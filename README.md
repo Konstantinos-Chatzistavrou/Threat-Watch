@@ -21,7 +21,7 @@ Welcome to Threat-Watch, the most privacy-focused cybersecurity news app in the 
 
 ## Usage
 
-[Provide instructions on how to run and use your app. Include any configuration steps.]
+Download the apk from the official website or from the Google play store.
 
 ## Contributing
 
