@@ -1,5 +1,5 @@
 # Threat-Watch
-The privacy focused cybersecurity news app.[Project's official website:](https://threatwatch.unofficialcreators.com)
+The privacy focused cybersecurity news app. Project's official website: [Threat Watch: Stay up-to-date](https://threatwatch.unofficialcreators.com)
 
 Welcome to Threat-Watch, the most privacy-focused cybersecurity news app in the world. This README provides an overview of the app's features, installation instructions, how to contribute, and more.
 
