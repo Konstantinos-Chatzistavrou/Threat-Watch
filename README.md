@@ -6,7 +6,9 @@ Welcome to Threat-Watch, the most privacy-focused cybersecurity news app in the 
 ## Features
 
 - Stay up-to-date with the latest cybersecurity news and trends.
-- Focus on privacy: We prioritize user privacy and have a no data collection policy.
+- Privacy-focused: We prioritize user privacy and have a no data collection policy.
+- Battle hardened: Integration of Zero Trust Architecture in every corner of the app.
+- User-first policy: Users have the most influence on which additional features will be added in the app.
 - User-friendly interface: Intuitive design for easy navigation.
 - No ads for free.
 - No central server, everything is run either inside the user's device or inside an API, thus making it almost impossible for a breach to ever happen.
