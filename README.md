@@ -1,2 +1,50 @@
 # Threat-Watch
-The most privacy focused cybersecurity news app in the world.
+The privacy focused cybersecurity news app.
+
+Welcome to Threat-Watch, the most privacy-focused cybersecurity news app in the world. This README provides an overview of the app's features, installation instructions, how to contribute, and more.
+
+## Features
+
+- Stay up-to-date with the latest cybersecurity news and trends.
+- Focus on privacy: We prioritize user privacy and have a no data collection policy.
+- User-friendly interface: Intuitive design for easy navigation.
+- No ads for free.
+- No central server, everything is run either inside the user's device or inside an API, thus making it almost impossible for a breach to ever happen.
+
+## Installation
+
+1. Clone this repository to your local machine.
+2. Navigate to the project directory: `cd Threat-Watch`.
+3. Install dependencies: `npm install` or `yarn install`.
+
+## Usage
+
+[Provide instructions on how to run and use your app. Include any configuration steps.]
+
+## Contributing
+
+We welcome contributions from the community! If you'd like to contribute to Threat-Watch, please follow these steps:
+
+1. Fork this repository.
+2. Create a new branch for your feature or bug fix: `git checkout -b feature/your-feature`.
+3. Make your changes and commit them.
+4. Push your changes to your forked repository: `git push origin feature/your-feature`.
+5. Open a pull request on this repository.
+
+Please ensure that your contributions align with our [Code of Conduct](CODE_OF_CONDUCT.md).
+
+## Issues
+
+If you encounter any bugs or have suggestions for improvements, please [open an issue](https://github.com/yourusername/Threat-Watch/issues).
+
+## License
+
+This project is licensed under the [GNU General Public License version 3 (GPLv3)](LICENSE.md). See the [LICENSE](LICENSE.md) file for details.
+
+## Contact
+
+For questions or inquiries, you can reach us at [threatwatchapp@gmail.com].
+
+Thank you for your interest in Threat-Watch!
+
+[Include badges or relevant images if desired.]
