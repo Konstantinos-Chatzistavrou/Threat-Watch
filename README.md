@@ -37,7 +37,7 @@ Please ensure that your contributions align with our [Code of Conduct](CODE_OF_C
 
 ## Issues
 
-If you encounter any bugs or have suggestions for improvements, please [open an issue](https://github.com/yourusername/Threat-Watch/issues).
+If you encounter any bugs or have suggestions for improvements, please [open an issue](https://github.com/kochas23/Threat-Watch/issues).
 
 ## License
 
@@ -45,7 +45,8 @@ This project is licensed under the [GNU General Public License version 3 (GPLv3)
 
 ## Contact
 
-For questions or inquiries, you can reach us at [threatwatchapp@gmail.com].
+For questions or inquiries, you can reach us at:
+threatwatchapp@gmail.com.
 
 Thank you for your interest in Threat-Watch!
 
