@@ -45,7 +45,7 @@ This plan includes the following steps:
 
 • Lessons Learned
 
-#####################################
+############################
 
 # App Security and Privacy Information
 
