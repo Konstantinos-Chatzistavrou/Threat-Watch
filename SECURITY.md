@@ -48,6 +48,24 @@ Your privacy is important to us. We handle user data carefully and follow indust
 
 ## Incident Response
 
+It's important to have a clear understanding of what qualifies as a security incident to trigger the incident response protocol. A security incident refers to any actual or suspected breach of security that could potentially compromise the confidentiality, integrity, or availability of our project or its data.
+
+Some examples of security incidents include:
+
+• Unauthorized access to sensitive data or systems
+
+• Data breaches or leaks
+
+• Malware infections or compromises
+
+• Denial of Service (DoS) attacks
+
+• Compromised accounts or credentials
+
+If you observe any activity or situation that aligns with these examples or any suspicious behavior that could impact security, it's crucial to promptly report it to our security team. Even if you're uncertain whether an incident has occurred, it's always better to err on the side of caution and notify us.
+
+Our incident response plan, outlined below, will guide us through the appropriate steps to contain, mitigate, and recover from any confirmed incidents.
+
 In the unfortunate event of a security incident, we follow a well-defined incident response plan to ensure timely and effective resolution. Our plan consists of the following key stages:
 
 1. **Identification**: We promptly identify and confirm the occurrence of the incident, determining its scope and potential impact.
@@ -86,13 +104,13 @@ Please make sure you are using the latest version of our app to ensure you have 
 
 We are committed to safeguarding your data and ensuring a secure browsing experience. Here are some of the security measures we have implemented:
 
-• No data collection: Being completely serverless, ad free and privacy-focused, our app doesn't collect any data or logs from it's users.
+• **No data collection**: Being completely serverless, ad free and privacy-focused, our app doesn't collect any data or logs from it's users.
 
-• Data Encryption: All the data are saved in the users'devices, making the data completely private.
+• **Data Encryption**: All the data are saved in the users'devices, making the data completely private.
 
-• Secure Connection: Our app communicates over secure HTTPS connections to ensure the confidentiality of your information.
+• **Secure Connection**: Our app communicates over secure HTTPS connections to ensure the confidentiality of your information.
 
-• Regular Security Audits: We conduct regular security audits and assessments to identify and address potential vulnerabilities.
+• **Regular Security Audits**: We conduct regular security audits and assessments to identify and address potential vulnerabilities.
 
 ## Privacy Policy
 
