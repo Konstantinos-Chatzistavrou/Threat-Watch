@@ -15,6 +15,6 @@ Project version support:
 
 If you believe you have found a security 
 vulnerability in our project, please report it to us 
-by emailing security@example.com. We take all security 
+by emailing threatwatchapp@gmail.com. We take all security 
 vulnerabilities seriously and will respond to your 
 report as soon as possible.
