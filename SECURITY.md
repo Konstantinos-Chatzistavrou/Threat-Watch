@@ -22,7 +22,9 @@ If you believe you have discovered a security vulnerability within our project, 
 
 4. **Contact Information**: Provide your contact details (name and email) so we can acknowledge your report and keep you informed about the resolution process.
 
-You can report the vulnerability by emailing us at:  threatwatchapp@gmail.com. We are committed to promptly addressing security issues and will acknowledge your report as soon as it's received. We kindly request that you do not publicly disclose the vulnerability until we have had a chance to investigate and mitigate it.
+You can report the vulnerability by emailing us at:  threatwatchapp@gmail.com. 
+
+We are committed to promptly addressing security issues and will acknowledge your report as soon as it's received. We kindly request that you do not publicly disclose the vulnerability until we have had a chance to investigate and mitigate it.
 
 We appreciate your cooperation in helping us maintain the security of our project.
 
@@ -77,6 +79,7 @@ If you discover a security vulnerability or privacy issue in our app, please rep
 Please make sure you are using the latest version of our app to ensure you have the latest security updates and improvements. We provide security updates for the following versions:
 
 • Version 0.0.1 ✓
+
 • Version 0.0.2 ✓
 
 ## Security Measures
@@ -93,7 +96,7 @@ We are committed to safeguarding your data and ensuring a secure browsing experi
 
 ## Privacy Policy
 
-Your privacy is important to us. You can find detailed information about how we collect, use, and protect your data in our [Privacy Policy](https://www.threatwatch.com/privacy-policy).
+Your privacy is important to us. You can find detailed information about how we collect, use, and protect your data in our [Privacy Policy](https://www.threatwatch.com/privacy-policy). -Under development-
 
 ## Third-Party Services
 
