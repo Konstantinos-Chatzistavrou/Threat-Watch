@@ -51,7 +51,7 @@ This plan includes the following steps:
 
 ## Vulnerability Reporting
 
-If you discover a security vulnerability or privacy issue in our app, please report it to us promptly so we can address it. You can contact us at: [threatwatchapp@gmail.com](mailto: threatwatchapp@gmail.com).
+If you discover a security vulnerability or privacy issue in our app, please report it to us promptly so we can address it. You can contact us at: threatwatchapp@gmail.com.
 
 ## Supported Versions
 
