@@ -1,4 +1,4 @@
-# Security Policy
+# Project Security Policy
 
 ## Supported Versions
 
@@ -34,10 +34,15 @@ We take the following security measures to protect our project:
 In the event of a security incident, we will follow the incident response plan outlined in our Computer Security Incident Handling Guide.
 
 This plan includes the following steps:
+
 • Identification
+
 • Containment
+
 • Eradication
+
 • Recovery
+
 • Lessons Learned
 
 #####################################
@@ -59,7 +64,9 @@ Please make sure you are using the latest version of our app to ensure you have 
 
 We are committed to safeguarding your data and ensuring a secure browsing experience. Here are some of the security measures we have implemented:
 
-- Data Encryption: We use industry-standard encryption protocols to protect your personal and sensitive data.
+- No data collection: Being completely serverless, ad free and privacy-focused, our app doesn't collect any data or logs from it's users.
+
+- Data Encryption: All the data are saved in the users'devices, making the data completely private.
 
 - Secure Connection: Our app communicates over secure HTTPS connections to ensure the confidentiality of your information.
 
