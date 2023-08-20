@@ -4,8 +4,11 @@
 
 Yes = ✓
 No = ✗
+
 Project version support:
+
 • Version 0.0.1 ✗
+
 • Version 0.0.2 ✓
 
 ## Reporting a Vulnerability
