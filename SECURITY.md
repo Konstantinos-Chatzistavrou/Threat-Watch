@@ -1,13 +1,12 @@
 # Project Security Policy
 
+## Introduction
+
+Welcome to our project's security policy. Security is a top priority, and we're committed to maintaining a safe environment for all users.
+
 ## Supported Versions
 
-Yes = ✓
-No = ✗
-
-Project version support:
-
-• Version 0.0.1 ✗
+• Version 0.0.1 ✗ (UI testing version])
 
 • Version 0.0.2 ✓
 
@@ -21,15 +20,15 @@ report as soon as possible.
 
 ## Security Measures
 
-We take the following security measures to protect our project:
+We've implemented a range of security measures to protect our project:
 
-• Secure Coding Practices: Our development team follows secure coding practices to minimize vulnerabilities during development.
+• Secure Coding Practices: Our development team adheres to secure coding practices to minimize vulnerabilities during development.
 
-• Regularly updating dependencies to ensure they are free of known vulnerabilities
+• Regular Dependency Updates: We frequently update dependencies to mitigate known vulnerabilities.
 
-• Enforcing strong passwords and two-factor authentication for all contributors
+• Contributor Security: We enforce strong passwords and two-factor authentication for all contributors.
 
-• Reviewing and approving all pull requests before merging into the main branch
+• Code Review Process: All pull requests undergo review and approval before merging into the main branch.
 
 ## Privacy Concerns
 
@@ -65,20 +64,20 @@ If you discover a security vulnerability or privacy issue in our app, please rep
 
 Please make sure you are using the latest version of our app to ensure you have the latest security updates and improvements. We provide security updates for the following versions:
 
-- Version 0.0.1 ✓
-- Version 0.0.2 ✓
+• Version 0.0.1 ✓
+• Version 0.0.2 ✓
 
 ## Security Measures
 
 We are committed to safeguarding your data and ensuring a secure browsing experience. Here are some of the security measures we have implemented:
 
-- No data collection: Being completely serverless, ad free and privacy-focused, our app doesn't collect any data or logs from it's users.
+• No data collection: Being completely serverless, ad free and privacy-focused, our app doesn't collect any data or logs from it's users.
 
-- Data Encryption: All the data are saved in the users'devices, making the data completely private.
+• Data Encryption: All the data are saved in the users'devices, making the data completely private.
 
-- Secure Connection: Our app communicates over secure HTTPS connections to ensure the confidentiality of your information.
+• Secure Connection: Our app communicates over secure HTTPS connections to ensure the confidentiality of your information.
 
-- Regular Security Audits: We conduct regular security audits and assessments to identify and address potential vulnerabilities.
+• Regular Security Audits: We conduct regular security audits and assessments to identify and address potential vulnerabilities.
 
 ## Privacy Policy
 
