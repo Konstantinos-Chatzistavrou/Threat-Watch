@@ -39,3 +39,42 @@ This plan includes the following steps:
 • Eradication
 • Recovery
 • Lessons Learned
+
+#####################################
+
+# App Security and Privacy Information
+
+## Vulnerability Reporting
+
+If you discover a security vulnerability or privacy issue in our app, please report it to us promptly so we can address it. You can contact us at: [threatwatchapp@gmail.com](mailto: threatwatchapp@gmail.com).
+
+## Supported Versions
+
+Please make sure you are using the latest version of our app to ensure you have the latest security updates and improvements. We provide security updates for the following versions:
+
+- Version 0.0.1 ✓
+- Version 0.0.2 ✓
+
+## Security Measures
+
+We are committed to safeguarding your data and ensuring a secure browsing experience. Here are some of the security measures we have implemented:
+
+- Data Encryption: We use industry-standard encryption protocols to protect your personal and sensitive data.
+
+- Secure Connection: Our app communicates over secure HTTPS connections to ensure the confidentiality of your information.
+
+- Regular Security Audits: We conduct regular security audits and assessments to identify and address potential vulnerabilities.
+
+## Privacy Policy
+
+Your privacy is important to us. You can find detailed information about how we collect, use, and protect your data in our [Privacy Policy](https://www.threatwatch.com/privacy-policy).
+
+## Third-Party Services
+
+We may use third-party services to enhance the functionality of our app. However, we carefully vet these services to ensure they align with our security and privacy standards.
+
+## Responsible Disclosure
+
+We appreciate the efforts of security researchers in helping us maintain the security of our app. If you discover a security vulnerability, we kindly request that you follow responsible disclosure practices by privately notifying us before publicly disclosing the issue.
+
+Thank you for choosing our cybersecurity news app. We're dedicated to providing you with a safe and informed experience.
