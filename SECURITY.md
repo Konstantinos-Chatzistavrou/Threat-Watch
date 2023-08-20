@@ -23,11 +23,17 @@ report as soon as possible.
 
 We take the following security measures to protect our project:
 
-•Regularly updating dependencies to ensure they are free of known vulnerabilities
+• Secure Coding Practices: Our development team follows secure coding practices to minimize vulnerabilities during development.
 
-•Enforcing strong passwords and two-factor authentication for all contributors
+• Regularly updating dependencies to ensure they are free of known vulnerabilities
 
-•Reviewing and approving all pull requests before merging into the main branch
+• Enforcing strong passwords and two-factor authentication for all contributors
+
+• Reviewing and approving all pull requests before merging into the main branch
+
+## Privacy Concerns
+
+Your privacy is important to us. We handle user data carefully and follow industry best practices to safeguard sensitive information.
 
 ## Incident Response
 
@@ -44,6 +50,8 @@ This plan includes the following steps:
 • Recovery
 
 • Lessons Learned
+
+Thank you for your collaboration in making our project safer for everyone.
 
 ############################
 
