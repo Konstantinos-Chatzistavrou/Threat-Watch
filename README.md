@@ -41,7 +41,7 @@ If you encounter any bugs or have suggestions for improvements, please [open an 
 
 ## License
 
-This project is licensed under the [GNU General Public License version 3 (GPLv3)](LICENSE.md). See the [LICENSE](https://github.com/kochas23/Threat-Watch/blob/Core/LICENSE) file for details.
+This project is licensed under the [GNU General Public License version 3 (GPLv3)](https://github.com/kochas23/Threat-Watch/blob/Core/LICENSE). See the [LICENSE](https://github.com/kochas23/Threat-Watch/blob/Core/LICENSE) file for details.
 
 ## Contact
 
