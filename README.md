@@ -46,7 +46,8 @@ This project is licensed under the [GNU General Public License version 3 (GPLv3)
 ## Contact
 
 For questions or inquiries, you can reach us at:
-threatwatchapp@gmail.com.
+Mail: threatwatchapp@gmail.com 
+Instagram: Threat-Watch (https://instagram.com/_threat_watch_official_?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D)
 
 Thank you for your interest in Threat-Watch!
 
