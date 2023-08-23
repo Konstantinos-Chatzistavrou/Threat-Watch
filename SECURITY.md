@@ -44,7 +44,7 @@ Welcome to our project's security policy. Security is a top priority, and we're 
 
 If you believe you have discovered a security vulnerability within our project, we highly appreciate your responsible disclosure. To report a vulnerability, please provide the following information:
 
-1. ### Description:
+1. #### Description:
 Clearly explain the vulnerability, its potential impact, and any scenarios or conditions necessary to reproduce it.
 
 2. **Steps to Reproduce**: Detail the exact steps needed to reproduce the vulnerability.
