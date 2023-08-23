@@ -19,13 +19,14 @@ Thank you for your interest in contributing to Threat-Watch! We welcome contribu
 
 ## Introduction
 
-Welcome to the [Your Project Name] contribution guide! We value your input and encourage you to contribute to the project. By following this guide, you can help us maintain a welcoming and collaborative community.
+Welcome to the Threat-Watch contribution guide! We value your input and encourage you to contribute to the project. By following this guide, you can help us maintain a welcoming and collaborative community.
 
 ## Getting Started
 
 ### Forking the Repository
 
 1. Fork the repository to your GitHub account.
+
 2. Clone your forked repository to your local machine.
 
 ### Setting up Your Development Environment
