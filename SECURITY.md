@@ -62,13 +62,13 @@ We appreciate your cooperation in helping us maintain the security of our projec
 
 Safeguarding our project and user data is our utmost priority. We employ the following comprehensive security measures:
 
-• #### Secure Coding Practices: Our experienced development team adheres to secure coding practices, including input validation, output encoding, and defense against common vulnerabilities like SQL injection and cross-site scripting (XSS).
+• Secure Coding Practices: Our experienced development team adheres to secure coding practices, including input validation, output encoding, and defense against common vulnerabilities like SQL injection and cross-site scripting (XSS).
 
-• ####Regular Dependency Updates: We proactively monitor and update third-party dependencies to ensure they are free from known vulnerabilities. This helps us maintain the stability and security of our project.
+• Regular Dependency Updates: We proactively monitor and update third-party dependencies to ensure they are free from known vulnerabilities. This helps us maintain the stability and security of our project.
 
-• #### Contributor Security: All contributors are required to use strong, unique passwords and enable two-factor authentication (2FA). This adds an additional layer of security to protect contributors' accounts from unauthorized access.
+• Contributor Security: All contributors are required to use strong, unique passwords and enable two-factor authentication (2FA). This adds an additional layer of security to protect contributors' accounts from unauthorized access.
 
-• #### Code Review Process: Every code change, including pull requests, undergoes rigorous review and approval before being merged into the main branch. This process helps identify potential security issues and ensures that only safe and well-tested code is deployed.
+• Code Review Process: Every code change, including pull requests, undergoes rigorous review and approval before being merged into the main branch. This process helps identify potential security issues and ensures that only safe and well-tested code is deployed.
 
 By implementing these security measures, we strive to provide a robust and secure environment for our project and its users.
 
@@ -134,13 +134,13 @@ Please make sure you are using the latest version of our app to ensure you have 
 
 We are committed to safeguarding your data and ensuring a secure browsing experience. Here are some of the security measures we have implemented:
 
-• #### No data collection: Being completely serverless, ad free and privacy-focused, our app doesn't collect any data or logs from it's users.
+• No data collection: Being completely serverless, ad free and privacy-focused, our app doesn't collect any data or logs from it's users.
 
-• #### Data Encryption: All the data are saved in the users'devices, making the data completely private.
+• Data Encryption: All the data are saved in the users'devices, making the data completely private.
 
-• #### Secure Connection: Our app communicates over secure HTTPS connections to ensure the confidentiality of your information.
+• Secure Connection: Our app communicates over secure HTTPS connections to ensure the confidentiality of your information.
 
-• #### Regular Security Audits: We conduct regular security audits and assessments to identify and address potential vulnerabilities.
+• Regular Security Audits: We conduct regular security audits and assessments to identify and address potential vulnerabilities.
 
 ## Privacy Policy
 
