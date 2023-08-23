@@ -23,6 +23,7 @@ Welcome to our project's security policy. Security is a top priority, and we're 
 ## Supported Versions
 
 • Version 0.0.1 ✗ 
+
 ([UI testing version])
 
 • Version 0.0.2 ✓
