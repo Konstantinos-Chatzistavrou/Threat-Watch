@@ -5,22 +5,9 @@
 1. [Introduction](#introduction)
 2. [Supported Versions](#supported-versions)
 3. [Reporting a Vulnerability](#reporting-a-vulnerability)
-    - [Description](#description)
-    - [Steps to Reproduce](#Steps-to-reproduce)
-    - [Technical Details](#technical-details)
-    - [Contact Information](#contact-information)
 4. [Security Measures](#security-measures)
-    - [Secure Coding Practices](#secure-coding-practices)
-    - [Regular Dependency Updates](#regular-dependency-updates)
-    - [Contributor Security](#contributor-security)
-    - [Code Review Process](#code-review-process)
 5. [Privacy Concerns](#privacy-concerns)
 6. [Incident Response](#incident-response)
-    - [Identification](#identification)
-    - [Containment](#containment)
-    - [Eradication](#eradication)
-    - [Recovery](#recovery)
-    - [Lessons Learned](#lessons-learned)
 7. [App Security and Privacy Information](#app-security-and-privacy-information)
 8. [Vulnerability Reporting](#vulnerability-reporting)
 9. [Supported App Versions](#supported-app-versions)
@@ -44,8 +31,7 @@ Welcome to our project's security policy. Security is a top priority, and we're 
 
 If you believe you have discovered a security vulnerability within our project, we highly appreciate your responsible disclosure. To report a vulnerability, please provide the following information:
 
-1. #### Description: 
-Clearly explain the vulnerability, its potential impact, and any scenarios or conditions necessary to reproduce it.
+1. #### Description: Clearly explain the vulnerability, its potential impact, and any scenarios or conditions necessary to reproduce it.
 
 2. #### Steps to Reproduce: Detail the exact steps needed to reproduce the vulnerability.
 
