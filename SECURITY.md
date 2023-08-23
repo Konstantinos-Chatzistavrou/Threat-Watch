@@ -1,12 +1,30 @@
 # Project Security Policy
 
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Supported Versions](#supported-versions)
+3. [Reporting a Vulnerability](#reporting-a-vulnerability)
+4. [Security Measures](#security-measures)
+5. [Privacy Concerns](#privacy-concerns)
+6. [Incident Response](#incident-response)
+7. [App Security and Privacy Information](#app-security-and-privacy-information)
+8. [Vulnerability Reporting](#vulnerability-reporting)
+9. [Supported App Versions](#supported-app-versions)
+10. [Security Measures for the App](#security-measures-for-the-app)
+11. [Privacy Policy](#privacy-policy)
+12. [Third-Party Services](#third-party-services)
+13. [Responsible Disclosure](#responsible-disclosure)
+
 ## Introduction
 
 Welcome to our project's security policy. Security is a top priority, and we're committed to maintaining a safe environment for all users.
 
 ## Supported Versions
 
-• Version 0.0.1 ✗ ([UI testing version])
+• Version 0.0.1 ✗ 
+
+([UI testing version])
 
 • Version 0.0.2 ✓
 
@@ -14,13 +32,13 @@ Welcome to our project's security policy. Security is a top priority, and we're 
 
 If you believe you have discovered a security vulnerability within our project, we highly appreciate your responsible disclosure. To report a vulnerability, please provide the following information:
 
-1. **Description**: Clearly explain the vulnerability, its potential impact, and any scenarios or conditions necessary to reproduce it.
+1. #### Description: Clearly explain the vulnerability, its potential impact, and any scenarios or conditions necessary to reproduce it.
 
-2. **Steps to Reproduce**: Detail the exact steps needed to reproduce the vulnerability.
+2. #### Steps to Reproduce: Detail the exact steps needed to reproduce the vulnerability.
 
-3. **Technical Details**: Include any relevant technical information, such as affected components, libraries, or code snippets.
+3. #### Technical Details: Include any relevant technical information, such as affected components, libraries, or code snippets.
 
-4. **Contact Information**: Provide your contact details (name and email) so we can acknowledge your report and keep you informed about the resolution process.
+4. #### Contact Information: Provide your contact details (name and email) so we can acknowledge your report and keep you informed about the resolution process.
 
 You can report the vulnerability by emailing us at:  threatwatchapp@gmail.com. 
 
@@ -32,13 +50,13 @@ We appreciate your cooperation in helping us maintain the security of our projec
 
 Safeguarding our project and user data is our utmost priority. We employ the following comprehensive security measures:
 
-• **Secure Coding Practices**: Our experienced development team adheres to secure coding practices, including input validation, output encoding, and defense against common vulnerabilities like SQL injection and cross-site scripting (XSS).
+• Secure Coding Practices: Our experienced development team adheres to secure coding practices, including input validation, output encoding, and defense against common vulnerabilities like SQL injection and cross-site scripting (XSS).
 
-• **Regular Dependency Updates**: We proactively monitor and update third-party dependencies to ensure they are free from known vulnerabilities. This helps us maintain the stability and security of our project.
+• Regular Dependency Updates: We proactively monitor and update third-party dependencies to ensure they are free from known vulnerabilities. This helps us maintain the stability and security of our project.
 
-• **Contributor Security**: All contributors are required to use strong, unique passwords and enable two-factor authentication (2FA). This adds an additional layer of security to protect contributors' accounts from unauthorized access.
+• Contributor Security: All contributors are required to use strong, unique passwords and enable two-factor authentication (2FA). This adds an additional layer of security to protect contributors' accounts from unauthorized access.
 
-• **Code Review Process**: Every code change, including pull requests, undergoes rigorous review and approval before being merged into the main branch. This process helps identify potential security issues and ensures that only safe and well-tested code is deployed.
+• Code Review Process: Every code change, including pull requests, undergoes rigorous review and approval before being merged into the main branch. This process helps identify potential security issues and ensures that only safe and well-tested code is deployed.
 
 By implementing these security measures, we strive to provide a robust and secure environment for our project and its users.
 
@@ -68,15 +86,15 @@ Our incident response plan, outlined below, will guide us through the appropriat
 
 In the unfortunate event of a security incident, we follow a well-defined incident response plan to ensure timely and effective resolution. Our plan consists of the following key stages:
 
-1. **Identification**: We promptly identify and confirm the occurrence of the incident, determining its scope and potential impact.
+1. #### Identification: We promptly identify and confirm the occurrence of the incident, determining its scope and potential impact.
 
-2. **Containment**: Immediate measures are taken to contain the incident and prevent further unauthorized access or data compromise.
+2. #### Containment: Immediate measures are taken to contain the incident and prevent further unauthorized access or data compromise.
 
-3. **Eradication**: We work diligently to eliminate the root cause of the incident and any lingering vulnerabilities.
+3. #### Eradication: We work diligently to eliminate the root cause of the incident and any lingering vulnerabilities.
 
-4. **Recovery**: After the threat has been neutralized, we begin the process of restoring affected systems and services to normal operation.
+4. #### Recovery: After the threat has been neutralized, we begin the process of restoring affected systems and services to normal operation.
 
-5. **Lessons Learned**: Once the incident is resolved, we conduct a thorough analysis of the incident to identify lessons learned and implement improvements to prevent similar incidents in the future.
+5. #### Lessons Learned: Once the incident is resolved, we conduct a thorough analysis of the incident to identify lessons learned and implement improvements to prevent similar incidents in the future.
 
 Our Computer Security Incident Handling Guide provides detailed procedures for each stage and ensures a coordinated and effective response.
 
@@ -104,13 +122,13 @@ Please make sure you are using the latest version of our app to ensure you have 
 
 We are committed to safeguarding your data and ensuring a secure browsing experience. Here are some of the security measures we have implemented:
 
-• **No data collection**: Being completely serverless, ad free and privacy-focused, our app doesn't collect any data or logs from it's users.
+• No data collection: Being completely serverless, ad free and privacy-focused, our app doesn't collect any data or logs from it's users.
 
-• **Data Encryption**: All the data are saved in the users'devices, making the data completely private.
+• Data Encryption: All the data are saved in the users'devices, making the data completely private.
 
-• **Secure Connection**: Our app communicates over secure HTTPS connections to ensure the confidentiality of your information.
+• Secure Connection: Our app communicates over secure HTTPS connections to ensure the confidentiality of your information.
 
-• **Regular Security Audits**: We conduct regular security audits and assessments to identify and address potential vulnerabilities.
+• Regular Security Audits: We conduct regular security audits and assessments to identify and address potential vulnerabilities.
 
 ## Privacy Policy
 
