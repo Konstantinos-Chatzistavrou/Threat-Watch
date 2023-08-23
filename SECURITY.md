@@ -15,7 +15,6 @@
 11. [Privacy Policy](#privacy-policy)
 12. [Third-Party Services](#third-party-services)
 13. [Responsible Disclosure](#responsible-disclosure)
-14. [Conclusion](#conclusion)
 
 ## Introduction
 
