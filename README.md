@@ -1,3 +1,14 @@
+## Table of Contents
+
+- [Threat-Watch](#threat-watch)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Issues](#issues)
+- [License](#license)
+- [Contact](#contact)
+
 # Threat-Watch
 The privacy focused cybersecurity news app. Project's official website: [Threat Watch: Stay up-to-date](https://threatwatch.unofficialcreators.com)
 
