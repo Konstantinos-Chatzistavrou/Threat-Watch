@@ -6,7 +6,7 @@
 2. [Supported Versions](#supported-versions)
 3. [Reporting a Vulnerability](#reporting-a-vulnerability)
     - [Description](#description)
-    - [Steps to Reproduce](#steps-to-reproduce)
+    - [Steps to Reproduce](#Steps-to-reproduce)
     - [Technical Details](#technical-details)
     - [Contact Information](#contact-information)
 4. [Security Measures](#security-measures)
