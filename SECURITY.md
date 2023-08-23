@@ -1,5 +1,35 @@
 # Project Security Policy
 
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Supported Versions](#supported-versions)
+3. [Reporting a Vulnerability](#reporting-a-vulnerability)
+    - [Description](#description)
+    - [Steps to Reproduce](#steps-to-reproduce)
+    - [Technical Details](#technical-details)
+    - [Contact Information](#contact-information)
+4. [Security Measures](#security-measures)
+    - [Secure Coding Practices](#secure-coding-practices)
+    - [Regular Dependency Updates](#regular-dependency-updates)
+    - [Contributor Security](#contributor-security)
+    - [Code Review Process](#code-review-process)
+5. [Privacy Concerns](#privacy-concerns)
+6. [Incident Response](#incident-response)
+    - [Identification](#identification)
+    - [Containment](#containment)
+    - [Eradication](#eradication)
+    - [Recovery](#recovery)
+    - [Lessons Learned](#lessons-learned)
+7. [App Security and Privacy Information](#app-security-and-privacy-information)
+8. [Vulnerability Reporting](#vulnerability-reporting)
+9. [Supported App Versions](#supported-app-versions)
+10. [Security Measures for the App](#security-measures-for-the-app)
+11. [Privacy Policy](#privacy-policy)
+12. [Third-Party Services](#third-party-services)
+13. [Responsible Disclosure](#responsible-disclosure)
+14. [Conclusion](#conclusion)
+
 ## Introduction
 
 Welcome to our project's security policy. Security is a top priority, and we're committed to maintaining a safe environment for all users.
