@@ -4,18 +4,18 @@ Thank you for your interest in contributing to Threat-Watch! We welcome contribu
 
 ## Table of Contents
 
-• [Introduction](#introduction)
-• [Getting Started](#getting-started)
-  • [Forking the Repository](#forking-the-repository)
-  • [Setting up Your Development Environment](#setting-up-your-development-environment)
-• [Contribution Guidelines](#contribution-guidelines)
-  • [Bug Fixes](#bug-fixes)
-  • [New Features](#new-features)
-  • [Documentation](#documentation)
-• [Code Review Process](#code-review-process)
-• [Pull Request Submission](#pull-request-submission)
-• [Community Guidelines](#community-guidelines)
-• [Contact](#contact)
+- [Introduction](#introduction)
+- [Getting Started](#getting-started)
+  - [Forking the Repository](#forking-the-repository)
+  - [Setting up Your Development Environment](#setting-up-your-development-environment)
+- [Contribution Guidelines](#contribution-guidelines)
+  - [Bug Fixes](#bug-fixes)
+  - [New Features](#new-features)
+  - [Documentation](#documentation)
+- [Code Review Process](#code-review-process)
+- [Pull Request Submission](#pull-request-submission)
+- [Community Guidelines](#community-guidelines)
+- [Contact](#contact)
 
 ## Introduction
 
