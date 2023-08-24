@@ -4,7 +4,7 @@ The maintenance team is responsible for ensuring the continuous health, stabilit
 
 ## Team Members
 
-### Konstantinos Chatzistavrou () - Project Lead
+### Konstantinos Chatzistavrou (https://github.com/kochas23) - Project Lead
 - **Contact:** [Email](mailto:youremail@example.com)
 - **Responsibilities:**
   - Overall project oversight and direction
