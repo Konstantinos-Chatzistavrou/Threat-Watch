@@ -1,3 +1,5 @@
+# Partners and Sponsors
+
 ## How to Become a Sponsor
 
 We are always open to new partnerships and sponsorships that align with our project's goals and values. If you or your organization are interested in supporting Threat-Watch, please reach out to us at threatwatchapp@gmail.com. We'd be happy to discuss potential collaborations and the benefits of becoming a sponsor.
