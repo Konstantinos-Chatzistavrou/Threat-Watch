@@ -1,3 +1,33 @@
+# Joining the Maintenance Team
+
+Welcome to the Threat-Watch Maintenance Team! We're excited to have you onboard as a volunteer. This document outlines the steps to join the team and provides information about your role and responsibilities.
+
+## Role Overview
+
+As a member of the Maintenance Team, you will play a crucial role in ensuring the security, stability, and improvement of the Threat-Watch project. Your contributions will directly impact the quality of the app and its user experience.
+
+## Getting Started
+
+To join the Maintenance Team, follow these steps:
+
+1. **Review Responsibilities:** Take some time to read through the responsibilities outlined in the [MAINTENANCE_TEAM.md](link_to_MAINTENANCE_TEAM.md) document. Make sure you understand the role you're taking on and the expectations associated with it.
+
+2. **Introduce Yourself:** Send an email to konstantinoschatzistavrou@gmail.com expressing your interest in joining the Maintenance Team. Feel free to include a brief introduction about yourself, your skills, and your motivation for joining.
+
+3. **Meeting Schedule:** Once you've expressed your interest, our team will coordinate a meeting with you to discuss your role, responsibilities, and how you can best contribute. We value your time and availability, so we'll work together to find a suitable schedule.
+
+4. **Familiarize Yourself:** Familiarize yourself with the Threat-Watch project, its goals, and its features. This will help you better understand the context of your role and how your contributions will fit in.
+
+## Your Contributions Matter
+
+By joining the Maintenance Team, you'll be making a significant impact on the Threat-Watch project. Your dedication and expertise will help ensure that the app remains secure, user-friendly, and up-to-date with the latest cybersecurity trends.
+
+Thank you for your willingness to contribute to the project's success. We look forward to working together to create a better and more secure digital environment.
+
+If you have any questions or need further assistance, please don't hesitate to reach out to us at konstantinoschatzistavrou@gmail.com.
+
+Let's make Threat-Watch the best it can be!
+
 # Maintenance Team
 
 The maintenance team is responsible for ensuring the continuous health, stability, and improvement of the Threat-Watch project. This document outlines the roles and responsibilities of the maintenance team members.
