@@ -12,7 +12,7 @@ To join the Maintenance Team, follow these steps:
 
 1. **Review Responsibilities:** Take some time to read through the responsibilities outlined in the [MAINTENANCE_TEAM.md](link_to_MAINTENANCE_TEAM.md) document. Make sure you understand the role you're taking on and the expectations associated with it.
 
-2. **Introduce Yourself:** Send an email to konstantinoschatzistavrou@gmail.com expressing your interest in joining the Maintenance Team. Feel free to include a brief introduction about yourself, your skills, and your motivation for joining.
+2. **Introduce Yourself:** Send an email to our project manager:  konstantinoschatzistavrou@gmail.com expressing your interest in joining the Maintenance Team. Feel free to include a brief introduction about yourself, your skills, and your motivation for joining.
 
 3. **Meeting Schedule:** Once you've expressed your interest, our team will coordinate a meeting with you to discuss your role, responsibilities, and how you can best contribute. We value your time and availability, so we'll work together to find a suitable schedule.
 
@@ -24,7 +24,7 @@ By joining the Maintenance Team, you'll be making a significant impact on the Th
 
 Thank you for your willingness to contribute to the project's success. We look forward to working together to create a better and more secure digital environment.
 
-If you have any questions or need further assistance, please don't hesitate to reach out to us at konstantinoschatzistavrou@gmail.com.
+If you have any questions or need further assistance, please don't hesitate to reach out to: konstantinoschatzistavrou@gmail.com.
 
 Let's make Threat-Watch the best it can be!
 
@@ -81,4 +81,4 @@ Email: konstantinoschatzistavrou@gmail.com
 
 ## Contact
 
-For questions or inquiries related to the maintenance team or project management, please feel free to contact the Project Lead, [Your Name](mailto:youremail@example.com).
+For questions or inquiries related to the maintenance team or project management, please feel free to contact the Project Lead, [Konstantinos Chatzistavrou](mailto: konstantinoschatzistavrou@gmail.com.com).
