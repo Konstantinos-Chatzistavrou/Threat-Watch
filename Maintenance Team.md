@@ -81,4 +81,4 @@ Email: konstantinoschatzistavrou@gmail.com
 
 ## Contact
 
-For questions or inquiries related to the maintenance team or project management, please feel free to contact the Project Lead, [Konstantinos Chatzistavrou](mailto: konstantinoschatzistavrou@gmail.com.com).
+For questions or inquiries related to the maintenance team or project management, please feel free to contact the Project Lead, Konstantinos Chatzistavrou via email at: konstantinoschatzistavrou@gmail.com.com.
