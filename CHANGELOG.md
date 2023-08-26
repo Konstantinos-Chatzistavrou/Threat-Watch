@@ -4,13 +4,21 @@ All notable changes to the Threat-Watch project will be documented in this file.
 
 ## [Unreleased]
 
+• 
+
+•
+
+•
+
+•
+
 ### Added
 
 #### List any new features, enhancements, or functionalities that have been added since the last release:
 
 ### Changed
 
-#### Document changes to existing features, optimizations, or other modifications:
+#### Document changes to existing features, optimizations, or other modifications (e.g. UI):
 
 ### Fixed
 
