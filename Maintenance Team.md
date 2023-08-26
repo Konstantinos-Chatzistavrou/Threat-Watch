@@ -2,6 +2,24 @@
 
 Welcome to the Threat-Watch Maintenance Team! We're excited to have you onboard as a volunteer. This document outlines the steps to join the team and provides information about your role and responsibilities.
 
+# Table of Contents
+
+1. [Joining the Maintenance Team](#joining-the-maintenance-team)
+   - [Role Overview](#role-overview)
+   - [Getting Started](#getting-started)
+   - [Your Contributions Matter](#your-contributions-matter)
+
+2. [Maintenance Team](#maintenance-team)
+   - [Team Members](#team-members)
+     - [Konstantinos Chatzistavrou](#konstantinos-chatzistavrou---project-lead)
+     - [Team Member 1's Name](#team-member-1s-name---developer)
+     - [Team Member 2's Name](#team-member-2s-name---security-lead)
+   - [Roles and Responsibilities](#roles-and-responsibilities)
+     - [Project Lead](#project-lead)
+     - [Developer](#developer)
+     - [Security Lead](#security-lead)
+   - [Contact](#contact)
+
 ## Role Overview
 
 As a member of the Maintenance Team, you will play a crucial role in ensuring the security, stability, and improvement of the Threat-Watch project. Your contributions will directly impact the quality of the app and its user experience.
