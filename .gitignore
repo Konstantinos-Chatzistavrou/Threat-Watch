@@ -1,1 +1,49 @@
+# Node.js
+node_modules/
 
+# Ionic
+platforms/
+plugins/
+
+# Compiled output
+www/
+
+# Build artifacts
+build/
+dist/
+.tmp/
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Miscellaneous
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# Android
+*.apk
+*.ap_
+
+# Gradle files
+.gradle/
+build/
+
+# Android Studio
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
