@@ -6,41 +6,41 @@ All notable changes to the Threat-Watch project will be documented in this file.
 
 ### Added
 
-- List any new features, enhancements, or functionalities that have been added since the last release.
+#### List any new features, enhancements, or functionalities that have been added since the last release:
 
 ### Changed
 
-- Document changes to existing features, optimizations, or other modifications.
+#### Document changes to existing features, optimizations, or other modifications:
 
 ### Fixed
 
-- Note any bug fixes or issues that have been resolved.
+#### Note any bug fixes or issues that have been resolved:
 
 ## [Version X.Y.Z] - YYYY-MM-DD
 
 ### Added
 
-- List new features, enhancements, or functionalities introduced in this version.
+#### List new features, enhancements, or functionalities introduced in this version:
 
 ### Changed
 
-- Document changes to existing features, optimizations, or other modifications made in this version.
+#### Document changes to existing features, optimizations, or other modifications made in this version:
 
 ### Deprecated
 
-- Note any features that have been deprecated and will be removed in future versions.
+#### Note any features that have been deprecated and will be removed in future versions:
 
 ### Removed
 
-- List any features, components, or functionalities that have been removed.
+#### List any features, components, or functionalities that have been removed:
 
 ### Fixed
 
-- Note any bug fixes or issues that have been resolved in this version.
+#### Note any bug fixes or issues that have been resolved in this version:
 
 ### Security
 
-- Mention any security-related changes or improvements made in this version.
+#### Mention any security-related changes or improvements made in this version:
 
 ## [Version X.Y.Z-1] - YYYY-MM-DD
 
