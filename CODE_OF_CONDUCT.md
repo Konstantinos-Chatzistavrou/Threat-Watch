@@ -1,5 +1,14 @@
 # Code of Conduct
 
+# Table of Contents
+
+1. [Our Pledge](#our-pledge)
+2. [Expected Behavior](#expected-behavior)
+3. [Unacceptable Behavior](#unacceptable-behavior)
+4. [Reporting and Enforcement](#reporting-and-enforcement)
+5. [Scope](#scope)
+6. [Acknowledgment](#acknowledgment)
+
 ## Our Pledge
 
 • We are committed to fostering an open and welcoming environment for everyone who wants to contribute to Threat-Watch, regardless of their background or identity. Our community values respect, collaboration, and the sharing of diverse perspectives.
