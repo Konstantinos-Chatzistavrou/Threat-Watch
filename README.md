@@ -1,5 +1,5 @@
-<img alt="License" src="https://img.shields.io/github/license/kochas23/Threat-Watch?style=for-the-badge&logoColor=%23008080&label=License&labelColor=#23008080&color=#23009010">
-<img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/kochas23/Threat-Watch/Core?style=for-the-badge&logoColor=%2302147&label=Last%20commit&labelColor=%2302147&color=%2300FF00">
+<img alt="License" src="https://img.shields.io/github/license/kochas23/Threat-Watch?style=for-the-badge&label=License&labelColor=#23008080&color=#23009010">
+<img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/kochas23/Threat-Watch/Core?style=for-the-badge&logoColor=%23000&label=Last%20commit&labelColor=%23000&color=%2300FF00">
 <img alt="Static Badge" src="https://img.shields.io/badge/Active-brightgreen?style=for-the-badge&label=Status&labelColor=%23008080&color=%23009010">
 
 
