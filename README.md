@@ -1,4 +1,4 @@
-<img alt="License" src="https://img.shields.io/github/license/kochas23/Threat-Watch?style=for-the-badge&logo=%233DDC84&logoColor=%2300FF00&label=License&labelColor=%23000&color=%23000">
+<img alt="License" src="https://img.shields.io/github/license/kochas23/Threat-Watch?style=for-the-badge&logo=%233DDC84&logoColor=%2300FF00&label=License&labelColor=#000&color=#000">
 
 # Threat-Watch
 The privacy focused cybersecurity news app. Project's official website: [Threat Watch: Stay up-to-date](https://threatwatch.unofficialcreators.com)
