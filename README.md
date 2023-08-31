@@ -2,9 +2,13 @@
 <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/kochas23/Threat-Watch/Core?style=for-the-badge&logoColor=%23002147&label=Last%20commit&labelColor=%23008080&color=%2300FF00"> <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/kochas23/Threat-Watch?style=for-the-badge&labelColor=%230000FF">
 
 
-## Translated Versions
-
-- [Greek (Ελληνικά)](https://github.com/kochas23/Threat-Watch/blob/Core/README-GR.md)
+<details>
+  <summary>Translated Versions</summary>
+  <ul>
+    <li><a href="https://github.com/kochas23/Threat-Watch/blob/Core/README-GR.md">Ελληνικά</a></li>
+    <!-- Add more translated version links here -->
+  </ul>
+</details>
 
 # Threat-Watch
 The privacy focused cybersecurity news app. Project's official website: [Threat Watch: Stay up-to-date](https://threatwatch.unofficialcreators.com)
