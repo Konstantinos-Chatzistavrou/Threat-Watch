@@ -4,7 +4,7 @@
 
 ## Translated Versions
 
-- [Greek (Ελληνικά)](https://github.com/kochas23/Threat-Watch/Core/README-GR.md)
+- [Greek (Ελληνικά)](https://github.com/kochas23/Threat-Watch/blob/Core/README-GR.md)
 
 # Threat-Watch
 The privacy focused cybersecurity news app. Project's official website: [Threat Watch: Stay up-to-date](https://threatwatch.unofficialcreators.com)
