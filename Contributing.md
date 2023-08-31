@@ -83,7 +83,7 @@ Welcome to the Threat-Watch contribution guide! We value your input and encourag
 
 ## Community Guidelines
 
-• **Respect the [Code of Conduct](link_to_code_of_conduct)** in all interactions.
+• **Respect the [Code of Conduct](https://github.com/kochas23/Threat-Watch/blob/Core/CODE_OF_CONDUCT.md)** in all interactions.
 
 • Use **inclusive and welcoming language** when communicating with others.
 
