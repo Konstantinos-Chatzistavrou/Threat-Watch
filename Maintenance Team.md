@@ -28,7 +28,7 @@ As a member of the Maintenance Team, you will play a crucial role in ensuring th
 
 To join the Maintenance Team, follow these steps:
 
-1. **Review Responsibilities:** Take some time to read through the responsibilities outlined in the [MAINTENANCE_TEAM.md](link_to_MAINTENANCE_TEAM.md) document. Make sure you understand the role you're taking on and the expectations associated with it.
+1. **Review Responsibilities:** Take some time to read through the responsibilities outlined in this [MAINTENANCE_TEAM.md](https://github.com/kochas23/Threat-Watch/blob/Core/Maintenance%20Team.md) document. Make sure you understand the role you're taking on and the expectations associated with it.
 
 2. **Introduce Yourself:** Send an email to our project manager:  konstantinoschatzistavrou@gmail.com expressing your interest in joining the Maintenance Team. Feel free to include a brief introduction about yourself, your skills, and your motivation for joining.
 
