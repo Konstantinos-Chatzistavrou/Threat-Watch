@@ -2,6 +2,8 @@
 <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/kochas23/Threat-Watch/Core?style=for-the-badge&logoColor=%23002147&label=Last%20commit&labelColor=%23008080&color=%2300FF00"> <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/kochas23/Threat-Watch?style=for-the-badge&labelColor=%230000FF">
 
 
+
+Available in 1 more language
 <details>
   <summary>Translated Versions</summary>
   <ul>
