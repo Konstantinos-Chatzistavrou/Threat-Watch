@@ -33,7 +33,7 @@ As a member of the Threat-Watch community, you are expected to:
 
 ## Reporting and Enforcement
 
-• If you witness or experience behavior that violates this code of conduct, please contact us immediately at konstantinoschatzistavrou@gmail.com. All reports will be kept confidential, and we are committed to addressing issues promptly and fairly.
+• If you witness or experience behavior that violates this code of conduct, please contact the project manager immediately at konstantinoschatzistavrou@gmail.com. All reports will be kept confidential, and we are committed to addressing issues promptly and fairly.
 
 • If someone's behavior is deemed harmful or disruptive to the community, appropriate action will be taken, which may include warnings, temporary or permanent bans, or other actions as necessary.
 
