@@ -3,7 +3,7 @@
 
 
 
-#Available in 1 more language
+Available in 1 more language
 <details>
   <summary>Translated Versions</summary>
   <ul>
