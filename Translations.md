@@ -23,7 +23,7 @@ Welcome to the Threat-Watch translation guide! Your contributions help us reach 
 
 ### Joining the Translation Team
 
-1. Join our Threat-Watch translation team on Crowdin: [Threat-Watch on Crowdin](https://crowdin.com/project/Threat-Watch_GitHub_README_file).
+1. Join our Threat-Watch translation team on Crowdin: [Threat-Watch on Crowdin](https://crowdin.com/project/Threat-Watch_GitHub_README_file/invite?h=805bdbb38c60236fa98cd9b0ba2c06201825065).
 
 2. Select your desired language and start contributing translations.
 
