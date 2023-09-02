@@ -18,17 +18,25 @@
 As a member of the Threat-Watch community, you are expected to:
 
 • Be respectful and considerate of others' opinions, experiences, and perspectives.
+
 • Refrain from using offensive, derogatory, or discriminatory language and behavior.
+
 • Provide constructive feedback and engage in healthy discussions.
+
 • Use inclusive language and make an effort to be welcoming to all.
+
 • Accept responsibility for your actions and their impact on the community.
 
 ## Unacceptable Behavior
 
 • Harassment, trolling, or any form of personal attacks.
+
 • Discrimination based on factors such as age, gender, race, religion, nationality, sexuality, etc.
+
 • Creating a hostile or unwelcome environment for others.
+
 • Intimidation or threats.
+
 • Any form of unwarranted negative criticism or rude behavior.
 
 ## Reporting and Enforcement
