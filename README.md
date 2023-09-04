@@ -17,7 +17,7 @@ Available in 1 more language
 The privacy focused cybersecurity news app. Project's official website: [Threat Watch: Stay up-to-date](https://threatwatch.unofficialcreators.com)
 
 <div style="display: flex; justify-content: center;">
-<a href="#"><img src="https://i.ibb.co/3YHXWK1/IMG-20230622-123420.png" alt="IMG-20230622-123420" border="0" alt="Threat-Watch logo" width="200" height="auto" style="border-radius: 10px;"></a></div>
+<a href="https://ibb.co/qx6604P"><img src="https://i.ibb.co/vD99srK/IMG-20230905-000015.png" alt="IMG-20230905-000015" border="0" alt="Threat-Watch logo" width="200" height="auto" style="border-radius: 10px;"></a></div>
 
 ## Table of Contents
 
