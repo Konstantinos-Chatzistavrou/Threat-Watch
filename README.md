@@ -78,6 +78,8 @@ We welcome contributions from the community! If you'd like to contribute to Thre
 
 Please ensure that your contributions align with our [Code of Conduct](CODE_OF_CONDUCT.md).
 
+For more detailed guidelines on how to contribute, please refer to our [Contributing Guide](CONTRIBUTING.md).
+
 ## Issues
 
 If you encounter any bugs or have suggestions for improvements, please [open an issue](https://github.com/kochas23/Threat-Watch/issues).
