@@ -97,4 +97,4 @@ Instagram: [Threat-Watch](https://instagram.com/_threat_watch_official_?utm_sour
 
 Thank you for your interest in Threat-Watch!
 
-[Include badges or relevant images if desired.]
+# Help us create a safer digital world
