@@ -22,11 +22,13 @@ Welcome to our project's security policy. Security is a top priority, and we're 
 
 ## Supported Versions
 
-• Version 0.0.1 ✗ 
+• 
 
-([UI testing version])
+•
 
-• Version 0.0.2 ✓
+•
+
+•
 
 ## Reporting a Vulnerability
 
@@ -114,9 +116,11 @@ If you discover a security vulnerability or privacy issue in our app, please rep
 
 Please make sure you are using the latest version of our app to ensure you have the latest security updates and improvements. We provide security updates for the following versions:
 
-• Version 0.0.1 ✓
+•
 
-• Version 0.0.2 ✓
+•
+
+•
 
 ## Security Measures
 
