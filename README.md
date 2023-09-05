@@ -1,4 +1,5 @@
 <a title="Crowdin" target="_blank" href="https://crowdin.com/project/Threat-Watch_GitHub_README_file"><img src="https://badges.crowdin.net/Threat-Watch_GitHub_README_file/localized.svg"></a>
+
 <img alt="License" src="https://img.shields.io/github/license/kochas23/Threat-Watch?style=for-the-badge&label=License&&color=#333"> <img alt="Static Badge" src="https://img.shields.io/badge/Active-brightgreen?style=for-the-badge&label=Status&labelColor=%23008080&color=%23009010">
 <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/kochas23/Threat-Watch/Core?style=for-the-badge&logoColor=%23002147&label=Last%20commit&labelColor=%23008080&color=%2300FF00"> <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/kochas23/Threat-Watch?style=for-the-badge&labelColor=%230000FF">
 
