@@ -78,7 +78,7 @@ We welcome contributions from the community! If you'd like to contribute to Thre
 
 Please ensure that your contributions align with our [Code of Conduct](CODE_OF_CONDUCT.md).
 
-For more detailed guidelines on how to contribute, please refer to our [Contributing Guide](CONTRIBUTING.md).
+For more detailed guidelines on how to contribute, please refer to our [Contributing Guide](Contributing.md).
 
 ## Issues
 
