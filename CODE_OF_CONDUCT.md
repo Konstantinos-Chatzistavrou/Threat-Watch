@@ -11,7 +11,7 @@
 
 ## Our Pledge
 
-• We are committed to fostering an open and welcoming environment for everyone who wants to contribute to Threat-Watch, regardless of their background or identity. Our community values respect, collaboration, and the sharing of diverse perspectives.
+We are committed to fostering an open and welcoming environment for everyone who wants to contribute to Threat-Watch, regardless of their background or identity. Our community values respect, collaboration, and the sharing of diverse perspectives.
 
 ## Expected Behavior
 
