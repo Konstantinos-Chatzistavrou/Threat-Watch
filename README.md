@@ -62,6 +62,7 @@ Welcome to the Threat-Watch Maintenance Team! Get to know the dedicated individu
 
  **Konstantinos Chatzistavrou** - Project Lead
 - Contact: [konstantinoschatzistavrou@gmail.com](mailto:konstantinoschatzistavrou@gmail.com)
+
  **Lucy Conner** - Back-End Developer
 
 For more details about each team member's role and responsibilities, please refer to the [Maintenance Team Documentation](Μaintenance team.md).
