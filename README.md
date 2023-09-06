@@ -14,7 +14,7 @@
   </ul>
 </details>
 
-##### If you want to help us translate this file to your mother language please read how to translate it from Crowdin here: [Translations Guide](Translations.md).
+##### If you want to help us translate this file to your mother language please read how to translate it from Crowdin here: [Translations Guide](Translations.md). Make sure to click the translated versions button to check which languages are already available.
 
 # Threat-Watch
 The privacy focused cybersecurity news app. Project's official website: [Threat Watch: Stay up-to-date](https://threatwatch.unofficialcreators.com)
