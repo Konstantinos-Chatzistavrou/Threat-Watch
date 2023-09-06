@@ -60,30 +60,10 @@ Welcome to the Threat-Watch Maintenance Team! Get to know the dedicated individu
 
 ### Team Members
 
-- **Konstantinos Chatzistavrou** - Project Lead
-- Contact: [konstantinoschatzistavrou@gmail.com](mailto:konstantinoschatzistavrou@gmail.com)
-- Responsibilities:
-- Overall project oversight and direction
-- Decision-making on project direction, features, and enhancements
-- Coordination and communication with contributors and users
+• **Konstantinos Chatzistavrou** - Project Lead
+Contact: [konstantinoschatzistavrou@gmail.com](mailto:konstantinoschatzistavrou@gmail.com)
 
-- **Lucy Conner** - Back-End Developer
-- Responsibilities:
-- Back-End development and Maintenance
-- API development
-
-### Roles and Responsibilities
-
-- **Project Lead**
-- Provides overall project vision and direction.
-- Makes decisions on project priorities, features, and roadmaps.
-- Manages communication and coordination with contributors, users, and stakeholders.
-
-- **Developer**
-- Implements new features and enhancements according to project requirements.
-- Reviews and merges pull requests from contributors.
-- Conducts code reviews to maintain code quality and consistency.
-- Resolves bugs and issues reported by users.
+• **Lucy Conner** - Back-End Developer
 
 For more details about each team member's role and responsibilities, please refer to the [Maintenance Team Documentation](Μaintenance team.md).
 
