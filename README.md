@@ -14,6 +14,8 @@ Available in 1 more language
   </ul>
 </details>
 
+### If you want to help us translate this file to your mother language please read how to translate it from Crowdin here: [Translations Guide](Translations.md).
+
 # Threat-Watch
 The privacy focused cybersecurity news app. Project's official website: [Threat Watch: Stay up-to-date](https://threatwatch.unofficialcreators.com)
 
