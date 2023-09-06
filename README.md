@@ -14,8 +14,6 @@
   </ul>
 </details>
 
-##### If you want to help us translate this file to your mother language please read how to translate it from Crowdin here: [Translations Guide](Translations.md). Make sure to click the translated versions button to check which languages are already available.
-
 # Threat-Watch
 The privacy focused cybersecurity news app. Project's official website: [Threat Watch: Stay up-to-date](https://threatwatch.unofficialcreators.com)
 
@@ -26,12 +24,12 @@ The privacy focused cybersecurity news app. Project's official website: [Threat 
 
 - [Threat-Watch](#threat-watch)
 - [Features](#features)
-- [Meet the team](#meet the threat-watch team)
+- [Meet the team](#meet the%20threat-watch%20team)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Issues](#issues)
-- [Sponsors and Dontions](#sponsors and donations)
+- [Sponsors and Dontions](#sponsors%20and%20donations)
 - [License](#license)
 - [Contact](#contact)
 
@@ -140,5 +138,7 @@ Mail: threatwatchapp@gmail.com
 Instagram: [Threat-Watch](https://instagram.com/_threat_watch_official_?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D)
 
 Thank you for your interest in Threat-Watch!
+
+##### If you want to help us translate this file to your mother language please read how to translate it from Crowdin here: [Translations Guide](Translations.md). Make sure to click the translated versions button to check which languages are already available.
 
 # Help us create a safer digital world
