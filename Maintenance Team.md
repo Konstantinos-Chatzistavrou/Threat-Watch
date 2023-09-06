@@ -59,12 +59,10 @@ The maintenance team is responsible for ensuring the continuous health, stabilit
   - Decision-making on project direction, features, and enhancements
   - Coordination and communication with contributors and users
 
-### [Team Member 1's Name](link_to_profile) - Developer
-- **Contact:** [Email](mailto:teammember1@example.com)
+### [Lucy Conner](. ) - Back-End Developer
 - **Responsibilities:**
-  - Code review and quality assurance
-  - Bug fixes and issue resolution
-  - Feature implementation and enhancements
+  - Back-End development and Maintenance 
+  - API development
 
 ### [Team Member 2's Name](link_to_profile) - Security Lead
 - **Contact:** [Email](mailto:teammember2@example.com)
