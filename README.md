@@ -54,18 +54,33 @@ Welcome to Threat-Watch, the most privacy-focused cybersecurity news app in the 
 
 - No central server, everything is run either inside the user's device or inside an API, thus making it almost impossible for a breach to ever happen.
 
-## Meet the Threat-Watch Maintenance Team
+## Meet the Threat-Watch Team
 
-Welcome to the Threat-Watch Maintenance Team! Get to know the dedicated individuals who work behind the scenes to ensure the security, stability, and improvement of the Threat-Watch project.
+Introducing you to the Threat-Watch Team! Get to know the dedicated individuals who work behind the scenes to ensure the security, stability, and improvement of the Threat-Watch project.
+
+## Maintenance
 
 ### Team Members
 
 • **Konstantinos Chatzistavrou** - Project Lead
+
 Contact: [konstantinoschatzistavrou@gmail.com](mailto:konstantinoschatzistavrou@gmail.com)
 
 • **Lucy Conner** - Back-End Developer
 
-For more details about each team member's role and responsibilities, please refer to the [Maintenance Team Documentation](Μaintenance team.md).
+• 
+
+•
+
+## Security
+
+•
+
+•
+
+•
+
+For more details about each team member's role and responsibilities, please refer to the [Maintenance Team Documentation](Μaintenance Team.md).
 
 We appreciate the hard work and dedication of our Maintenance Team in making Threat-Watch the best it can be!
 
