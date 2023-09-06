@@ -26,10 +26,12 @@ The privacy focused cybersecurity news app. Project's official website: [Threat 
 
 - [Threat-Watch](#threat-watch)
 - [Features](#features)
+- [Meet the team](#meet the threat-watch team)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Issues](#issues)
+- [Sponsors and Dontions](#sponsors and donations)
 - [License](#license)
 - [Contact](#contact)
 
@@ -121,7 +123,7 @@ If you encounter any bugs or have suggestions for improvements, please [open an 
 
 ## Sponsors and donations
 
-Are you interested in sponsoring this project or contributing with donations? Learn more in [Partners and Sponsors](Partners%20and%20Sponsors.md)
+Are you interested in sponsoring this project or contributing with donations? Learn more in [Partners and Sponsors](Partners%20And%20Sponsors.md)
 
 ## License
 
