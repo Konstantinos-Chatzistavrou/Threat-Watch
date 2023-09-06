@@ -80,7 +80,7 @@ Contact: [konstantinoschatzistavrou@gmail.com](mailto:konstantinoschatzistavrou@
 
 •
 
-For more details about each team member's role and responsibilities, please refer to the [Maintenance Team Documentation](Μaintenance team.md).
+For more details about each team member's role and responsibilities, please refer to the [Maintenance Team Documentation](Μaintenance Team.md).
 
 We appreciate the hard work and dedication of our Maintenance Team in making Threat-Watch the best it can be!
 
