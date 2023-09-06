@@ -119,6 +119,10 @@ For more detailed guidelines on how to contribute, please refer to our [Contribu
 
 If you encounter any bugs or have suggestions for improvements, please [open an issue](https://github.com/kochas23/Threat-Watch/issues).
 
+## Sponsors and donations
+
+Are you interested in sponsoring this project or contributing with donations? Learn more in [Sponsors and donations]()
+
 ## License
 
 This project is licensed under the [GNU General Public License version 3 (GPLv3)](https://github.com/kochas23/Threat-Watch/blob/Core/LICENSE). 
