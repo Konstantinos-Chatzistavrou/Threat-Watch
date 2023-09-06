@@ -7,8 +7,7 @@
 
 ### Available in 1 more language
 <details>
-  <summary>
-### Translated Versions</summary>
+  <summary>Translated Versions</summary>
   <ul>
     <li><a href="https://github.com/kochas23/Threat-Watch/blob/Core/README-GR.md">Ελληνικά</a></li>
     <!-- Add more translated version links here -->
