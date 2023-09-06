@@ -121,7 +121,7 @@ If you encounter any bugs or have suggestions for improvements, please [open an 
 
 ## Sponsors and donations
 
-Are you interested in sponsoring this project or contributing with donations? Learn more in [Sponsors and donations]()
+Are you interested in sponsoring this project or contributing with donations? Learn more in [Partners and Sponsors](Partners%20and%20Sponsors.md)
 
 ## License
 
