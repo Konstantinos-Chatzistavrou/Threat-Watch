@@ -59,7 +59,7 @@ The maintenance team is responsible for ensuring the continuous health, stabilit
   - Decision-making on project direction, features, and enhancements
   - Coordination and communication with contributors and users
 
-### [Lucy Conner](. ) - Back-End Developer
+### [Lucy Conner](https://github.com/Luco2) - Back-End Developer
 - **Responsibilities:**
   - Back-End development and Maintenance 
   - API development
