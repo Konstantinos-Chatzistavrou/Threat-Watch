@@ -24,8 +24,8 @@ The privacy focused cybersecurity news app. Project's official website: [Threat 
 
 - [Threat-Watch](#threat-watch)
 - [Features](#features)
-- [Logo and app name license](#logo%20and%20app%20name%20license]
-- [Meet the team](#meet%20the%20threat-watch%20team)
+- [Logo and app name license](#logo-and-app-name-license]
+- [Meet the team](#meet-the-threat-watch-team)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -66,7 +66,7 @@ For details, please visit: https://creativecommons.org/licenses/by-nc/4.0/
 
 This license applies to the Threat-Watch logo and the app name "Threat-Watch" in this repository.
 
-## Logo and App Name License
+## Logo-and-App-Name-License
 
 The logo and app name displayed in this repository are licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
 
