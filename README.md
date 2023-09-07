@@ -54,7 +54,10 @@ Welcome to Threat-Watch, the most privacy-focused cybersecurity news app in the 
 
 - No central server, everything is run either inside the user's device or inside an API, thus making it almost impossible for a breach to ever happen.
 
-# Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)
+# Creative Commons license
+
+License used:
+Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)
 
 This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
 For details, please visit: https://creativecommons.org/licenses/by-nc/4.0/
