@@ -72,7 +72,7 @@ The logo and app name displayed in this repository are licensed under a [Creativ
 
 This means you are free to use, share, and modify the logo and app name for non-commercial purposes. For any commercial use, please contact us for permission.
 
-## Meet_the_Threat-Watch_Team
+## Meet-the-Threat-Watch-Team
 
 Introducing you to the Threat-Watch Team! Get to know the dedicated individuals who work behind the scenes to ensure the security, stability, and improvement of the Threat-Watch project.
 
