@@ -57,6 +57,7 @@ Welcome to Threat-Watch, the most privacy-focused cybersecurity news app in the 
 # Creative Commons license
 
 License used:
+
 Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)
 
 This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
