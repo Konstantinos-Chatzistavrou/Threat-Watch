@@ -20,20 +20,20 @@ The privacy focused cybersecurity news app. Project's official website: [Threat 
 <p align="center">
 <a href="https://ibb.co/qx6604P"><img src="https://i.ibb.co/vD99srK/IMG-20230905-000015.png" alt="IMG-20230905-000015" border="0" alt="Threat-Watch logo" width="200" height="auto" style="border-radius: 10px;"></a></p>
 
+
 ## Table of Contents
 
 - [Threat-Watch](#threat-watch)
 - [Features](#features)
-- [Logo and app name license](#logo-and-app-name-license]
+- [Logo and app name license](#logo-and-app-name-license)
 - [Meet the team](#meet-the-threat-watch-team)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Issues](#issues)
-- [Sponsors and Dontions](#sponsors%20and%20donations)
+- [Sponsors and donations](#sponsors-and-donations)
 - [License](#license)
 - [Contact](#contact)
-
 
 Welcome to Threat-Watch, the most privacy-focused cybersecurity news app in the world. This README provides an overview of the app's features, installation instructions, how to contribute, and more.
 
@@ -72,7 +72,7 @@ The logo and app name displayed in this repository are licensed under a [Creativ
 
 This means you are free to use, share, and modify the logo and app name for non-commercial purposes. For any commercial use, please contact us for permission.
 
-## Meet the Threat-Watch Team
+## Meet_the_Threat-Watch_Team
 
 Introducing you to the Threat-Watch Team! Get to know the dedicated individuals who work behind the scenes to ensure the security, stability, and improvement of the Threat-Watch project.
 
