@@ -25,7 +25,7 @@ The privacy focused cybersecurity news app. Project's official website: [Threat 
 - [Threat-Watch](#threat-watch)
 - [Features](#features)
 - [Logo and app name license](#logo-and-app-name-license]
-- [Meet the team](#meet%20the%20threat-watch%20team)
+- [Meet the team](#meet-the-threat-watch-team)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
