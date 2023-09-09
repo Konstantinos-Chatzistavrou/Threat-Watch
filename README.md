@@ -98,7 +98,7 @@ Contact: [konstantinoschatzistavrou@gmail.com](mailto:konstantinoschatzistavrou@
 
 •
 
-For more details about each team member's role and responsibilities, please refer to the [Maintenance Team Documentation](Μaintenance%20Team.md) and the [Security Team Documentation](Security%20Team.md).
+For more details about each team member's role and responsibilities, please refer to the [Maintenance Team Documentation](https://github.com/kochas23/Threat-Watch/blob/Core/Maintenance%20Team.md) and the [Security Team Documentation](https://github.com/kochas23/Threat-Watch/blob/Core/Security%20Team.md).
 
 We appreciate the hard work and dedication of our Maintenance Team in making Threat-Watch the best it can be!
 
