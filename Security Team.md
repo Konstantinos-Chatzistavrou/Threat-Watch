@@ -16,8 +16,7 @@ Welcome to the Threat-Watch Security Team! This document provides information ab
   - Security code practices and training
   - Collaborating with developers to implement security best practices
 
-### [Team Member 3's Name](link_to_profile) - Network Security Specialist
-- **Contact:** [Email](mailto:teammember3@example.com)
+### [Daniel Niamien](link_to_profile) - Network Security Specialist
 - **Responsibilities:**
   - Network security assessment and recommendations
   - Collaborating with developers to ensure network security
