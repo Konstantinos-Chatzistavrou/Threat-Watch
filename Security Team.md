@@ -16,7 +16,7 @@ Welcome to the Threat-Watch Security Team! This document provides information ab
   - Security code practices and training
   - Collaborating with developers to implement security best practices
 
-### [Daniel Niamien](link_to_profile) - Network Security Specialist
+### [Daniel Niamien](https://github.com/nyd2) - Network Security Specialist
 - **Responsibilities:**
   - Network security assessment and recommendations
   - Collaborating with developers to ensure network security
