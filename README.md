@@ -92,7 +92,7 @@ Contact: [konstantinoschatzistavrou@gmail.com](mailto:konstantinoschatzistavrou@
 
 ## Security
 
-•
+• [Zacharia Mosehle](https://github.com/Zach-Mose) - Security Specialist
 
 • [Daniel Niamien](https://github.com/nyd2) - Network Security Specialist
 
