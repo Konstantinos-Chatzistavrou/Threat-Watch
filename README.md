@@ -94,7 +94,7 @@ Contact: [konstantinoschatzistavrou@gmail.com](mailto:konstantinoschatzistavrou@
 
 •
 
-•
+• [Daniel Niamien](https://github.com/nyd2) - Network Security Specialist
 
 •
 
