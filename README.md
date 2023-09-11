@@ -80,7 +80,7 @@ Introducing you to the Threat-Watch Team! Get to know the dedicated individuals 
 
 ### Team Members
 
-• **Konstantinos Chatzistavrou** - Project Manager and Lead
+• [Konstantinos Chatzistavrou](https://github.com/kochas23) - Project Manager and Lead
 
 Contact: [konstantinoschatzistavrou@gmail.com](mailto:konstantinoschatzistavrou@gmail.com)
 
