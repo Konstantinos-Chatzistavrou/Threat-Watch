@@ -84,7 +84,7 @@ Introducing you to the Threat-Watch Team! Get to know the dedicated individuals 
 
 Contact: [konstantinoschatzistavrou@gmail.com](mailto:konstantinoschatzistavrou@gmail.com)
 
-• **Lucy Conner** - Back-End Developer
+• [Lucy Conner](https://github.com/Luco2) - Back-End Developer
 
 • 
 
