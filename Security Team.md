@@ -11,7 +11,7 @@ Welcome to the Threat-Watch Security Team! This document provides information ab
   - Incident response and mitigation
   - Ensuring adherence to security best practices
 
-### [Zacharia Mosehle](link_to_profile) - Security Specialist
+### [Zacharia Mosehle](https://github.com/Zach-Mose) - Security Specialist
 - **Responsibilities:**
   - Security code practices and training
   - Collaborating with developers to implement security best practices
