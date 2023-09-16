@@ -17,7 +17,7 @@ Welcome to the Threat-Watch Maintenance Team! We're excited to have you onboard 
    - [Roles and Responsibilities](#roles-and-responsibilities)
      - [Project Lead](#project-lead)
      - [Developer](#developer)
-     - [Security Lead](#security-lead)
+     - [UI/UX design](#UI/UX-design)
    - [Contact](#contact)
 
 ## Role Overview
@@ -64,12 +64,10 @@ The maintenance team is responsible for ensuring the continuous health, stabilit
   - Back-End development and Maintenance 
   - API development
 
-### [Team Member 2's Name](link_to_profile) - Security Lead
-- **Contact:** [Email](mailto:teammember2@example.com)
+### [Cameron Keeley](link_to_profile) - UI/UX design
 - **Responsibilities:**
-  - Security audits and vulnerability assessment
-  - Incident response and mitigation
-  - Ensuring adherence to security best practices
+  - Design the UI of the app
+  - Improve UX.
 
 ## Roles and Responsibilities
 
@@ -87,7 +85,7 @@ The maintenance team is responsible for ensuring the continuous health, stabilit
 - Conducts code reviews to maintain code quality and consistency.
 - Resolves bugs and issues reported by users.
 
-### Security Lead
+### UI/UX-Design
 
 - Conducts regular security audits and assessments.
 - Identifies potential vulnerabilities and recommends security enhancements.
