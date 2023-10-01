@@ -88,7 +88,7 @@ Contact: [konstantinoschatzistavrou@gmail.com](mailto:konstantinoschatzistavrou@
 
 • [Lucy Conner](https://github.com/Luco2) - Back-End Developer
 
-• 
+• [Cameron Keeley](https://github.com/cameronwritingcode) - UI/UX design
 
 •
 
