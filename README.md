@@ -90,7 +90,7 @@ Contact: [konstantinoschatzistavrou@gmail.com](mailto:konstantinoschatzistavrou@
 
 • [Cameron Keeley](https://github.com/cameronwritingcode) - UI/UX design
 
-•
+• [Ethan Huang](https://github.com/ehuang47) - Front-End Developer 
 
 ## Security
 
