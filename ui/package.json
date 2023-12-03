@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ionic/react": "^7.5.7",
+    "@ionic/react-router": "^7.5.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
