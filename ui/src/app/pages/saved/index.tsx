@@ -1,5 +1,5 @@
-import ExploreContainer from '../components/ExploreContainer';
-import './Tab2.css';
+import ExploreContainer from '../../components/ExploreContainer';
+import './index.css';
 import { camera, trash, close } from 'ionicons/icons';
 import {
     IonContent,
@@ -16,10 +16,10 @@ import {
     IonImg,
     IonActionSheet,
 } from '@ionic/react';
-import {usePhotoGallery, UserPhoto} from "../hooks/usePhotoGallery";
+import {usePhotoGallery, UserPhoto} from "../../hooks/usePhotoGallery";
 import {useState} from "react";
 
-const Tab2: React.FC = () => {
+const Saved: React.FC = () => {
     const {takePhoto, photos, deletePhoto} = usePhotoGallery();
     const [photoToDelete, setPhotoToDelete] = useState<UserPhoto>();
 
@@ -78,4 +78,4 @@ const Tab2: React.FC = () => {
   );
 };
 
-export default Tab2;
+export default Saved;
