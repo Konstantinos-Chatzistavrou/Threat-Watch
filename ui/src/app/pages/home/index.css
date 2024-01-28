@@ -1,0 +1,7 @@
+ion-row {
+    display: flex;
+    background-color: #135d54;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
