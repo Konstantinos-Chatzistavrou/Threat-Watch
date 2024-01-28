@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ionic build
+ionic cap copy # into native projects
+ionic cap sync # run if updating native code (adding a new plugin)
