@@ -43,7 +43,7 @@ Welcome to Threat-Watch, the most privacy-focused cybersecurity news app in the 
 
 - Stay up-to-date with the latest cybersecurity news and trends.
 
-- Privacy-focused: We prioritize user privacy and have a no data collection policy. We will never collect or give any of your data away to third-parties, not even anonymously.
+- Privacy-focused: We prioritize user privacy and have a no data collection policy. We will never collect or give any of your data away to third-parties, not even anonymously. (GDPR compliant)
 
 - Minimal Third-Party Dependence: In our commitment to user privacy, we minimize reliance on third-party services wherever possible.
 
