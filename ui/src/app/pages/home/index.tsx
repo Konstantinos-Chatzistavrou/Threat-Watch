@@ -15,6 +15,7 @@ import {
 } from "@ionic/react";
 import "./index.css";
 import { logoRss, sparkles, syncCircle } from "ionicons/icons";
+import React from "react";
 
 // todo: figure out why SVG doesn't load
 const Home: React.FC = () => {

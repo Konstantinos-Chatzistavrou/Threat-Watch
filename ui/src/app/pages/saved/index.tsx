@@ -1,29 +1,29 @@
-import ExploreContainer from '../../components/ExploreContainer';
-import './index.css';
-import { camera, trash, close } from 'ionicons/icons';
+import ExploreContainer from "../../common/ExploreContainer/ExploreContainer";
+import "./index.css";
+import { camera, close, trash } from "ionicons/icons";
 import {
-    IonContent,
-    IonHeader,
-    IonPage,
-    IonTitle,
-    IonToolbar,
-    IonFab,
-    IonFabButton,
-    IonIcon,
-    IonGrid,
-    IonRow,
-    IonCol,
-    IonImg,
-    IonActionSheet,
-} from '@ionic/react';
-import {usePhotoGallery, UserPhoto} from "../../hooks/usePhotoGallery";
-import {useState} from "react";
+  IonActionSheet,
+  IonCol,
+  IonContent,
+  IonFab,
+  IonFabButton,
+  IonGrid,
+  IonHeader,
+  IonIcon,
+  IonImg,
+  IonPage,
+  IonRow,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/react";
+import { usePhotoGallery, UserPhoto } from "../../hooks/usePhotoGallery";
+import { useState } from "react";
 
 const Saved: React.FC = () => {
-    const {takePhoto, photos, deletePhoto} = usePhotoGallery();
-    const [photoToDelete, setPhotoToDelete] = useState<UserPhoto>();
+  const { takePhoto, photos, deletePhoto } = usePhotoGallery();
+  const [photoToDelete, setPhotoToDelete] = useState<UserPhoto>();
 
-    return (
+  return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
@@ -37,42 +37,45 @@ const Saved: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <ExploreContainer name="Tab 2 page" />
-          <IonFab vertical="bottom" horizontal="center" slot="fixed">
-              <IonFabButton onClick={() => takePhoto()}>
-                  <IonIcon icon={camera}></IonIcon>
-              </IonFabButton>
-          </IonFab>
-          <IonGrid>
-              <IonRow>
-                  {photos.map((photo, index) => (
-                      <IonCol size="6" key={photo.filepath}>
-                          <IonImg onClick={() => setPhotoToDelete(photo)} src={photo.webviewPath} />
-                      </IonCol>
-                  ))}
-              </IonRow>
-          </IonGrid>
-          <IonActionSheet
-              isOpen={!!photoToDelete}
-              buttons={[
-                  {
-                      text: 'Delete',
-                      role: 'destructive',
-                      icon: trash,
-                      handler: () => {
-                          if (photoToDelete) {
-                              deletePhoto(photoToDelete);
-                              setPhotoToDelete(undefined);
-                          }
-                      },
-                  },
-                  {
-                      text: 'Cancel',
-                      icon: close,
-                      role: 'cancel',
-                  },
-              ]}
-              onDidDismiss={() => setPhotoToDelete(undefined)}
-          />
+        <IonFab vertical="bottom" horizontal="center" slot="fixed">
+          <IonFabButton onClick={() => takePhoto()}>
+            <IonIcon icon={camera}></IonIcon>
+          </IonFabButton>
+        </IonFab>
+        <IonGrid>
+          <IonRow>
+            {photos.map((photo, index) => (
+              <IonCol size="6" key={photo.filepath}>
+                <IonImg
+                  onClick={() => setPhotoToDelete(photo)}
+                  src={photo.webviewPath}
+                />
+              </IonCol>
+            ))}
+          </IonRow>
+        </IonGrid>
+        <IonActionSheet
+          isOpen={!!photoToDelete}
+          buttons={[
+            {
+              text: "Delete",
+              role: "destructive",
+              icon: trash,
+              handler: () => {
+                if (photoToDelete) {
+                  deletePhoto(photoToDelete);
+                  setPhotoToDelete(undefined);
+                }
+              },
+            },
+            {
+              text: "Cancel",
+              icon: close,
+              role: "cancel",
+            },
+          ]}
+          onDidDismiss={() => setPhotoToDelete(undefined)}
+        />
       </IonContent>
     </IonPage>
   );
