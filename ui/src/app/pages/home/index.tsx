@@ -1,4 +1,5 @@
 import {
+  IonButton,
   IonCol,
   IonContent,
   IonGrid,
@@ -19,6 +20,8 @@ import React from "react";
 
 // todo: figure out why SVG doesn't load
 const Home: React.FC = () => {
+  const handleSearchChange = () => {};
+
   return (
     <IonPage>
       <IonHeader>
@@ -27,28 +30,44 @@ const Home: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonGrid class={"ion-no-padding"}>
-          <IonRow>
+        <IonGrid className={"ion-no-padding"}>
+          <IonRow
+            className={"ion-padding-horizontal"}
+            data-testid={"home-search-row"}
+          >
             <IonCol size={"1"}>
-              <IonIcon
-                aria-hidden="true"
-                icon={syncCircle}
-                style={{ fontSize: "24px" }}
-              />
+              <IonButton
+                className={"ion-no-padding custom"}
+                aria-label="search-reload"
+              >
+                <IonIcon
+                  slot={"icon-only"}
+                  aria-hidden={true}
+                  icon={syncCircle}
+                />
+              </IonButton>
             </IonCol>
-            <IonCol>
+            <IonCol className={"ion-padding-horizontal"}>
               <IonSearchbar
                 aria-label="home-search-input"
                 animated={true}
                 placeholder="tap to search"
+                debounce={500}
+                onIonInput={handleSearchChange}
+                className={"custom"}
               ></IonSearchbar>
             </IonCol>
             <IonCol size={"1"}>
-              <IonIcon
-                aria-hidden="true"
-                icon={sparkles}
-                style={{ fontSize: "24px" }}
-              />
+              <IonButton
+                className={"ion-no-padding custom"}
+                aria-label="sparkles-placeholder-aria-label"
+              >
+                <IonIcon
+                  slot={"icon-only"}
+                  aria-hidden={true}
+                  icon={sparkles}
+                />
+              </IonButton>
             </IonCol>
           </IonRow>
           <IonRow>
