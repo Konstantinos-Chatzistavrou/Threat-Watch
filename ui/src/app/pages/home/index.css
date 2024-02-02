@@ -1,7 +1,15 @@
 ion-row {
     display: flex;
-    background-color: #135d54;
+    background-color: #65E09D;
     align-items: center;
     justify-content: center;
     height: 100%;
+}
+
+ion-searchbar.custom {
+    --border-radius: 10px;
+}
+
+ion-button.custom {
+    --background: #135d54;
 }
