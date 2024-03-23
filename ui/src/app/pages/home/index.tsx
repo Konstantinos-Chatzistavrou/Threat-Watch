@@ -3,7 +3,6 @@ import {
   IonCol,
   IonContent,
   IonGrid,
-  IonHeader,
   IonIcon,
   IonItem,
   IonLabel,
@@ -12,23 +11,18 @@ import {
   IonPage,
   IonRow,
   IonSearchbar,
-  IonToolbar,
 } from "@ionic/react";
 import "./index.css";
-import { logoRss, sparkles, syncCircle } from "ionicons/icons";
+import { sparkles, syncCircle } from "ionicons/icons";
 import React from "react";
+import Header from "../../common/Header/Header";
 
-// todo: figure out why SVG doesn't load
 const Home: React.FC = () => {
   const handleSearchChange = () => {};
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonIcon aria-hidden="true" src={logoRss} size={"large"} />
-        </IonToolbar>
-      </IonHeader>
+      <Header />
       <IonContent fullscreen>
         <IonGrid className={"ion-no-padding"}>
           <IonRow
