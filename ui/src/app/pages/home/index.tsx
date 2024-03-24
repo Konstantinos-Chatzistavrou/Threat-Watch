@@ -1,9 +1,7 @@
 import {
-  IonButton,
   IonCol,
   IonContent,
   IonGrid,
-  IonIcon,
   IonItem,
   IonLabel,
   IonList,
@@ -15,6 +13,7 @@ import {
 import { sparkles, syncCircle } from "ionicons/icons";
 import React from "react";
 import Header from "../../common/Header/Header";
+import Button from "../../common/Button/Button";
 
 const Home: React.FC = () => {
   const handleSearchChange = () => {};
@@ -29,17 +28,11 @@ const Home: React.FC = () => {
             data-testid={"home-search-row"}
           >
             <IonCol size={"1"}>
-              <IonButton
-                className={"ion-no-padding custom"}
-                aria-label="search-reload"
-              >
-                <IonIcon
-                  slot={"icon-only"}
-                  size="large"
-                  aria-hidden={true}
-                  icon={syncCircle}
-                />
-              </IonButton>
+              <Button
+                ariaLabel={"search-reload"}
+                type="icon"
+                icon={syncCircle}
+              />
             </IonCol>
             <IonCol className={"ion-padding-horizontal"}>
               <IonSearchbar
@@ -52,17 +45,11 @@ const Home: React.FC = () => {
               ></IonSearchbar>
             </IonCol>
             <IonCol size={"1"}>
-              <IonButton
-                className={"ion-no-padding custom"}
-                aria-label="sparkles-placeholder-aria-label"
-              >
-                <IonIcon
-                  slot={"icon-only"}
-                  size="large"
-                  aria-hidden={true}
-                  icon={sparkles}
-                />
-              </IonButton>
+              <Button
+                ariaLabel={"sparkles-placeholder-aria-label"}
+                type="icon"
+                icon={sparkles}
+              />
             </IonCol>
           </IonRow>
           <IonRow>
