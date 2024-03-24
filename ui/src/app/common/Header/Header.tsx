@@ -17,8 +17,8 @@ interface HeaderProps {
 const Header = ({ title, children }: PropsWithChildren<HeaderProps>) => (
   <IonHeader>
     <IonToolbar>
-      <IonGrid className={"ion-no-padding"}>
-        <IonRow className={"ion-padding-horizontal"}>
+      <IonGrid>
+        <IonRow>
           <IonCol>
             <IonIcon className="xl" aria-hidden="true" src={logo} />
           </IonCol>

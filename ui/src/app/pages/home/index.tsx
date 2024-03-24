@@ -22,19 +22,19 @@ const Home: React.FC = () => {
     <IonPage>
       <Header />
       <IonContent fullscreen>
-        <IonGrid className={"ion-no-padding"}>
+        <IonGrid className={""}>
           <IonRow
-            className={"ion-padding-horizontal"}
+            className={"ion-justify-content-start ion-align-items-center"}
             data-testid={"home-search-row"}
           >
-            <IonCol size={"1"}>
+            <IonCol size={"2"}>
               <Button
                 ariaLabel={"search-reload"}
                 type="icon"
                 icon={syncCircle}
               />
             </IonCol>
-            <IonCol className={"ion-padding-horizontal"}>
+            <IonCol>
               <IonSearchbar
                 aria-label="home-search-input"
                 animated={true}
@@ -44,8 +44,9 @@ const Home: React.FC = () => {
                 className={"custom"}
               ></IonSearchbar>
             </IonCol>
-            <IonCol size={"1"}>
+            <IonCol size={"2"}>
               <Button
+                classes={"ion-float-right"}
                 ariaLabel={"sparkles-placeholder-aria-label"}
                 type="icon"
                 icon={sparkles}

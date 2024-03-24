@@ -1,16 +1,12 @@
-ion-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
 ion-icon.xl {
     font-size: 3rem;
 }
 
 ion-searchbar.custom {
     --border-radius: 10px;
+    --background: #F2E5E5;
+    color: #797272;
+    text-align: center;
 }
 
 ion-content {
