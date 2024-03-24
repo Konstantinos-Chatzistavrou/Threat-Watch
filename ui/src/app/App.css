@@ -15,13 +15,23 @@ ion-content {
 
 ion-tab-bar, ion-toolbar {
     --background: #4CA7BE;
+    border: none;
 }
 
 ion-button.custom {
     --background: #4CA7BE;
-    border: 1px solid black;
     border-radius: 5px;
     width: 2.5rem;
+}
+
+ion-button.none {
+    --background: transparent;
+    --box-shadow: none;
+}
+
+ion-accordion-group.custom {
+    --ion-background-color: transparent;
+    --ion-item-background: rgb(100, 165, 187, 0.75);
 }
 
 ion-tab-button:not(.tab-selected) {

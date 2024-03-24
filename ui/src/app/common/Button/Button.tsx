@@ -35,7 +35,7 @@ const Button = ({
 
   return (
     <IonButton
-      className={`ion-no-padding custom ${classes || ""}`}
+      className={`ion-no-padding ${classes || ""}`}
       aria-label={ariaLabel}
     >
       {buttonContents}

@@ -18,7 +18,7 @@ const Header = ({ title, children }: PropsWithChildren<HeaderProps>) => (
   <IonHeader>
     <IonToolbar>
       <IonGrid>
-        <IonRow>
+        <IonRow class={"ion-align-items-center"}>
           <IonCol>
             <IonIcon className="xl" aria-hidden="true" src={logo} />
           </IonCol>

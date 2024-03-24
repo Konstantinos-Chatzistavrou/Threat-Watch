@@ -1,16 +1,21 @@
 import {
+  IonAccordion,
+  IonAccordionGroup,
   IonCol,
   IonContent,
   IonGrid,
   IonItem,
   IonLabel,
-  IonList,
-  IonListHeader,
   IonPage,
   IonRow,
   IonSearchbar,
 } from "@ionic/react";
-import { sparkles, syncCircle } from "ionicons/icons";
+import {
+  caretDownCircle,
+  ellipsisHorizontalCircleSharp,
+  sparkles,
+  syncCircle,
+} from "ionicons/icons";
 import React from "react";
 import Header from "../../common/Header/Header";
 import Button from "../../common/Button/Button";
@@ -24,7 +29,7 @@ const Home: React.FC = () => {
       <IonContent fullscreen>
         <IonGrid className={""}>
           <IonRow
-            className={"ion-justify-content-start ion-align-items-center"}
+            className={"ion-align-items-center"}
             data-testid={"home-search-row"}
           >
             <IonCol size={"2"}>
@@ -32,6 +37,7 @@ const Home: React.FC = () => {
                 ariaLabel={"search-reload"}
                 type="icon"
                 icon={syncCircle}
+                classes={"custom"}
               />
             </IonCol>
             <IonCol>
@@ -46,7 +52,7 @@ const Home: React.FC = () => {
             </IonCol>
             <IonCol size={"2"}>
               <Button
-                classes={"ion-float-right"}
+                classes={"ion-float-right custom"}
                 ariaLabel={"sparkles-placeholder-aria-label"}
                 type="icon"
                 icon={sparkles}
@@ -54,19 +60,33 @@ const Home: React.FC = () => {
             </IonCol>
           </IonRow>
           <IonRow>
-            <IonList>
-              <IonListHeader>
-                <IonLabel>Critical News</IonLabel>
-              </IonListHeader>
-              <IonItem></IonItem>
-              <IonItem></IonItem>
-            </IonList>
-          </IonRow>
-          <IonRow>
-            <IonListHeader>
-              <IonLabel>NEWS</IonLabel>
-            </IonListHeader>
-            <IonList></IonList>
+            <IonCol>
+              <IonAccordionGroup class={"custom"}>
+                <IonAccordion
+                  value="first"
+                  toggleIcon={caretDownCircle}
+                  toggleIconSlot="start"
+                >
+                  <IonItem slot="header">
+                    <IonRow class={"ion-align-items-center"}>
+                      <IonLabel class={"ion-padding-end"} color={"dark"}>
+                        Critical News
+                      </IonLabel>
+                      <Button
+                        type={"icon"}
+                        icon={ellipsisHorizontalCircleSharp}
+                        ariaLabel={"critical-news-menu"}
+                        size={"small"}
+                        classes={"none"}
+                      />
+                    </IonRow>
+                  </IonItem>
+                  <div className="ion-padding" slot="content">
+                    lorem
+                  </div>
+                </IonAccordion>
+              </IonAccordionGroup>
+            </IonCol>
           </IonRow>
         </IonGrid>
       </IonContent>
