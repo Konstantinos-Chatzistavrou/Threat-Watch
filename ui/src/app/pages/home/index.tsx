@@ -12,7 +12,6 @@ import {
   IonRow,
   IonSearchbar,
 } from "@ionic/react";
-import "./index.css";
 import { sparkles, syncCircle } from "ionicons/icons";
 import React from "react";
 import Header from "../../common/Header/Header";
@@ -36,6 +35,7 @@ const Home: React.FC = () => {
               >
                 <IonIcon
                   slot={"icon-only"}
+                  size="large"
                   aria-hidden={true}
                   icon={syncCircle}
                 />
@@ -58,6 +58,7 @@ const Home: React.FC = () => {
               >
                 <IonIcon
                   slot={"icon-only"}
+                  size="large"
                   aria-hidden={true}
                   icon={sparkles}
                 />
