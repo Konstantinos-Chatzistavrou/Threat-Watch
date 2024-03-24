@@ -1,18 +1,31 @@
-import { IonHeader, IonIcon, IonToolbar } from "@ionic/react";
+import {
+  IonCol,
+  IonGrid,
+  IonHeader,
+  IonIcon,
+  IonRow,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/react";
 import logo from "../../../assets/icons/tw-logo.svg";
-import React from "react";
+import React, { PropsWithChildren } from "react";
 
-const Header: React.FC = () => (
+interface HeaderProps {
+  title?: string;
+}
+
+const Header = ({ title, children }: PropsWithChildren<HeaderProps>) => (
   <IonHeader>
     <IonToolbar>
-      <IonIcon
-        className="xl"
-        aria-hidden="true"
-        src={logo}
-        style={{
-          borderRadius: "4px",
-        }}
-      />
+      <IonGrid className={"ion-no-padding"}>
+        <IonRow className={"ion-padding-horizontal"}>
+          <IonCol>
+            <IonIcon className="xl" aria-hidden="true" src={logo} />
+          </IonCol>
+          <IonCol>{title && <IonTitle>{title}</IonTitle>}</IonCol>
+          <IonCol>{children}</IonCol>
+        </IonRow>
+      </IonGrid>
     </IonToolbar>
   </IonHeader>
 );

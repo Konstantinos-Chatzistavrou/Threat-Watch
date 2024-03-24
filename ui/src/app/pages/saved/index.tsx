@@ -18,6 +18,7 @@ import {
 } from "@ionic/react";
 import { usePhotoGallery, UserPhoto } from "../../hooks/usePhotoGallery";
 import { useState } from "react";
+import Header from "../../common/Header/Header";
 
 const Saved: React.FC = () => {
   const { takePhoto, photos, deletePhoto } = usePhotoGallery();
@@ -25,11 +26,7 @@ const Saved: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Photo Gallery</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      <Header title="Saved" />
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
