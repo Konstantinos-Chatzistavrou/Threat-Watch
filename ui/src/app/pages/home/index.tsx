@@ -1,32 +1,56 @@
 import {
-  IonAccordion,
-  IonAccordionGroup,
   IonCard,
   IonCardHeader,
   IonCardTitle,
   IonCol,
   IonContent,
   IonGrid,
-  IonItem,
-  IonLabel,
   IonPage,
   IonRow,
   IonSearchbar,
 } from "@ionic/react";
-import {
-  caretDownCircle,
-  ellipsisHorizontalCircleSharp,
-  sparkles,
-  star,
-  syncCircle,
-} from "ionicons/icons";
+import { sparkles, star, syncCircle } from "ionicons/icons";
 import React from "react";
 import Header from "../../common/Header/Header";
 import Button from "../../common/Button/Button";
 import lockSecurityImage from "../../../assets/lock-circuit.jpeg";
+import CriticalNews from "./components/CriticalNews";
+import ArticleMockData from "./mock-data/articleHeaders.json";
 
 const Home: React.FC = () => {
   const handleSearchChange = () => {};
+
+  const renderNewsArticles = ({ title }: Article) => (
+    <IonCard className={"ion-no-margin"}>
+      <img
+        alt="security-thumbnail"
+        src={lockSecurityImage}
+        style={{
+          width: "15rem", // 225px
+          maxHeight: "5rem", // 80px
+          objectFit: "none",
+        }}
+      />
+      <IonCardHeader class={"ion-no-padding"}>
+        <IonRow class={"ion-align-items-center"}>
+          <IonCol>
+            <IonCardTitle>{title}</IonCardTitle>
+          </IonCol>
+          <IonCol>
+            <Button
+              type="icon"
+              ariaLabel={"favorite-btn"}
+              size={"small"}
+              icon={star}
+              iconSize={"small"}
+              classes={"small-square ion-float-right"}
+              shape={"round"}
+            />
+          </IonCol>
+        </IonRow>
+      </IonCardHeader>
+    </IonCard>
+  );
 
   return (
     <IonPage>
@@ -66,64 +90,10 @@ const Home: React.FC = () => {
           </IonRow>
           <IonRow>
             <IonCol>
-              <IonAccordionGroup class={"custom"}>
-                <IonAccordion
-                  value="first"
-                  toggleIcon={caretDownCircle}
-                  toggleIconSlot="start"
-                >
-                  <IonItem slot="header">
-                    <IonRow class={"ion-align-items-center"}>
-                      <IonLabel class={"ion-padding-end"}>
-                        Critical News
-                      </IonLabel>
-                      <Button
-                        type={"icon"}
-                        icon={ellipsisHorizontalCircleSharp}
-                        ariaLabel={"critical-news-menu"}
-                        iconSize={"small"}
-                        classes={"none"}
-                      />
-                    </IonRow>
-                  </IonItem>
-                  <div
-                    slot="content"
-                    style={{
-                      maxWidth: "225px",
-                    }}
-                  >
-                    <IonCard className={"ion-no-margin"}>
-                      <img
-                        alt="security-thumbnail"
-                        src={lockSecurityImage}
-                        style={{
-                          width: "225px",
-                          maxHeight: "80px",
-                          objectFit: "none",
-                        }}
-                      />
-                      <IonCardHeader class={"ion-no-padding"}>
-                        <IonRow class={"ion-align-items-center"}>
-                          <IonCol>
-                            <IonCardTitle>Card Title</IonCardTitle>
-                          </IonCol>
-                          <IonCol>
-                            <Button
-                              type="icon"
-                              ariaLabel={"favorite-btn"}
-                              size={"small"}
-                              icon={star}
-                              iconSize={"small"}
-                              classes={"small-square ion-float-right"}
-                              shape={"round"}
-                            />
-                          </IonCol>
-                        </IonRow>
-                      </IonCardHeader>
-                    </IonCard>
-                  </div>
-                </IonAccordion>
-              </IonAccordionGroup>
+              <CriticalNews
+                articles={ArticleMockData}
+                render={renderNewsArticles}
+              />
             </IonCol>
           </IonRow>
         </IonGrid>
