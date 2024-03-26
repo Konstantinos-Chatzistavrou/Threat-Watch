@@ -1,6 +1,9 @@
 import {
   IonAccordion,
   IonAccordionGroup,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
   IonCol,
   IonContent,
   IonGrid,
@@ -14,11 +17,13 @@ import {
   caretDownCircle,
   ellipsisHorizontalCircleSharp,
   sparkles,
+  star,
   syncCircle,
 } from "ionicons/icons";
 import React from "react";
 import Header from "../../common/Header/Header";
 import Button from "../../common/Button/Button";
+import lockSecurityImage from "../../../assets/lock-circuit.jpeg";
 
 const Home: React.FC = () => {
   const handleSearchChange = () => {};
@@ -37,7 +42,7 @@ const Home: React.FC = () => {
                 ariaLabel={"search-reload"}
                 type="icon"
                 icon={syncCircle}
-                classes={"custom"}
+                classes={"default-square"}
               />
             </IonCol>
             <IonCol>
@@ -52,7 +57,7 @@ const Home: React.FC = () => {
             </IonCol>
             <IonCol size={"2"}>
               <Button
-                classes={"ion-float-right custom"}
+                classes={"ion-float-right default-square"}
                 ariaLabel={"sparkles-placeholder-aria-label"}
                 type="icon"
                 icon={sparkles}
@@ -69,20 +74,53 @@ const Home: React.FC = () => {
                 >
                   <IonItem slot="header">
                     <IonRow class={"ion-align-items-center"}>
-                      <IonLabel class={"ion-padding-end"} color={"dark"}>
+                      <IonLabel class={"ion-padding-end"}>
                         Critical News
                       </IonLabel>
                       <Button
                         type={"icon"}
                         icon={ellipsisHorizontalCircleSharp}
                         ariaLabel={"critical-news-menu"}
-                        size={"small"}
+                        iconSize={"small"}
                         classes={"none"}
                       />
                     </IonRow>
                   </IonItem>
-                  <div className="ion-padding" slot="content">
-                    lorem
+                  <div
+                    slot="content"
+                    style={{
+                      maxWidth: "225px",
+                    }}
+                  >
+                    <IonCard className={"ion-no-margin"}>
+                      <img
+                        alt="security-thumbnail"
+                        src={lockSecurityImage}
+                        style={{
+                          width: "225px",
+                          maxHeight: "80px",
+                          objectFit: "none",
+                        }}
+                      />
+                      <IonCardHeader class={"ion-no-padding"}>
+                        <IonRow class={"ion-align-items-center"}>
+                          <IonCol>
+                            <IonCardTitle>Card Title</IonCardTitle>
+                          </IonCol>
+                          <IonCol>
+                            <Button
+                              type="icon"
+                              ariaLabel={"favorite-btn"}
+                              size={"small"}
+                              icon={star}
+                              iconSize={"small"}
+                              classes={"small-square ion-float-right"}
+                              shape={"round"}
+                            />
+                          </IonCol>
+                        </IonRow>
+                      </IonCardHeader>
+                    </IonCard>
                   </div>
                 </IonAccordion>
               </IonAccordionGroup>

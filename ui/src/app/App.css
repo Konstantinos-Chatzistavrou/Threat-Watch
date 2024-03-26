@@ -18,16 +18,32 @@ ion-tab-bar, ion-toolbar {
     border: none;
 }
 
-ion-button.custom {
-    --background: #4CA7BE;
+ion-button {
     border-radius: 5px;
-    width: 2.5rem;
+    --background: #4CA7BE;
+
+    &.small-square {
+        width: 1.75rem;
+    }
+
+    &.default-square {
+        width: 2.25rem
+    }
+
+    &.large-square {
+        width: 3.5rem
+    }
+
+    &.rounded {
+        border-radius: 50%;
+    }
+
+    &.none {
+        --background: transparent;
+        --box-shadow: none;
+    }
 }
 
-ion-button.none {
-    --background: transparent;
-    --box-shadow: none;
-}
 
 ion-accordion-group.custom {
     --ion-background-color: transparent;
@@ -36,4 +52,8 @@ ion-accordion-group.custom {
 
 ion-tab-button:not(.tab-selected) {
     color: white;
+}
+
+ion-card {
+    --background: #377E7F;
 }

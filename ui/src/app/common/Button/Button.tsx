@@ -1,24 +1,31 @@
 import React, { ReactNode } from "react";
 import { IonButton, IonIcon } from "@ionic/react";
 
-interface ButtonProps {
-  type: ButtonType;
-  ariaLabel: string;
-  ariaHidden?: boolean;
-  size?: string;
-  classes?: string;
-  icon?: string;
+interface IonButtonProps {
+  size?: "large" | "small";
+  shape?: "round";
 }
 
-type ButtonType = "icon";
+interface IonIconProps {
+  icon?: string;
+  iconSize?: "small" | "large";
+  ariaHidden?: boolean;
+}
+
+interface ButtonProps extends IonButtonProps, IonIconProps {
+  type: "icon";
+  ariaLabel: string;
+  classes?: string;
+}
 
 const Button = ({
   type,
   ariaLabel,
   ariaHidden = true,
-  size = "large",
+  iconSize,
   classes,
   icon,
+  ...rest
 }: ButtonProps) => {
   let buttonContents: ReactNode;
 
@@ -26,7 +33,7 @@ const Button = ({
     buttonContents = (
       <IonIcon
         slot={"icon-only"}
-        size={size}
+        size={iconSize}
         aria-hidden={ariaHidden}
         icon={icon}
       />
@@ -37,6 +44,7 @@ const Button = ({
     <IonButton
       className={`ion-no-padding ${classes || ""}`}
       aria-label={ariaLabel}
+      {...rest}
     >
       {buttonContents}
     </IonButton>
