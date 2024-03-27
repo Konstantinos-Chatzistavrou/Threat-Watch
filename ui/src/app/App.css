@@ -10,7 +10,7 @@ ion-searchbar.custom {
 }
 
 ion-content {
-    --background: url('../assets/background.svg');
+    --background: url('../assets/background.svg') center;
 }
 
 ion-tab-bar, ion-toolbar {
@@ -56,4 +56,8 @@ ion-tab-button:not(.tab-selected) {
 
 ion-card {
     --background: #377E7F;
+}
+
+ion-popover {
+    --ion-item-background: transparent;
 }

@@ -4,6 +4,8 @@ import { IonButton, IonIcon } from "@ionic/react";
 interface IonButtonProps {
   size?: "large" | "small";
   shape?: "round";
+  onClick?: (e: any) => void;
+  id?: string;
 }
 
 interface IonIconProps {
