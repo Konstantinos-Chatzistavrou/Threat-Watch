@@ -21,7 +21,12 @@ const Home: React.FC = () => {
   const handleSearchChange = () => {};
 
   const renderNewsArticles = ({ title }: Article) => (
-    <IonCard className={"ion-no-margin"}>
+    <IonCard
+      className={"ion-no-margin ion-margin-top"}
+      style={{
+        maxWidth: "15rem",
+      }}
+    >
       <img
         alt="security-thumbnail"
         src={lockSecurityImage}

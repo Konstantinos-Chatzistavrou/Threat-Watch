@@ -57,15 +57,12 @@ const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
             </IonPopover>
           </IonRow>
         </IonItem>
-        <div
-          slot="content"
-          style={{
-            maxWidth: "15rem",
-          }}
-        >
-          <Swiper>
+        <div slot="content">
+          <Swiper spaceBetween={16} slidesPerView={"auto"}>
             {articles.map((article) => (
-              <SwiperSlide key={article.id}>{render(article)}</SwiperSlide>
+              <SwiperSlide key={article.id} style={{ width: "fit-content" }}>
+                {render(article)}
+              </SwiperSlide>
             ))}
           </Swiper>
           {/*<IonRow class={"scroll"}>{children}</IonRow>*/}
