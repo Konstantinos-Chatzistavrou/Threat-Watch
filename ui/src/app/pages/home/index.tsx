@@ -45,11 +45,15 @@ const Home: React.FC = () => {
             <Button
               type="icon"
               ariaLabel={"favorite-btn"}
-              size={"small"}
-              icon={star}
-              iconSize={"small"}
               classes={"small-square ion-float-right"}
-              shape={"round"}
+              ionButtonProps={{
+                size: "small",
+                shape: "round",
+              }}
+              ionIconProps={{
+                icon: star,
+                size: "small",
+              }}
             />
           </IonCol>
         </IonRow>
@@ -68,10 +72,10 @@ const Home: React.FC = () => {
           >
             <IonCol size={"2"}>
               <Button
-                ariaLabel={"search-reload"}
                 type="icon"
-                icon={syncCircle}
+                ariaLabel={"search-reload"}
                 classes={"default-square"}
+                ionIconProps={{ icon: syncCircle }}
               />
             </IonCol>
             <IonCol>
@@ -86,10 +90,10 @@ const Home: React.FC = () => {
             </IonCol>
             <IonCol size={"2"}>
               <Button
-                classes={"ion-float-right default-square"}
-                ariaLabel={"sparkles-placeholder-aria-label"}
                 type="icon"
-                icon={sparkles}
+                ariaLabel={"sparkles-placeholder-aria-label"}
+                classes={"ion-float-right default-square"}
+                ionIconProps={{ icon: sparkles }}
               />
             </IonCol>
           </IonRow>

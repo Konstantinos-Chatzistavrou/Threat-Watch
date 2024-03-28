@@ -18,6 +18,14 @@ ion-tab-bar, ion-toolbar {
     border: none;
 }
 
+ion-tab-button:not(.tab-selected) {
+    color: white;
+}
+
+ion-card {
+    --background: #377E7F;
+}
+
 ion-button {
     border-radius: 5px;
     --background: #4CA7BE;
@@ -44,20 +52,27 @@ ion-button {
     }
 }
 
+/* ----------------------------------- */
+/* Critical News */
+ion-accordion-group {
+    /* disable accordion unless you click on carat icon */
+    pointer-events: none !important;
 
-ion-accordion-group.custom {
-    --ion-background-color: transparent;
-    --ion-item-background: rgb(100, 165, 187, 0.75);
-}
+    & ion-icon {
+        pointer-events: auto !important;
+    }
 
-ion-tab-button:not(.tab-selected) {
-    color: white;
-}
-
-ion-card {
-    --background: #377E7F;
+    &.custom {
+        --ion-background-color: transparent;
+        --ion-item-background: rgb(100, 165, 187, 0.75);
+    }
 }
 
 ion-popover {
     --ion-item-background: transparent;
 }
+
+div.ion-delegate-host {
+    border: 2px solid #377E7F;
+}
+

@@ -10,35 +10,31 @@ interface IonButtonProps {
 
 interface IonIconProps {
   icon?: string;
-  iconSize?: "small" | "large";
+  size?: "small" | "large";
   ariaHidden?: boolean;
 }
 
-interface ButtonProps extends IonButtonProps, IonIconProps {
+interface ButtonProps {
   type: "icon";
   ariaLabel: string;
   classes?: string;
+  ionButtonProps?: IonButtonProps;
+  ionIconProps?: IonIconProps;
 }
 
 const Button = ({
   type,
   ariaLabel,
-  ariaHidden = true,
-  iconSize,
   classes,
-  icon,
-  ...rest
+  ionIconProps = { ariaHidden: true },
+  ionButtonProps = {},
 }: ButtonProps) => {
   let buttonContents: ReactNode;
 
   if (type === "icon") {
+    const { ariaHidden, ...rest } = ionIconProps;
     buttonContents = (
-      <IonIcon
-        slot={"icon-only"}
-        size={iconSize}
-        aria-hidden={ariaHidden}
-        icon={icon}
-      />
+      <IonIcon slot={"icon-only"} aria-hidden={ariaHidden} {...rest} />
     );
   }
 
@@ -46,7 +42,7 @@ const Button = ({
     <IonButton
       className={`ion-no-padding ${classes || ""}`}
       aria-label={ariaLabel}
-      {...rest}
+      {...ionButtonProps}
     >
       {buttonContents}
     </IonButton>

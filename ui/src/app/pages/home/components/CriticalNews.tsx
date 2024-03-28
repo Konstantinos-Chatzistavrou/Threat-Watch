@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect, useRef } from "react";
 import {
   IonAccordion,
   IonAccordionGroup,
@@ -21,8 +21,15 @@ interface CriticalNewsProps {
 }
 
 const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
+  const accordionGroupRef = useRef<HTMLIonAccordionGroupElement>(null);
+
+  useEffect(() => {
+    if (accordionGroupRef?.current) {
+      accordionGroupRef.current;
+    }
+  }, []);
   return (
-    <IonAccordionGroup class={"custom"}>
+    <IonAccordionGroup class={"custom"} ref={accordionGroupRef}>
       <IonAccordion
         value="first"
         toggleIcon={caretDownCircle}
@@ -33,11 +40,15 @@ const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
             <IonLabel class={"ion-padding-end"}>Critical News</IonLabel>
             <Button
               type={"icon"}
-              icon={ellipsisHorizontalCircleSharp}
               ariaLabel={"critical-news-menu"}
-              iconSize={"small"}
               classes={"none"}
-              id={"critical-news-more-info"}
+              ionButtonProps={{
+                id: "critical-news-more-info",
+              }}
+              ionIconProps={{
+                size: "small",
+                icon: ellipsisHorizontalCircleSharp,
+              }}
             />
             <IonPopover
               trigger={"critical-news-more-info"}
@@ -65,7 +76,6 @@ const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
               </SwiperSlide>
             ))}
           </Swiper>
-          {/*<IonRow class={"scroll"}>{children}</IonRow>*/}
         </div>
       </IonAccordion>
     </IonAccordionGroup>
