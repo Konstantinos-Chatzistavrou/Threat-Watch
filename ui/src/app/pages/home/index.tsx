@@ -22,7 +22,7 @@ const Home: React.FC = () => {
 
   const renderNewsArticles = ({ title }: Article) => (
     <IonCard
-      className={"ion-no-margin ion-margin-top"}
+      className={"ion-no-margin ion-margin-end"}
       style={{
         maxWidth: "15rem",
       }}

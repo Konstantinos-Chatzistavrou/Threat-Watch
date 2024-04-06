@@ -54,19 +54,6 @@ ion-button {
 
 /* ----------------------------------- */
 /* Critical News */
-ion-accordion-group {
-    /* disable accordion unless you click on carat icon */
-    pointer-events: none !important;
-
-    & ion-icon {
-        pointer-events: auto !important;
-    }
-
-    &.custom {
-        --ion-background-color: transparent;
-        --ion-item-background: rgb(100, 165, 187, 0.75);
-    }
-}
 
 ion-popover {
     --ion-item-background: transparent;
