@@ -16,6 +16,7 @@ import Button from "../../common/Button/Button";
 import lockSecurityImage from "../../../assets/lock-circuit.jpeg";
 import CriticalNews from "./components/CriticalNews";
 import ArticleMockData from "./mock-data/articleHeaders.json";
+import Chip from "../../common/Chip/Chip";
 
 const Home: React.FC = () => {
   const handleSearchChange = () => {};
@@ -36,8 +37,22 @@ const Home: React.FC = () => {
           objectFit: "none",
         }}
       />
+      <div
+        style={{
+          position: "fixed",
+          bottom: "2.5rem",
+          left: "0.2rem",
+        }}
+      >
+        <Chip
+          content={"HIGHLY DISCUSSED"}
+          backgroundColor={"#59BE3B"}
+          ionLabelProps={{ color: "dark" }}
+        />
+      </div>
+
       <IonCardHeader class={"ion-no-padding"}>
-        <IonRow class={"ion-align-items-center"}>
+        <IonRow class={"ion-align-items-center ion-padding-horizontal"}>
           <IonCol>
             <IonCardTitle>{title}</IonCardTitle>
           </IonCol>

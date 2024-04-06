@@ -2,6 +2,7 @@ import React, { ReactNode, useState } from "react";
 import {
   IonCol,
   IonContent,
+  IonGrid,
   IonItem,
   IonLabel,
   IonList,
@@ -23,7 +24,7 @@ const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
   const [showSwiper, setShowSwiper] = useState(false);
 
   return (
-    <>
+    <IonGrid class={"ion-no-padding"}>
       <IonRow class={"ion-align-items-center ion-justify-content-center"}>
         <IonCol size={"1"}>
           <Button
@@ -78,18 +79,16 @@ const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
           </IonPopover>
         </IonCol>
       </IonRow>
-      {showSwiper && (
-        <IonRow>
-          <Swiper slidesPerView={"auto"}>
-            {articles.map((article) => (
-              <SwiperSlide key={article.id} style={{ width: "fit-content" }}>
-                {render(article)}
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </IonRow>
-      )}
-    </>
+      <IonRow class={!showSwiper ? "ion-hide" : ""}>
+        <Swiper slidesPerView={"auto"}>
+          {articles.map((article) => (
+            <SwiperSlide key={article.id} style={{ width: "fit-content" }}>
+              {render(article)}
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </IonRow>
+    </IonGrid>
   );
 };
 
