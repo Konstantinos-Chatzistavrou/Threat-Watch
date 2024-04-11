@@ -1,0 +1,59 @@
+ion-icon.xl {
+    font-size: 3rem;
+}
+
+ion-searchbar.custom {
+    --border-radius: 10px;
+    --background: #F2E5E5;
+    color: #797272;
+    text-align: center;
+}
+
+ion-content {
+    --background: url('../assets/background.svg');
+}
+
+ion-tab-bar, ion-toolbar {
+    --background: #4CA7BE;
+    border: none;
+}
+
+ion-button {
+    border-radius: 5px;
+    --background: #4CA7BE;
+
+    &.small-square {
+        width: 1.75rem;
+    }
+
+    &.default-square {
+        width: 2.25rem
+    }
+
+    &.large-square {
+        width: 3.5rem
+    }
+
+    &.rounded {
+        border-radius: 50%;
+    }
+
+    &.none {
+        --background: transparent;
+        --box-shadow: none;
+    }
+}
+
+
+ion-accordion-group.custom {
+    --ion-background-color: transparent;
+    --ion-item-background: rgb(100, 165, 187, 0.75);
+}
+
+ion-tab-button:not(.tab-selected) {
+    color: white;
+}
+
+ion-card {
+    --background: #377E7F;
+}

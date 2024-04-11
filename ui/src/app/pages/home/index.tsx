@@ -1,53 +1,75 @@
 import {
-  IonButton,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
   IonCol,
   IonContent,
   IonGrid,
-  IonHeader,
-  IonIcon,
-  IonItem,
-  IonLabel,
-  IonList,
-  IonListHeader,
   IonPage,
   IonRow,
   IonSearchbar,
-  IonToolbar,
 } from "@ionic/react";
-import "./index.css";
-import { logoRss, sparkles, syncCircle } from "ionicons/icons";
+import { sparkles, star, syncCircle } from "ionicons/icons";
 import React from "react";
+import Header from "../../common/Header/Header";
+import Button from "../../common/Button/Button";
+import lockSecurityImage from "../../../assets/lock-circuit.jpeg";
+import CriticalNews from "./components/CriticalNews";
+import ArticleMockData from "./mock-data/articleHeaders.json";
 
-// todo: figure out why SVG doesn't load
 const Home: React.FC = () => {
   const handleSearchChange = () => {};
 
+  const renderNewsArticles = ({ title }: Article) => (
+    <IonCard className={"ion-no-margin"}>
+      <img
+        alt="security-thumbnail"
+        src={lockSecurityImage}
+        style={{
+          width: "15rem", // 225px
+          maxHeight: "5rem", // 80px
+          objectFit: "none",
+        }}
+      />
+      <IonCardHeader class={"ion-no-padding"}>
+        <IonRow class={"ion-align-items-center"}>
+          <IonCol>
+            <IonCardTitle>{title}</IonCardTitle>
+          </IonCol>
+          <IonCol>
+            <Button
+              type="icon"
+              ariaLabel={"favorite-btn"}
+              size={"small"}
+              icon={star}
+              iconSize={"small"}
+              classes={"small-square ion-float-right"}
+              shape={"round"}
+            />
+          </IonCol>
+        </IonRow>
+      </IonCardHeader>
+    </IonCard>
+  );
+
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonIcon aria-hidden="true" src={logoRss} size={"large"} />
-        </IonToolbar>
-      </IonHeader>
+      <Header />
       <IonContent fullscreen>
-        <IonGrid className={"ion-no-padding"}>
+        <IonGrid className={""}>
           <IonRow
-            className={"ion-padding-horizontal"}
+            className={"ion-align-items-center"}
             data-testid={"home-search-row"}
           >
-            <IonCol size={"1"}>
-              <IonButton
-                className={"ion-no-padding custom"}
-                aria-label="search-reload"
-              >
-                <IonIcon
-                  slot={"icon-only"}
-                  aria-hidden={true}
-                  icon={syncCircle}
-                />
-              </IonButton>
+            <IonCol size={"2"}>
+              <Button
+                ariaLabel={"search-reload"}
+                type="icon"
+                icon={syncCircle}
+                classes={"default-square"}
+              />
             </IonCol>
-            <IonCol className={"ion-padding-horizontal"}>
+            <IonCol>
               <IonSearchbar
                 aria-label="home-search-input"
                 animated={true}
@@ -57,33 +79,22 @@ const Home: React.FC = () => {
                 className={"custom"}
               ></IonSearchbar>
             </IonCol>
-            <IonCol size={"1"}>
-              <IonButton
-                className={"ion-no-padding custom"}
-                aria-label="sparkles-placeholder-aria-label"
-              >
-                <IonIcon
-                  slot={"icon-only"}
-                  aria-hidden={true}
-                  icon={sparkles}
-                />
-              </IonButton>
+            <IonCol size={"2"}>
+              <Button
+                classes={"ion-float-right default-square"}
+                ariaLabel={"sparkles-placeholder-aria-label"}
+                type="icon"
+                icon={sparkles}
+              />
             </IonCol>
           </IonRow>
           <IonRow>
-            <IonList>
-              <IonListHeader>
-                <IonLabel>Critical News</IonLabel>
-              </IonListHeader>
-              <IonItem></IonItem>
-              <IonItem></IonItem>
-            </IonList>
-          </IonRow>
-          <IonRow>
-            <IonListHeader>
-              <IonLabel>NEWS</IonLabel>
-            </IonListHeader>
-            <IonList></IonList>
+            <IonCol>
+              <CriticalNews
+                articles={ArticleMockData}
+                render={renderNewsArticles}
+              />
+            </IonCol>
           </IonRow>
         </IonGrid>
       </IonContent>

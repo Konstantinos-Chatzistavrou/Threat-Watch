@@ -7,15 +7,12 @@ import {
 } from "@ionic/react";
 import ExploreContainer from "../../common/ExploreContainer/ExploreContainer";
 import "./index.css";
+import Header from "../../common/Header/Header";
 
 const Profile: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Tab 3</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      <Header title="Profile" />
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
