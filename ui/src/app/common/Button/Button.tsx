@@ -12,6 +12,7 @@ interface IonIconProps {
   icon?: string;
   size?: "small" | "large";
   ariaHidden?: boolean;
+  color?: string;
 }
 
 interface ButtonProps {
@@ -32,9 +33,15 @@ const Button = ({
   let buttonContents: ReactNode;
 
   if (type === "icon") {
-    const { ariaHidden, ...rest } = ionIconProps;
+    const { ariaHidden, color, ...rest } = ionIconProps;
+    const style = { style: { color } };
     buttonContents = (
-      <IonIcon slot={"icon-only"} aria-hidden={ariaHidden} {...rest} />
+      <IonIcon
+        slot={"icon-only"}
+        aria-hidden={ariaHidden}
+        {...rest}
+        style={{ color }}
+      />
     );
   }
 

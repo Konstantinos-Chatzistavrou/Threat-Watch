@@ -10,7 +10,7 @@ import {
   IonSearchbar,
 } from "@ionic/react";
 import { sparkles, star, syncCircle } from "ionicons/icons";
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../common/Header/Header";
 import Button from "../../common/Button/Button";
 import lockSecurityImage from "../../../assets/lock-circuit.jpeg";
@@ -19,9 +19,19 @@ import ArticleMockData from "./mock-data/articleHeaders.json";
 import Chip from "../../common/Chip/Chip";
 
 const Home: React.FC = () => {
+  const [articles, setArticles] = useState<Article[]>(ArticleMockData);
   const handleSearchChange = () => {};
+  const handleFavorite = (id: number) => () => {
+    console.log("handlefavorite");
+    setArticles((list) =>
+      list.map((article) => {
+        if (article.id !== id) return article;
+        return { ...article, isFavorite: !article.isFavorite };
+      }),
+    );
+  };
 
-  const renderNewsArticles = ({ title }: Article) => (
+  const renderNewsArticles = ({ title, id, isFavorite }: Article) => (
     <IonCard
       className={"ion-no-margin ion-margin-end"}
       style={{
@@ -64,10 +74,12 @@ const Home: React.FC = () => {
               ionButtonProps={{
                 size: "small",
                 shape: "round",
+                onClick: handleFavorite(id),
               }}
               ionIconProps={{
                 icon: star,
                 size: "small",
+                color: isFavorite ? "yellow" : "",
               }}
             />
           </IonCol>
@@ -114,10 +126,7 @@ const Home: React.FC = () => {
           </IonRow>
           <IonRow>
             <IonCol>
-              <CriticalNews
-                articles={ArticleMockData}
-                render={renderNewsArticles}
-              />
+              <CriticalNews articles={articles} render={renderNewsArticles} />
             </IonCol>
           </IonRow>
         </IonGrid>
