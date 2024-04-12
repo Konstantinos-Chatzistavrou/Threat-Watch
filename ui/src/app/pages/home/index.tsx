@@ -17,12 +17,12 @@ import lockSecurityImage from "../../../assets/lock-circuit.jpeg";
 import CriticalNews from "./components/CriticalNews";
 import ArticleMockData from "./mock-data/articleHeaders.json";
 import Chip from "../../common/Chip/Chip";
+import homeContent from "../../content/home.json";
 
 const Home: React.FC = () => {
   const [articles, setArticles] = useState<Article[]>(ArticleMockData);
   const handleSearchChange = () => {};
   const handleFavorite = (id: number) => () => {
-    console.log("handlefavorite");
     setArticles((list) =>
       list.map((article) => {
         if (article.id !== id) return article;
@@ -55,7 +55,7 @@ const Home: React.FC = () => {
         }}
       >
         <Chip
-          content={"HIGHLY DISCUSSED"}
+          content={homeContent.criticalNews.chipLabel}
           backgroundColor={"#59BE3B"}
           ionLabelProps={{ color: "dark" }}
         />
@@ -109,7 +109,7 @@ const Home: React.FC = () => {
               <IonSearchbar
                 aria-label="home-search-input"
                 animated={true}
-                placeholder="tap to search"
+                placeholder={homeContent.searchPlaceholder}
                 debounce={500}
                 onIonInput={handleSearchChange}
                 className={"custom"}

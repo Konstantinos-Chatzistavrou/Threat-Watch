@@ -19,6 +19,7 @@ import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 import Button from "../../../common/Button/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
+import homeContent from "../../../content/home.json";
 
 const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
   const [showSwiper, setShowSwiper] = useState(false);
@@ -45,7 +46,7 @@ const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
         </IonCol>
         <IonCol size={"4"}>
           <IonRow>
-            <IonLabel>Critical News</IonLabel>
+            <IonLabel>{homeContent.criticalNews.heading}</IonLabel>
           </IonRow>
         </IonCol>
         <IonCol>
@@ -69,11 +70,13 @@ const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
           >
             <IonContent>
               <IonList className={"ion-no-padding"} lines={"full"}>
-                {["Critical News", "Rumors"].map((item, i) => (
-                  <IonItem key={i}>
-                    <IonLabel class={"ion-text-center"}>{item}</IonLabel>
-                  </IonItem>
-                ))}
+                {Object.values(homeContent.criticalNews.menuItem).map(
+                  (item, i) => (
+                    <IonItem key={i}>
+                      <IonLabel class={"ion-text-center"}>{item}</IonLabel>
+                    </IonItem>
+                  ),
+                )}
               </IonList>
             </IonContent>
           </IonPopover>

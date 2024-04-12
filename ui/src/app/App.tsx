@@ -16,6 +16,7 @@ import Saved from "./pages/saved";
 import Settings from "./pages/settings";
 import Downloads from "./pages/downloads";
 import Profile from "./pages/profile";
+import appContent from "./content/app.json";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -67,23 +68,23 @@ const App: React.FC = () => (
         <IonTabBar slot="bottom">
           <IonTabButton tab="home" href="/home">
             <IonIcon aria-hidden="true" icon={home} />
-            <IonLabel>Home</IonLabel>
+            <IonLabel>{appContent.home}</IonLabel>
           </IonTabButton>
           <IonTabButton tab="saved" href="/saved">
             <IonIcon aria-hidden="true" icon={bookmark} />
-            <IonLabel>Saved</IonLabel>
+            <IonLabel>{appContent.saved}</IonLabel>
           </IonTabButton>
           <IonTabButton tab="settings" href="/settings">
             <IonIcon aria-hidden="true" icon={settings} />
-            <IonLabel>Settings</IonLabel>
+            <IonLabel>{appContent.settings}</IonLabel>
           </IonTabButton>
           <IonTabButton tab="downloads" href="/downloads">
             <IonIcon aria-hidden="true" icon={download} />
-            <IonLabel>Downloads</IonLabel>
+            <IonLabel>{appContent.downloads}</IonLabel>
           </IonTabButton>
           <IonTabButton tab="profile" href="/profile">
             <IonIcon aria-hidden="true" icon={person} />
-            <IonLabel>Profile</IonLabel>
+            <IonLabel>{appContent.profile}</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

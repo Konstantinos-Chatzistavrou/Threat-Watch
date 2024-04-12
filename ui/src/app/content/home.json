@@ -1,0 +1,11 @@
+{
+  "searchPlaceholder": "tap to search",
+  "criticalNews": {
+    "heading": "Critical News",
+    "chipLabel": "HIGHLY DISCUSSED",
+    "menuItem": {
+      "criticalNews": "Critical News",
+      "rumors": "Rumors"
+    }
+  }
+}
