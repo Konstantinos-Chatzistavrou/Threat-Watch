@@ -11,12 +11,12 @@ import {
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import { bookmark, download, home, person, settings } from "ionicons/icons";
-import Home from "./pages/home";
-import Saved from "./pages/saved";
-import Settings from "./pages/settings";
-import Downloads from "./pages/downloads";
-import Profile from "./pages/profile";
-import appContent from "./content/app.json";
+import Home from "@pages/home";
+import Saved from "@pages/saved";
+import Settings from "@pages/settings";
+import Downloads from "@pages/downloads";
+import Profile from "@pages/profile";
+import appContent from "@content/app.json";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";

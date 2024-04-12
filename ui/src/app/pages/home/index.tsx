@@ -11,13 +11,13 @@ import {
 } from "@ionic/react";
 import { sparkles, star, syncCircle } from "ionicons/icons";
 import React, { useState } from "react";
-import Header from "../../common/Header/Header";
-import Button from "../../common/Button/Button";
-import lockSecurityImage from "../../../assets/lock-circuit.jpeg";
+import Header from "@common/Header/Header";
+import Button from "@common/Button/Button";
+import lockSecurityImage from "@assets/lock-circuit.jpeg";
 import CriticalNews from "./components/CriticalNews";
 import ArticleMockData from "./mock-data/articleHeaders.json";
-import Chip from "../../common/Chip/Chip";
-import homeContent from "../../content/home.json";
+import Chip from "@common/Chip/Chip";
+import homeContent from "@content/home.json";
 
 const Home: React.FC = () => {
   const [articles, setArticles] = useState<Article[]>(ArticleMockData);

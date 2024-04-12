@@ -7,7 +7,7 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import logo from "../../../assets/icons/tw-logo.svg";
+import logo from "@assets/icons/tw-logo.svg";
 import React, { PropsWithChildren } from "react";
 
 interface HeaderProps {

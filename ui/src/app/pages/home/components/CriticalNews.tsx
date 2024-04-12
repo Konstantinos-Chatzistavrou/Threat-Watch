@@ -17,9 +17,9 @@ import {
 import "swiper/swiper-bundle.min.css";
 
 import "swiper/swiper.min.css";
-import Button from "../../../common/Button/Button";
+import Button from "@common/Button/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
-import homeContent from "../../../content/home.json";
+import homeContent from "@content/home.json";
 
 const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
   const [showSwiper, setShowSwiper] = useState(false);
