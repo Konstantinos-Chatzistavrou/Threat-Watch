@@ -1,40 +1,19 @@
 import React, { ReactNode } from "react";
 import { IonButton, IonIcon } from "@ionic/react";
-
-interface IonButtonProps {
-  size?: "large" | "small";
-  shape?: "round";
-  onClick?: (e: any) => void;
-  id?: string;
-}
-
-interface IonIconProps {
-  icon?: string;
-  size?: "small" | "large";
-  ariaHidden?: boolean;
-  color?: string;
-}
-
-interface ButtonProps {
-  type: "icon";
-  ariaLabel: string;
-  classes?: string;
-  ionButtonProps?: IonButtonProps;
-  ionIconProps?: IonIconProps;
-}
+import { ButtonProps } from "@common/Button/types";
 
 const Button = ({
   type,
   ariaLabel,
+  dataTestId,
   classes,
   ionIconProps = { ariaHidden: true },
   ionButtonProps = {},
 }: ButtonProps) => {
-  let buttonContents: ReactNode;
+  let buttonContents: ReactNode = <></>;
 
   if (type === "icon") {
     const { ariaHidden, color, ...rest } = ionIconProps;
-    const style = { style: { color } };
     buttonContents = (
       <IonIcon
         slot={"icon-only"}
@@ -49,6 +28,7 @@ const Button = ({
     <IonButton
       className={`ion-no-padding ${classes || ""}`}
       aria-label={ariaLabel}
+      data-testid={dataTestId}
       {...ionButtonProps}
     >
       {buttonContents}

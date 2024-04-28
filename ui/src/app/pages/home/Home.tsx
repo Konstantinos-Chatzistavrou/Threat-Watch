@@ -1,3 +1,8 @@
+import lockSecurityImage from "@assets/lock-circuit.jpeg";
+import Button from "@common/Button/Button";
+import Chip from "@common/Chip/Chip";
+import Header from "@common/Header/Header";
+import homeContent from "@content/home.json";
 import {
   IonCard,
   IonCardHeader,
@@ -9,15 +14,10 @@ import {
   IonRow,
   IonSearchbar,
 } from "@ionic/react";
+import ArticleMockData from "@pages/home/__tests__/mock-data/articleHeaders.json";
 import { sparkles, star, syncCircle } from "ionicons/icons";
 import React, { useState } from "react";
-import Header from "@common/Header/Header";
-import Button from "@common/Button/Button";
-import lockSecurityImage from "@assets/lock-circuit.jpeg";
-import CriticalNews from "./components/CriticalNews";
-import ArticleMockData from "./mock-data/articleHeaders.json";
-import Chip from "@common/Chip/Chip";
-import homeContent from "@content/home.json";
+import { CriticalNews } from "./components/CriticalNews";
 
 const Home: React.FC = () => {
   const [articles, setArticles] = useState<Article[]>(ArticleMockData);
@@ -37,6 +37,7 @@ const Home: React.FC = () => {
       style={{
         maxWidth: "15rem",
       }}
+      data-testid={`critical-news-article-${id}`}
     >
       <img
         alt="security-thumbnail"
@@ -69,7 +70,7 @@ const Home: React.FC = () => {
           <IonCol>
             <Button
               type="icon"
-              ariaLabel={"favorite-btn"}
+              ariaLabel={`favorite-btn-${id}`}
               classes={"small-square ion-float-right"}
               ionButtonProps={{
                 size: "small",

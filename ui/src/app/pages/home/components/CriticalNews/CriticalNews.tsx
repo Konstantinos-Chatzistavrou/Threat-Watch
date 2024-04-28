@@ -1,4 +1,5 @@
-import React, { ReactNode, useState } from "react";
+import Button from "@common/Button/Button";
+import homeContent from "@content/home.json";
 import {
   IonCol,
   IonContent,
@@ -17,9 +18,8 @@ import {
 import "swiper/swiper-bundle.min.css";
 
 import "swiper/swiper.min.css";
-import Button from "@common/Button/Button";
+import React, { ReactNode, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import homeContent from "@content/home.json";
 
 const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
   const [showSwiper, setShowSwiper] = useState(false);
@@ -82,7 +82,10 @@ const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
           </IonPopover>
         </IonCol>
       </IonRow>
-      <IonRow class={!showSwiper ? "ion-hide" : ""}>
+      <IonRow
+        class={!showSwiper ? "ion-hide" : ""}
+        data-testid={"critical-news-swiper-container"}
+      >
         <Swiper slidesPerView={"auto"}>
           {articles.map((article) => (
             <SwiperSlide key={article.id} style={{ width: "fit-content" }}>

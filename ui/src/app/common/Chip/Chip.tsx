@@ -1,29 +1,12 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { IonLabel } from "@ionic/react";
-
-interface IonLabelProps {
-  color?:
-    | "primary"
-    | "secondary"
-    | "tertiary"
-    | "success"
-    | "warning"
-    | "danger"
-    | "light"
-    | "medium"
-    | "dark";
-}
-
-interface ChipProps {
-  backgroundColor?: string;
-  content: ReactNode;
-  ionLabelProps?: IonLabelProps;
-}
+import { ChipProps } from "@common/Chip/types";
 
 const Chip = ({
   content,
   backgroundColor = "",
   ionLabelProps = {},
+  dataTestId,
 }: ChipProps) => {
   return (
     <div
@@ -34,6 +17,7 @@ const Chip = ({
         border: "1px solid black",
         fontSize: "0.5rem",
       }}
+      data-testid={dataTestId}
     >
       <IonLabel {...ionLabelProps}>{content}</IonLabel>
     </div>

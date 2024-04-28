@@ -1,21 +1,3 @@
-import { Redirect, Route } from "react-router-dom";
-import {
-  IonApp,
-  IonIcon,
-  IonLabel,
-  IonRouterOutlet,
-  IonTabBar,
-  IonTabButton,
-  IonTabs,
-  setupIonicReact,
-} from "@ionic/react";
-import { IonReactRouter } from "@ionic/react-router";
-import { bookmark, download, home, person, settings } from "ionicons/icons";
-import Home from "@pages/home";
-import Saved from "@pages/saved";
-import Settings from "@pages/settings";
-import Downloads from "@pages/downloads";
-import Profile from "@pages/profile";
 import appContent from "@content/app.json";
 
 /* Core CSS required for Ionic components to work properly */
@@ -36,7 +18,25 @@ import "@ionic/react/css/display.css";
 
 /* Theme variables */
 import "./theme/variables.css";
+import {
+  IonApp,
+  IonIcon,
+  IonLabel,
+  IonRouterOutlet,
+  IonTabBar,
+  IonTabButton,
+  IonTabs,
+  setupIonicReact,
+} from "@ionic/react";
+import { IonReactRouter } from "@ionic/react-router";
+import Downloads from "@pages/downloads";
+import { Home } from "@pages/home";
+import Profile from "@pages/profile";
+import Saved from "@pages/saved";
+import Settings from "@pages/settings";
+import { bookmark, download, home, person, settings } from "ionicons/icons";
 import React from "react";
+import { Redirect, Route } from "react-router-dom";
 import "./App.css";
 
 setupIonicReact();
