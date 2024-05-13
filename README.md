@@ -86,11 +86,10 @@ Introducing you to the Threat-Watch Team! Get to know the dedicated individuals 
 
 Contact: [konstantinoschatzistavrou@gmail.com](mailto:konstantinoschatzistavrou@gmail.com)
 
-• [Lucy Conner](https://github.com/Luco2) - Back-End Developer
+• [Ethan Huang](https://github.com/ehuang47) - Front-End Developer 
 
 • [Cameron Keeley](https://github.com/cameronwritingcode) - UI/UX design
 
-• [Ethan Huang](https://github.com/ehuang47) - Front-End Developer 
 
 ## Security
 
@@ -98,7 +97,6 @@ Contact: [konstantinoschatzistavrou@gmail.com](mailto:konstantinoschatzistavrou@
 
 • [Daniel Niamien](https://github.com/nyd2) - Network Security Specialist
 
-•
 
 For more details about each team member's role and responsibilities, please refer to the [Maintenance Team Documentation](https://github.com/kochas23/Threat-Watch/blob/Core/Maintenance%20Team.md) and the [Security Team Documentation](https://github.com/kochas23/Threat-Watch/blob/Core/Security%20Team.md).
 
