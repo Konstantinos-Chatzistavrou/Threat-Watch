@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "test.e2e": "cypress run",
     "test.unit": "vitest",
-    "lint": "eslint"
+    "lint": "eslint",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@capacitor/android": "5.6.0",
@@ -37,9 +38,9 @@
   "devDependencies": {
     "@capacitor/cli": "5.6.0",
     "@testing-library/dom": ">=7.21.4",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/user-event": "^14.4.3",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^14.3.1",
+    "@testing-library/user-event": "^14.5.2",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-legacy": "^5.0.0",
@@ -52,7 +53,8 @@
     "terser": "^5.4.0",
     "typescript": "^5.1.6",
     "vite": "^5.0.0",
-    "vitest": "^0.34.6"
+    "vitest": "^0.34.6",
+    "vitest-fail-on-console": "^0.7.0"
   },
   "description": "An Ionic project"
 }
