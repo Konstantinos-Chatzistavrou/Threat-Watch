@@ -53,7 +53,8 @@
     "terser": "^5.4.0",
     "typescript": "^5.1.6",
     "vite": "^5.0.0",
-    "vitest": "^0.34.6"
+    "vitest": "^0.34.6",
+    "vitest-fail-on-console": "^0.7.0"
   },
   "description": "An Ionic project"
 }

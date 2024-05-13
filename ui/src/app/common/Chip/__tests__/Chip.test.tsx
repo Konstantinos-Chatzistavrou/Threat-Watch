@@ -1,5 +1,5 @@
 import { Chip } from "@common/Chip";
-import type { ChipProps } from "@common/Chip/types";
+import type { ChipProps } from "@common/Chip/ChipTypes";
 import { IonApp } from "@ionic/react";
 import { render, screen, within } from "@testing-library/react";
 

@@ -1,3 +1,4 @@
+import { buildElementId } from "@/app/utils/test/testUtils";
 import Button from "@common/Button/Button";
 import homeContent from "@content/home.json";
 import {
@@ -21,7 +22,7 @@ import "swiper/swiper.min.css";
 import React, { ReactNode, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
+export const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
   const [showSwiper, setShowSwiper] = useState(false);
 
   return (
@@ -61,6 +62,7 @@ const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
               size: "small",
               icon: ellipsisHorizontalCircleSharp,
             }}
+            dataTestId={testId.moreInfoBtn}
           />
           <IonPopover
             trigger={"critical-news-more-info"}
@@ -68,7 +70,7 @@ const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
             side={"bottom"}
             alignment={"center"}
           >
-            <IonContent>
+            <IonContent data-testid={testId.popoverContent}>
               <IonList className={"ion-no-padding"} lines={"full"}>
                 {Object.values(homeContent.criticalNews.menuItem).map(
                   (item, i) => (
@@ -84,7 +86,7 @@ const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
       </IonRow>
       <IonRow
         class={!showSwiper ? "ion-hide" : ""}
-        data-testid={"critical-news-swiper-container"}
+        data-testid={testId.swiperContainer}
       >
         <Swiper slidesPerView={"auto"}>
           {articles.map((article) => (
@@ -103,4 +105,10 @@ interface CriticalNewsProps {
   render: (article: Article) => ReactNode;
 }
 
-export default CriticalNews;
+const prefixId = (name: string) =>
+  buildElementId("home", "critical-news", name);
+export const testId = {
+  moreInfoBtn: prefixId("more-info"),
+  popoverContent: prefixId("popover-content"),
+  swiperContainer: prefixId("swiper-container"),
+};

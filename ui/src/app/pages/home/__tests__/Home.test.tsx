@@ -2,12 +2,13 @@ import homeContent from "@content/home.json";
 import { IonApp } from "@ionic/react";
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Home } from "..";
+import { Home, testId as HomeTestId } from "..";
+import { testId as CriticalNewsTestId } from "../components/CriticalNews";
 
 test("displays a search bar and 2 buttons", async () => {
-  setup();
+  renderHome();
 
-  const searchRow = screen.getByTestId("home-search-row");
+  const searchRow = screen.getByTestId(HomeTestId.homeSearchRow);
   expect(within(searchRow).getByLabelText("search-reload")).toBeVisible();
   expect(
     within(searchRow).getByLabelText("sparkles-placeholder-aria-label"),
@@ -22,7 +23,7 @@ test("displays a search bar and 2 buttons", async () => {
 });
 
 test("highlights a starred article", async () => {
-  const { user } = setup();
+  const { user } = renderHome();
 
   const favoriteBtn = screen.getByLabelText("favorite-btn-1");
   expect(within(favoriteBtn).queryByRole("img")).toBeNull();
@@ -34,10 +35,10 @@ test("highlights a starred article", async () => {
 });
 
 test("displays articles after clicking to expand the dropdown", async () => {
-  const { user } = setup();
+  const { user } = renderHome();
 
   const criticalNewsContainer = screen.getByTestId(
-    "critical-news-swiper-container",
+    CriticalNewsTestId.swiperContainer,
   );
   const criticalNewsDropdownButton = screen.getByLabelText(
     "critical-news-dropdown-button",
@@ -47,7 +48,7 @@ test("displays articles after clicking to expand the dropdown", async () => {
   expect(criticalNewsContainer).toHaveAttribute("class", "");
 });
 
-function setup() {
+function renderHome() {
   const utils = render(
     <IonApp>
       <Home />

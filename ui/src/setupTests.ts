@@ -6,7 +6,9 @@ import "@testing-library/jest-dom/extend-expect";
 import {setupIonicReact} from "@ionic/react";
 import {cleanup} from "@testing-library/react";
 import {vi} from "vitest";
+import failOnConsole from "vitest-fail-on-console";
 
+failOnConsole();
 setupIonicReact();
 
 afterEach(() => {

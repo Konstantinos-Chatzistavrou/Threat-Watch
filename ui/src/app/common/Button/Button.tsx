@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react";
+import { ButtonProps } from "@common/Button/ButtonTypes";
 import { IonButton, IonIcon } from "@ionic/react";
-import { ButtonProps } from "@common/Button/types";
+import React, { ReactNode } from "react";
 
 const Button = ({
   type,

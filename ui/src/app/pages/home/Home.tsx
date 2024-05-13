@@ -1,3 +1,4 @@
+import { buildElementId } from "@/app/utils/test/testUtils";
 import lockSecurityImage from "@assets/lock-circuit.jpeg";
 import Button from "@common/Button/Button";
 import Chip from "@common/Chip/Chip";
@@ -14,12 +15,12 @@ import {
   IonRow,
   IonSearchbar,
 } from "@ionic/react";
-import ArticleMockData from "@pages/home/__tests__/mock-data/articleHeaders.json";
+import ArticleMockData from "@pages/home/__tests__/mock-data/ArticleHeaders.json";
 import { sparkles, star, syncCircle } from "ionicons/icons";
 import React, { useState } from "react";
 import { CriticalNews } from "./components/CriticalNews";
 
-const Home: React.FC = () => {
+export const Home: React.FC = () => {
   const [articles, setArticles] = useState<Article[]>(ArticleMockData);
   const handleSearchChange = () => {};
   const handleFavorite = (id: number) => () => {
@@ -37,7 +38,7 @@ const Home: React.FC = () => {
       style={{
         maxWidth: "15rem",
       }}
-      data-testid={`critical-news-article-${id}`}
+      data-testid={`${testId.criticalNewsArticle}-${id}`}
     >
       <img
         alt="security-thumbnail"
@@ -96,7 +97,7 @@ const Home: React.FC = () => {
         <IonGrid className={""}>
           <IonRow
             className={"ion-align-items-center"}
-            data-testid={"home-search-row"}
+            data-testid={testId.homeSearchRow}
           >
             <IonCol size={"2"}>
               <Button
@@ -136,4 +137,9 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+const prefixId = (section: string, element: string) =>
+  buildElementId("home", section, element);
+export const testId = {
+  criticalNewsArticle: prefixId("critical-news", "article"),
+  homeSearchRow: prefixId("search-bar", "row"),
+};

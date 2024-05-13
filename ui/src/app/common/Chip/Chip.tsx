@@ -1,6 +1,6 @@
-import React from "react";
+import { ChipProps } from "@common/Chip/ChipTypes";
 import { IonLabel } from "@ionic/react";
-import { ChipProps } from "@common/Chip/types";
+import React from "react";
 
 const Chip = ({
   content,

@@ -1,5 +1,5 @@
 import { Button } from "@common/Button";
-import type { ButtonProps, IonButtonProps } from "@common/Button/types";
+import type { ButtonProps, IonButtonProps } from "@common/Button/ButtonTypes";
 import { IonApp } from "@ionic/react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
