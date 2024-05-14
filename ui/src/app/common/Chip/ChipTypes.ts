@@ -18,4 +18,5 @@ export interface ChipProps {
   content: ReactNode;
   ionLabelProps?: IonLabelProps;
   dataTestId?: string;
+  icon?: string;
 }

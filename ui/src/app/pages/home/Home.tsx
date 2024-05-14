@@ -1,29 +1,31 @@
 import { buildElementId } from "@/app/utils/test/testUtils";
-import lockSecurityImage from "@assets/lock-circuit.jpeg";
+import gridLockImage from "@assets/grid-lock.jpeg";
 import Button from "@common/Button/Button";
-import Chip from "@common/Chip/Chip";
 import Header from "@common/Header/Header";
+import InfoCard from "@common/InfoCard/InfoCard";
+import "./HomeStyles.css";
 import homeContent from "@content/home.json";
 import {
-  IonCard,
-  IonCardHeader,
-  IonCardTitle,
   IonCol,
   IonContent,
   IonGrid,
+  IonHeader,
   IonPage,
   IonRow,
   IonSearchbar,
 } from "@ionic/react";
-import ArticleMockData from "@pages/home/__tests__/mock-data/ArticleHeaders.json";
-import { sparkles, star, syncCircle } from "ionicons/icons";
+import ArticleSummaryMockData from "@pages/home/__tests__/mock-data/ArticleSummary.json";
+import CriticalArticleSummaryMockData from "@pages/home/__tests__/mock-data/CriticalArticleSummary.json";
+import { sparkles, syncCircle, timeSharp } from "ionicons/icons";
 import React, { useState } from "react";
 import { CriticalNews } from "./components/CriticalNews";
 
 export const Home: React.FC = () => {
-  const [articles, setArticles] = useState<Article[]>(ArticleMockData);
+  const [articles, setArticles] = useState<Article[]>(
+    CriticalArticleSummaryMockData,
+  );
   const handleSearchChange = () => {};
-  const handleFavorite = (id: number) => () => {
+  const handleFavorite = (id: number) => {
     setArticles((list) =>
       list.map((article) => {
         if (article.id !== id) return article;
@@ -32,69 +34,11 @@ export const Home: React.FC = () => {
     );
   };
 
-  const renderNewsArticles = ({ title, id, isFavorite }: Article) => (
-    <IonCard
-      className={"ion-no-margin ion-margin-end"}
-      style={{
-        maxWidth: "15rem",
-      }}
-      data-testid={`${testId.criticalNewsArticle}-${id}`}
-    >
-      <img
-        alt="security-thumbnail"
-        src={lockSecurityImage}
-        style={{
-          width: "15rem", // 225px
-          maxHeight: "5rem", // 80px
-          objectFit: "none",
-        }}
-      />
-      <div
-        style={{
-          position: "fixed",
-          bottom: "2.5rem",
-          left: "0.2rem",
-        }}
-      >
-        <Chip
-          content={homeContent.criticalNews.chipLabel}
-          backgroundColor={"#59BE3B"}
-          ionLabelProps={{ color: "dark" }}
-        />
-      </div>
-
-      <IonCardHeader class={"ion-no-padding"}>
-        <IonRow class={"ion-align-items-center ion-padding-horizontal"}>
-          <IonCol>
-            <IonCardTitle>{title}</IonCardTitle>
-          </IonCol>
-          <IonCol>
-            <Button
-              type="icon"
-              ariaLabel={`favorite-btn-${id}`}
-              classes={"small-square ion-float-right"}
-              ionButtonProps={{
-                size: "small",
-                shape: "round",
-                onClick: handleFavorite(id),
-              }}
-              ionIconProps={{
-                icon: star,
-                size: "small",
-                color: isFavorite ? "yellow" : "",
-              }}
-            />
-          </IonCol>
-        </IonRow>
-      </IonCardHeader>
-    </IonCard>
-  );
-
   return (
     <IonPage>
       <Header />
       <IonContent fullscreen>
-        <IonGrid className={""}>
+        <IonGrid>
           <IonRow
             className={"ion-align-items-center"}
             data-testid={testId.homeSearchRow}
@@ -128,8 +72,31 @@ export const Home: React.FC = () => {
           </IonRow>
           <IonRow>
             <IonCol>
-              <CriticalNews articles={articles} render={renderNewsArticles} />
+              <CriticalNews
+                articles={articles}
+                handleFavorite={handleFavorite}
+              />
             </IonCol>
+          </IonRow>
+          <IonRow>
+            <IonHeader class={"ion-no-border"}>
+              {homeContent.news.heading}
+            </IonHeader>
+            {ArticleSummaryMockData.map((article, i) => (
+              <IonCol size={i === 0 ? "12" : "6"}>
+                <InfoCard
+                  id={article.id}
+                  title={article.title}
+                  handleFavorite={() => handleFavorite(article.id)}
+                  isFavorite={article.isFavorite}
+                  chipLabel={`2 ${homeContent.news.timestamp.hoursAgo}`}
+                  cardImg={gridLockImage}
+                  cardImgAlt={"security-thumbnail"}
+                  testId={`${testId.newsInfoCard}-${article.id}`}
+                  chipIcon={timeSharp}
+                />
+              </IonCol>
+            ))}
           </IonRow>
         </IonGrid>
       </IonContent>
@@ -140,6 +107,6 @@ export const Home: React.FC = () => {
 const prefixId = (section: string, element: string) =>
   buildElementId("home", section, element);
 export const testId = {
-  criticalNewsArticle: prefixId("critical-news", "article"),
   homeSearchRow: prefixId("search-bar", "row"),
+  newsInfoCard: prefixId("news", "info-card"),
 };

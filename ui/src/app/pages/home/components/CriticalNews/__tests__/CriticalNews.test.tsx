@@ -1,6 +1,6 @@
 import homeJson from "@content/home.json";
 import { IonApp } from "@ionic/react";
-import ArticleMockData from "@pages/home/__tests__/mock-data/ArticleHeaders.json";
+import ArticleMockData from "@pages/home/__tests__/mock-data/CriticalArticleSummary.json";
 import {
   CriticalNews,
   testId as CriticalNewsTestId,
