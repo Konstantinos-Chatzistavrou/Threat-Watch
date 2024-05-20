@@ -14,16 +14,14 @@ import {
   IonRow,
   IonSearchbar,
 } from "@ionic/react";
-import ArticleSummaryMockData from "@pages/home/__tests__/mock-data/ArticleSummary.json";
-import CriticalArticleSummaryMockData from "@pages/home/__tests__/mock-data/CriticalArticleSummary.json";
+import { articleMockData } from "@pages/home/__tests__/mock-data/articleMockData";
+import { Article } from "@pages/home/HomeTypes";
 import { sparkles, syncCircle, timeSharp } from "ionicons/icons";
 import React, { useState } from "react";
 import { CriticalNews } from "./components/CriticalNews";
 
 export const Home: React.FC = () => {
-  const [articles, setArticles] = useState<Article[]>(
-    CriticalArticleSummaryMockData,
-  );
+  const [articles, setArticles] = useState<Article[]>(articleMockData);
   const handleSearchChange = () => {};
   const handleFavorite = (id: number) => {
     setArticles((list) =>
@@ -33,6 +31,9 @@ export const Home: React.FC = () => {
       }),
     );
   };
+
+  const criticalArticles = articles.filter((article) => article.isCritical);
+  const nonCriticalArticles = articles.filter((article) => !article.isCritical);
 
   return (
     <IonPage>
@@ -73,27 +74,30 @@ export const Home: React.FC = () => {
           <IonRow>
             <IonCol>
               <CriticalNews
-                articles={articles}
+                articles={criticalArticles}
                 handleFavorite={handleFavorite}
               />
             </IonCol>
           </IonRow>
           <IonRow>
-            <IonHeader class={"ion-no-border"}>
-              {homeContent.news.heading}
-            </IonHeader>
-            {ArticleSummaryMockData.map((article, i) => (
-              <IonCol size={i === 0 ? "12" : "6"}>
+            <IonCol size={"12"}>
+              <IonHeader class={"ion-no-border"}>
+                {homeContent.news.heading}
+              </IonHeader>
+            </IonCol>
+            {nonCriticalArticles.map((article, i) => (
+              <IonCol size={"6"}>
                 <InfoCard
                   id={article.id}
                   title={article.title}
                   handleFavorite={() => handleFavorite(article.id)}
                   isFavorite={article.isFavorite}
-                  chipLabel={`2 ${homeContent.news.timestamp.hoursAgo}`}
+                  chipLabel={`${new Date(article.updatedDate).getHours()} ${homeContent.news.timestamp.hoursAgo}`}
                   cardImg={gridLockImage}
                   cardImgAlt={"security-thumbnail"}
                   testId={`${testId.newsInfoCard}-${article.id}`}
                   chipIcon={timeSharp}
+                  cardContent={article.summary}
                 />
               </IonCol>
             ))}

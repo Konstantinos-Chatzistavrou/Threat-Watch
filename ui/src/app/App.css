@@ -26,6 +26,10 @@ ion-card {
     --background: #377E7F;
 }
 
+ion-card-title {
+    font-size: 1rem;
+}
+
 ion-button {
     border-radius: 5px;
     --background: #4CA7BE;
@@ -40,10 +44,6 @@ ion-button {
 
     &.large-square {
         width: 3.5rem
-    }
-
-    &.rounded {
-        border-radius: 50%;
     }
 
     &.none {

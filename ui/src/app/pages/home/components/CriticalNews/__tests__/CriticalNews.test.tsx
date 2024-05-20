@@ -1,6 +1,6 @@
 import homeJson from "@content/home.json";
 import { IonApp } from "@ionic/react";
-import ArticleMockData from "@pages/home/__tests__/mock-data/CriticalArticleSummary.json";
+import { criticalArticleMockData } from "@pages/home/__tests__/mock-data/articleMockData";
 import {
   CriticalNews,
   testId as CriticalNewsTestId,
@@ -12,7 +12,7 @@ import { vi } from "vitest";
 test("renders all slide contents based on data length", async () => {
   const { mockRenderFn } = renderCriticalNews();
 
-  expect(mockRenderFn).toBeCalledTimes(ArticleMockData.length);
+  expect(mockRenderFn).toBeCalledTimes(criticalArticleMockData.length);
 });
 test("opens popover with more info list items when clicked", async () => {
   const { user } = renderCriticalNews();
@@ -35,7 +35,10 @@ function renderCriticalNews() {
   const user = userEvent.setup();
   const utils = render(
     <IonApp>
-      <CriticalNews articles={ArticleMockData} render={mockRenderFn} />
+      <CriticalNews
+        articles={criticalArticleMockData}
+        handleFavorite={mockRenderFn}
+      />
     </IonApp>,
   );
 

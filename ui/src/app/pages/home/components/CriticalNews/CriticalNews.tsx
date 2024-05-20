@@ -13,6 +13,7 @@ import {
   IonPopover,
   IonRow,
 } from "@ionic/react";
+import {Article} from "@pages/home/HomeTypes";
 import {
   caretDownCircle,
   caretForwardCircle,
