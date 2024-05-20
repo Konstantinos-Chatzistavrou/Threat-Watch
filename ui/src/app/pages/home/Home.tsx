@@ -85,22 +85,38 @@ export const Home: React.FC = () => {
                 {homeContent.news.heading}
               </IonHeader>
             </IonCol>
-            {nonCriticalArticles.map((article, i) => (
-              <IonCol size={"6"}>
-                <InfoCard
-                  id={article.id}
-                  title={article.title}
-                  handleFavorite={() => handleFavorite(article.id)}
-                  isFavorite={article.isFavorite}
-                  chipLabel={`${new Date(article.updatedDate).getHours()} ${homeContent.news.timestamp.hoursAgo}`}
-                  cardImg={gridLockImage}
-                  cardImgAlt={"security-thumbnail"}
-                  testId={`${testId.newsInfoCard}-${article.id}`}
-                  chipIcon={timeSharp}
-                  cardContent={article.summary}
-                />
-              </IonCol>
-            ))}
+            {nonCriticalArticles.map((article, i) => {
+              const timePassedMs =
+                new Date().getTime() - new Date(article.updatedDate).getTime();
+              const timePassedSec = timePassedMs / 1000;
+              let timePassedLabel;
+              if (timePassedSec < 60) {
+                timePassedLabel = `0 ${homeContent.news.timestamp.minutesAgo}`;
+              } else if (timePassedSec < 3600) {
+                timePassedLabel = `${Math.floor(timePassedSec / 60)} ${homeContent.news.timestamp.minutesAgo}`;
+              } else if (timePassedSec < 3600 * 24) {
+                timePassedLabel = `${Math.floor(timePassedSec / 3600)} ${homeContent.news.timestamp.hoursAgo}`;
+              } else {
+                timePassedLabel = `${Math.floor(timePassedSec / 3600 / 24)} ${homeContent.news.timestamp.daysAgo}`;
+              }
+
+              return (
+                <IonCol size={"6"}>
+                  <InfoCard
+                    id={article.id}
+                    title={article.title}
+                    handleFavorite={() => handleFavorite(article.id)}
+                    isFavorite={article.isFavorite}
+                    chipLabel={timePassedLabel}
+                    cardImg={gridLockImage}
+                    cardImgAlt={"security-thumbnail"}
+                    testId={`${testId.newsInfoCard}-${article.id}`}
+                    chipIcon={timeSharp}
+                    cardContent={article.summary}
+                  />
+                </IonCol>
+              );
+            })}
           </IonRow>
         </IonGrid>
       </IonContent>

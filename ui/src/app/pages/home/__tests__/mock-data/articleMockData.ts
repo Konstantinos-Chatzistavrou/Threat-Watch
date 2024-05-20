@@ -26,7 +26,7 @@ export const articleMockData: Article[] = [...Array(15)].map((_, i) => ({
   text: sampleText,
   createdBy: "Author",
   createdDate: getRandomDate(7),
-  updatedDate: getRandomDate(0.5),
+  updatedDate: getRandomDate(0.08),
 }));
 
 export const criticalArticleMockData = articleMockData.filter(
