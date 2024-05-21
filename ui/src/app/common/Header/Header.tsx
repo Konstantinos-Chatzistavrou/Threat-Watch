@@ -1,4 +1,6 @@
+import logo from "@assets/icons/tw-logo.svg";
 import {
+  IonBackButton,
   IonCol,
   IonGrid,
   IonHeader,
@@ -7,21 +9,32 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import logo from "@assets/icons/tw-logo.svg";
 import React, { PropsWithChildren } from "react";
 
 interface HeaderProps {
   title?: string;
+  inModal?: boolean;
 }
 
-const Header = ({ title, children }: PropsWithChildren<HeaderProps>) => (
+const Header = ({
+  title,
+  inModal = false,
+  children,
+}: PropsWithChildren<HeaderProps>) => (
   <IonHeader>
     <IonToolbar>
       <IonGrid>
-        <IonRow class={"ion-align-items-center"}>
-          <IonCol>
-            <IonIcon className="xl" aria-hidden="true" src={logo} />
-          </IonCol>
+        <IonRow class={"ion-align-items-center ion-justify-content-between"}>
+          {inModal && (
+            <IonCol>
+              <IonBackButton style={{ height: "20px" }} />
+            </IonCol>
+          )}
+          {!inModal && (
+            <IonCol>
+              <IonIcon className="xl" aria-hidden="true" src={logo} />
+            </IonCol>
+          )}
           <IonCol>{title && <IonTitle>{title}</IonTitle>}</IonCol>
           <IonCol>{children}</IonCol>
         </IonRow>

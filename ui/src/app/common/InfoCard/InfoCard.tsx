@@ -8,8 +8,8 @@ import {
   IonCol,
   IonRow,
 } from "@ionic/react";
-import { download, star } from "ionicons/icons";
-import React from "react";
+import { bookmark, download } from "ionicons/icons";
+import React, { ReactNode } from "react";
 
 interface InfoCardProps {
   id: number;
@@ -26,6 +26,7 @@ interface InfoCardProps {
   imgMaxHeight?: string;
   classes?: string;
   cardContent?: string;
+  navLinkWrapper?: (child: ReactNode) => ReactNode;
 }
 
 const InfoCard = ({
@@ -43,6 +44,7 @@ const InfoCard = ({
   chipIcon,
   classes,
   cardContent,
+  navLinkWrapper,
 }: InfoCardProps) => {
   const favoriteButton = (
     <Button
@@ -55,7 +57,7 @@ const InfoCard = ({
         onClick: handleFavorite,
       }}
       ionIconProps={{
-        icon: star,
+        icon: bookmark,
         size: "small",
         color: isFavorite ? "yellow" : "",
       }}
@@ -80,6 +82,33 @@ const InfoCard = ({
     />
   );
 
+  const CardText = (
+    <IonRow style={{ transform: "scale(1,1)" }}>
+      <img
+        alt={cardImgAlt}
+        src={cardImg}
+        style={{
+          width: imgWidth,
+          maxHeight: imgMaxHeight,
+          objectFit: "none",
+        }}
+      />
+      <div
+        style={{
+          position: "fixed",
+          bottom: "0.2rem",
+          left: "0.2rem",
+        }}
+      >
+        <Chip
+          content={chipLabel}
+          backgroundColor={"#59BE3B"}
+          ionLabelProps={{ color: "dark" }}
+          icon={chipIcon}
+        />
+      </div>
+    </IonRow>
+  );
   return (
     <IonCard
       className={`ion-no-margin ${classes || ""}`}
@@ -89,32 +118,7 @@ const InfoCard = ({
       }}
       data-testid={testId}
     >
-      <IonRow style={{ transform: "scale(1,1)" }}>
-        <img
-          alt={cardImgAlt}
-          src={cardImg}
-          style={{
-            width: imgWidth,
-            maxHeight: imgMaxHeight,
-            objectFit: "none",
-          }}
-        />
-        <div
-          style={{
-            position: "fixed",
-            bottom: "0.2rem",
-            left: "0.2rem",
-          }}
-        >
-          <Chip
-            content={chipLabel}
-            backgroundColor={"#59BE3B"}
-            ionLabelProps={{ color: "dark" }}
-            icon={chipIcon}
-          />
-        </div>
-      </IonRow>
-
+      {navLinkWrapper ? navLinkWrapper(CardText) : CardText}
       <IonCardHeader
         class={"ion-no-padding"}
         style={{ borderTop: "1px solid black" }}
