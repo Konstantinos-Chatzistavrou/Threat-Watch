@@ -57,16 +57,32 @@ Welcome to Threat-Watch, the most privacy-focused cybersecurity news app in the 
 
 - No central server, everything is run either inside the user's device or inside an API, thus making it almost impossible for a breach to ever happen.
 
-# Creative Commons license
+# Creative Commons License
 
-License used:
+**License used:**
 
 Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)
 
 This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
-For details, please visit: https://creativecommons.org/licenses/by-nc/4.0/
+For details, please visit: [Creative Commons License Page](https://creativecommons.org/licenses/by-nc/4.0/).
 
-This license applies to the Threat-Watch logo and the app name "Threat-Watch" in this repository as well as the branding colours combination of the project and app including: #002147, #00FF00, #FFFF00, #008080, #000. These branding colour combinations are part of our identity and are closely related to our project. 
+This license applies to the Threat-Watch logo, the app name "Threat-Watch" in this repository, as well as the branding color combinations of the project and app, including:
+
+- **Primary**: #002147
+- **Text**: #00FF00
+- **Accent**: #FFFF00
+- **Secondary**: #008080
+- **Anchor**: #000000
+
+These branding color combinations are part of our identity and are closely related to our project.
+If you wish to any of those 3:
+
+ •You may not use them for commercial purposes.
+
+• You may need to attribute our project: the Threat-Watch Project.
+
+For any questions or permissions beyond the scope of this license, please contact us at threatwatchapp@gmail.com
+
 
 ## Logo-and-App-Name-License
 
