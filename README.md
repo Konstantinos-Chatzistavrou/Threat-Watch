@@ -76,11 +76,11 @@ This license applies to the Threat-Watch logo, the app name "Threat-Watch" in th
 - **Anchor**: #000000
 
 These branding color combinations are part of our identity and are closely related to our project.
-If you wish to any of those 3:
+If you wish to use any of those 3:
 
- •You may not use them for commercial purposes.
+• **NonCommercial Use**: You may not use them for commercial purposes.
 
-• You may need to attribute our project: the Threat-Watch Project.
+• **Attribution**: You must attribute our project: the Threat-Watch Project.
 
 For any questions or permissions beyond the scope of this license, please contact us at threatwatchapp@gmail.com
 
