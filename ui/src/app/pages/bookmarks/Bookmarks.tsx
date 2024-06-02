@@ -1,6 +1,3 @@
-import ExploreContainer from "../../common/ExploreContainer/ExploreContainer";
-import "./index.css";
-import { camera, close, trash } from "ionicons/icons";
 import {
   IonActionSheet,
   IonCol,
@@ -16,17 +13,20 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import { usePhotoGallery, UserPhoto } from "../../hooks/usePhotoGallery";
+import { camera, close, trash } from "ionicons/icons";
 import { useState } from "react";
+import ExploreContainer from "../../common/ExploreContainer/ExploreContainer";
+import "./Bookmarks.css";
 import Header from "../../common/Header/Header";
+import { usePhotoGallery, UserPhoto } from "../../hooks/usePhotoGallery";
 
-const Saved: React.FC = () => {
+export const Bookmarks: React.FC = () => {
   const { takePhoto, photos, deletePhoto } = usePhotoGallery();
   const [photoToDelete, setPhotoToDelete] = useState<UserPhoto>();
 
   return (
     <IonPage>
-      <Header title="Saved" />
+      <Header title="Bookmarks" />
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
@@ -77,5 +77,3 @@ const Saved: React.FC = () => {
     </IonPage>
   );
 };
-
-export default Saved;

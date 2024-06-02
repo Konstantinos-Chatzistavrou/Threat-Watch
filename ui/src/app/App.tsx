@@ -29,10 +29,10 @@ import {
   setupIonicReact,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
+import { Bookmarks } from "@pages/bookmarks";
 import Downloads from "@pages/downloads";
 import { Home } from "@pages/home";
 import Profile from "@pages/profile";
-import Saved from "@pages/saved";
 import Settings from "@pages/settings";
 import { bookmark, download, home, person, settings } from "ionicons/icons";
 import React from "react";
@@ -49,8 +49,8 @@ const App: React.FC = () => (
           <Route exact path="/home">
             <Home />
           </Route>
-          <Route exact path="/saved">
-            <Saved />
+          <Route exact path="/bookmarks">
+            <Bookmarks />
           </Route>
           <Route exact path="/settings">
             <Settings />
@@ -70,9 +70,9 @@ const App: React.FC = () => (
             <IonIcon aria-hidden="true" icon={home} />
             <IonLabel>{appContent.home}</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="saved" href="/saved">
+          <IonTabButton tab="bookmarks" href="/bookmarks">
             <IonIcon aria-hidden="true" icon={bookmark} />
-            <IonLabel>{appContent.saved}</IonLabel>
+            <IonLabel>{appContent.bookmarks}</IonLabel>
           </IonTabButton>
           <IonTabButton tab="settings" href="/settings">
             <IonIcon aria-hidden="true" icon={settings} />
