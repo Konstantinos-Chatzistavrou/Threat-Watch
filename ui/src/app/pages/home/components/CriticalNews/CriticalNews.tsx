@@ -13,7 +13,7 @@ import {
   IonPopover,
   IonRow,
 } from "@ionic/react";
-import {Article} from "@pages/home/HomeTypes";
+import { Article } from "@pages/home/HomeTypes";
 import {
   caretDownCircle,
   caretForwardCircle,
@@ -27,12 +27,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 interface CriticalNewsProps {
   articles: Article[];
-  handleFavorite: (id: number) => void;
+  handleBookmark: (id: number) => void;
 }
 
 export const CriticalNews = ({
   articles,
-  handleFavorite,
+  handleBookmark,
 }: CriticalNewsProps) => {
   const [showSwiper, setShowSwiper] = useState(false);
 
@@ -105,8 +105,8 @@ export const CriticalNews = ({
               <InfoCard
                 id={article.id}
                 title={article.title}
-                handleFavorite={() => handleFavorite(article.id)}
-                isFavorite={article.isFavorite}
+                handleBookmark={() => handleBookmark(article.id)}
+                isBookmarked={article.isBookmarked}
                 chipLabel={homeContent.criticalNews.chipLabel}
                 cardImgAlt={"security-thumbnail"}
                 cardImg={lockSecurityImage}

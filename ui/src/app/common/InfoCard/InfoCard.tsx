@@ -14,8 +14,10 @@ import React, { ReactNode } from "react";
 interface InfoCardProps {
   id: number;
   title: string;
-  handleFavorite: () => void;
-  isFavorite: boolean;
+  handleBookmark: () => void;
+  handleDownload?: () => void;
+  isBookmarked: boolean;
+  isDownloaded?: boolean;
   chipLabel: string;
   chipIcon?: string;
   cardImg: string;
@@ -32,8 +34,10 @@ interface InfoCardProps {
 const InfoCard = ({
   id,
   title,
-  handleFavorite,
-  isFavorite,
+  handleBookmark,
+  handleDownload,
+  isBookmarked,
+  isDownloaded,
   chipLabel,
   cardImg,
   cardImgAlt,
@@ -46,20 +50,20 @@ const InfoCard = ({
   cardContent,
   navLinkWrapper,
 }: InfoCardProps) => {
-  const favoriteButton = (
+  const bookmarkButton = (
     <Button
       type="icon"
-      ariaLabel={`favorite-btn-${id}`}
+      ariaLabel={`bookmark-btn-${id}`}
       classes={"small-square ion-float-right"}
       ionButtonProps={{
         size: "small",
         shape: "round",
-        onClick: handleFavorite,
+        onClick: handleBookmark,
       }}
       ionIconProps={{
         icon: bookmark,
         size: "small",
-        color: isFavorite ? "yellow" : "",
+        color: isBookmarked ? "yellow" : "",
       }}
     />
   );
@@ -67,17 +71,17 @@ const InfoCard = ({
   const downloadButton = (
     <Button
       type="icon"
-      ariaLabel={`favorite-btn-${id}`}
+      ariaLabel={`download-btn-${id}`}
       classes={"small-square ion-float-right"}
       ionButtonProps={{
         size: "small",
         shape: "round",
-        onClick: handleFavorite,
+        onClick: handleDownload,
       }}
       ionIconProps={{
         icon: download,
         size: "small",
-        color: isFavorite ? "cyan" : "",
+        color: isDownloaded ? "cyan" : "",
       }}
     />
   );
@@ -136,13 +140,13 @@ const InfoCard = ({
                   </IonCardContent>
                 </IonRow>
                 <IonRow class={"ion-justify-content-end"}>
-                  {favoriteButton}
+                  {bookmarkButton}
                   {downloadButton}
                 </IonRow>
               </>
             )}
           </IonCol>
-          {!cardContent && <IonCol>{favoriteButton}</IonCol>}
+          {!cardContent && <IonCol>{bookmarkButton}</IonCol>}
         </IonRow>
       </IonCardHeader>
     </IonCard>

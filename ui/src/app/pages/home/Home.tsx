@@ -26,11 +26,20 @@ import { CriticalNews } from "./components/CriticalNews";
 export const Home: React.FC = () => {
   const [articles, setArticles] = useState<Article[]>(articleMockData);
   const handleSearchChange = () => {};
-  const handleFavorite = (id: number) => {
+  const handleBookmark = (id: number) => {
     setArticles((list) =>
       list.map((article) => {
         if (article.id !== id) return article;
-        return { ...article, isFavorite: !article.isFavorite };
+        return { ...article, isBookmarked: !article.isBookmarked };
+      }),
+    );
+  };
+
+  const handleDownload = (id: number) => {
+    setArticles((list) =>
+      list.map((article) => {
+        if (article.id !== id) return article;
+        return { ...article, isDownloaded: !article.isDownloaded };
       }),
     );
   };
@@ -88,7 +97,7 @@ export const Home: React.FC = () => {
                 <IonCol>
                   <CriticalNews
                     articles={criticalArticles}
-                    handleFavorite={handleFavorite}
+                    handleBookmark={handleBookmark}
                   />
                 </IonCol>
               </IonRow>
@@ -119,8 +128,10 @@ export const Home: React.FC = () => {
                       <InfoCard
                         id={article.id}
                         title={article.title}
-                        handleFavorite={() => handleFavorite(article.id)}
-                        isFavorite={article.isFavorite}
+                        handleBookmark={() => handleBookmark(article.id)}
+                        handleDownload={() => handleDownload(article.id)}
+                        isBookmarked={article.isBookmarked}
+                        isDownloaded={article.isDownloaded}
                         chipLabel={timePassedLabel}
                         cardImg={gridLockImage}
                         cardImgAlt={"security-thumbnail"}

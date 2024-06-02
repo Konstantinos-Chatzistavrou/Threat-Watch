@@ -3,7 +3,8 @@ export interface Article {
   id: number;
   title: string;
   isCritical: boolean;
-  isFavorite: boolean;
+  isBookmarked: boolean;
+  isDownloaded: boolean;
   summary: string;
   text: string;
   createdBy: string;

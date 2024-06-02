@@ -37,7 +37,7 @@ function renderCriticalNews() {
     <IonApp>
       <CriticalNews
         articles={criticalArticleMockData}
-        handleFavorite={mockRenderFn}
+        handleBookmark={mockRenderFn}
       />
     </IonApp>,
   );
