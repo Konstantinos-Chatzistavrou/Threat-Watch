@@ -66,7 +66,7 @@ Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)
 This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
 For details, please visit: https://creativecommons.org/licenses/by-nc/4.0/
 
-This license applies to the Threat-Watch logo and the app name "Threat-Watch" in this repository as well as the branding colours combination of the project and app including: #002147, #00FF00, #FFFF00, #FFF, #000.
+This license applies to the Threat-Watch logo and the app name "Threat-Watch" in this repository as well as the branding colours combination of the project and app including: #002147, #00FF00, #FFFF00, #008080, #000. These branding colour combinations are part of our identity and are closely related to our project. 
 
 ## Logo-and-App-Name-License
 
