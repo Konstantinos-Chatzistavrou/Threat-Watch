@@ -1,3 +1,5 @@
+import { Article } from "@/app/api/articleApi/ArticleTypes";
+import { articleMockData } from "@/app/api/articleApi/mock-data/articleMockData";
 import { buildElementId } from "@/app/utils/test/testUtils";
 import gridLockImage from "@assets/grid-lock.jpeg";
 import Button from "@common/Button/Button";
@@ -17,8 +19,6 @@ import {
   IonSearchbar,
 } from "@ionic/react";
 import { ArticleDetails } from "@pages/article-details/ArticleDetails";
-import { articleMockData } from "@pages/home/__tests__/mock-data/articleMockData";
-import { Article } from "@pages/home/HomeTypes";
 import { sparkles, syncCircle, timeSharp } from "ionicons/icons";
 import React, { ReactNode, useState } from "react";
 import { CriticalNews } from "./components/CriticalNews";
@@ -148,7 +148,7 @@ export const Home: React.FC = () => {
           </IonContent>
         </IonPage>
       )}
-    ></IonNav>
+    />
   );
 };
 

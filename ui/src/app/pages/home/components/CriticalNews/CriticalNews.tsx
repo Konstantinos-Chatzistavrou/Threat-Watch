@@ -1,3 +1,4 @@
+import { Article } from "@/app/api/articleApi/ArticleTypes";
 import { buildElementId } from "@/app/utils/test/testUtils";
 import lockSecurityImage from "@assets/lock-circuit.jpeg";
 import Button from "@common/Button/Button";
@@ -13,7 +14,6 @@ import {
   IonPopover,
   IonRow,
 } from "@ionic/react";
-import { Article } from "@pages/home/HomeTypes";
 import {
   caretDownCircle,
   caretForwardCircle,

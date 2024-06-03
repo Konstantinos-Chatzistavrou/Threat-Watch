@@ -1,79 +1,94 @@
+import { Article } from "@/app/api/articleApi/ArticleTypes";
+import { bookmarkedArticleMockData } from "@/app/api/articleApi/mock-data/bookmarkedArticleMockData";
+import gridLockImage from "@assets/grid-lock.jpeg";
+import { Button } from "@common/Button";
 import {
-  IonActionSheet,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardTitle,
   IonCol,
   IonContent,
-  IonFab,
-  IonFabButton,
   IonGrid,
-  IonHeader,
-  IonIcon,
-  IonImg,
+  IonNav,
+  IonNavLink,
   IonPage,
   IonRow,
-  IonTitle,
-  IonToolbar,
 } from "@ionic/react";
-import { camera, close, trash } from "ionicons/icons";
-import { useState } from "react";
-import ExploreContainer from "../../common/ExploreContainer/ExploreContainer";
 import "./Bookmarks.css";
+import { ArticleDetails } from "@pages/article-details/ArticleDetails";
+import React, { ReactNode, useState } from "react";
 import Header from "../../common/Header/Header";
-import { usePhotoGallery, UserPhoto } from "../../hooks/usePhotoGallery";
 
 export const Bookmarks: React.FC = () => {
-  const { takePhoto, photos, deletePhoto } = usePhotoGallery();
-  const [photoToDelete, setPhotoToDelete] = useState<UserPhoto>();
+  const [bookmarkedArticles, setBookmarkedArticles] = useState<Article[]>(
+    bookmarkedArticleMockData,
+  );
+
+  const navLinkWrapper = (articleId: number) => (child: ReactNode) => (
+    <IonNavLink
+      routerDirection={"forward"}
+      component={() => <ArticleDetails id={articleId} />}
+    >
+      {child}
+    </IonNavLink>
+  );
 
   return (
-    <IonPage>
-      <Header title="Bookmarks" />
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 2</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Tab 2 page" />
-        <IonFab vertical="bottom" horizontal="center" slot="fixed">
-          <IonFabButton onClick={() => takePhoto()}>
-            <IonIcon icon={camera}></IonIcon>
-          </IonFabButton>
-        </IonFab>
-        <IonGrid>
-          <IonRow>
-            {photos.map((photo, index) => (
-              <IonCol size="6" key={photo.filepath}>
-                <IonImg
-                  onClick={() => setPhotoToDelete(photo)}
-                  src={photo.webviewPath}
-                />
-              </IonCol>
-            ))}
-          </IonRow>
-        </IonGrid>
-        <IonActionSheet
-          isOpen={!!photoToDelete}
-          buttons={[
-            {
-              text: "Delete",
-              role: "destructive",
-              icon: trash,
-              handler: () => {
-                if (photoToDelete) {
-                  deletePhoto(photoToDelete);
-                  setPhotoToDelete(undefined);
-                }
-              },
-            },
-            {
-              text: "Cancel",
-              icon: close,
-              role: "cancel",
-            },
-          ]}
-          onDidDismiss={() => setPhotoToDelete(undefined)}
-        />
-      </IonContent>
-    </IonPage>
+    <IonNav
+      root={() => (
+        <IonPage>
+          <Header title="Bookmarks" />
+          <IonContent fullscreen>
+            <IonGrid>
+              <IonRow className={"ion-margin-bottom"}>
+                <Button
+                  type={"button"}
+                  ariaLabel={"edit-btn"}
+                  classes={"ion-no-margin"}
+                >
+                  Edit
+                </Button>
+              </IonRow>
+              {bookmarkedArticles.map((article) => (
+                <IonRow>
+                  <IonCard
+                    className={"ion-no-margin ion-margin-bottom"}
+                    style={{
+                      width: "100%",
+                      border: "1px solid black",
+                    }}
+                  >
+                    <IonRow
+                      className={"ion-justify-content-between ion-padding"}
+                    >
+                      <IonCol
+                        className={"ion-no-padding ion-justify-content-between"}
+                      >
+                        <IonCardHeader className={"ion-no-padding"}>
+                          <IonCardTitle>{article.title}</IonCardTitle>
+                        </IonCardHeader>
+                        <IonCardContent className={"ion-no-padding"}>
+                          temp
+                        </IonCardContent>
+                      </IonCol>
+
+                      <img
+                        alt={"alt"}
+                        src={gridLockImage}
+                        style={{
+                          width: "120px",
+                          maxHeight: "103px",
+                        }}
+                      />
+                    </IonRow>
+                  </IonCard>
+                </IonRow>
+              ))}
+            </IonGrid>
+          </IonContent>
+        </IonPage>
+      )}
+    />
   );
 };

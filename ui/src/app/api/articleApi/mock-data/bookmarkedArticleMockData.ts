@@ -1,4 +1,4 @@
-import { Article } from "@pages/home/HomeTypes";
+import { Article } from "@/app/api/articleApi/ArticleTypes";
 
 const sampleSummary =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
@@ -17,22 +17,17 @@ const getRandomDate = (withinPastDays: number) =>
     new Date().getTime() - Math.random() * 8.64e7 * withinPastDays,
   ).toISOString();
 
-export const articleMockData: Article[] = [...Array(15)].map((_, i) => ({
-  id: i,
-  title: `Article ${i + 1}`,
-  isCritical: i < 5,
-  isBookmarked: false,
-  isDownloaded: false,
-  summary: sampleSummary,
-  text: sampleText,
-  createdBy: "Author",
-  createdDate: getRandomDate(7),
-  updatedDate: getRandomDate(0.08),
-}));
-
-export const criticalArticleMockData = articleMockData.filter(
-  (article) => article.isCritical,
-);
-export const nonCriticalArticleMockData = articleMockData.filter(
-  (article) => !article.isCritical,
+export const bookmarkedArticleMockData: Article[] = [...Array(5)].map(
+  (_, i) => ({
+    id: i,
+    title: `Bookmarked Article ${i + 1}`,
+    isCritical: true,
+    isBookmarked: true,
+    isDownloaded: false,
+    summary: sampleSummary,
+    text: sampleText,
+    createdBy: "Author",
+    createdDate: getRandomDate(7),
+    updatedDate: getRandomDate(0.08),
+  }),
 );

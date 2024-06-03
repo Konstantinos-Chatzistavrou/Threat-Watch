@@ -1,8 +1,8 @@
+import { articleMockData } from "@/app/api/articleApi/mock-data/articleMockData";
 import gridLockImage from "@assets/grid-lock.jpeg";
 import Header from "@common/Header/Header";
 import articleDetails from "@content/article-details.json";
 import { IonContent, IonGrid, IonRow, IonText } from "@ionic/react";
-import { articleMockData } from "@pages/home/__tests__/mock-data/articleMockData";
 import React from "react";
 
 interface ArticleDetailsProps {

@@ -1,5 +1,5 @@
+import { Article } from "@/app/api/articleApi/ArticleTypes";
 import { useGetApi } from "@/app/hooks/useGetApi";
-import { Article } from "@pages/home/HomeTypes";
 
 export const ARTICLE_API_URL = "/api/article";
 

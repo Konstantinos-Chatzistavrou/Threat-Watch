@@ -1,6 +1,6 @@
+import { criticalArticleMockData } from "@/app/api/articleApi/mock-data/articleMockData";
 import homeJson from "@content/home.json";
 import { IonApp } from "@ionic/react";
-import { criticalArticleMockData } from "@pages/home/__tests__/mock-data/articleMockData";
 import {
   CriticalNews,
   testId as CriticalNewsTestId,
