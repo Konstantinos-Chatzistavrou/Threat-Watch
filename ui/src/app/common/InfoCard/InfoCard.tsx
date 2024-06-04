@@ -86,6 +86,7 @@ const InfoCard = ({
     />
   );
 
+  // transform to make the chip position relative to direct parent
   const CardText = (
     <IonRow style={{ transform: "scale(1,1)" }}>
       <img

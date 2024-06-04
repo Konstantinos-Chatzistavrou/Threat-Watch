@@ -1,6 +1,7 @@
 import { Article } from "@/app/api/articleApi/ArticleTypes";
 import { articleMockData } from "@/app/api/articleApi/mock-data/articleMockData";
 import { buildElementId } from "@/app/utils/test/testUtils";
+import { getTimePassedLabel } from "@/app/utils/timeUtils";
 import gridLockImage from "@assets/grid-lock.jpeg";
 import Button from "@common/Button/Button";
 import Header from "@common/Header/Header";
@@ -108,20 +109,9 @@ export const Home: React.FC = () => {
                   </IonHeader>
                 </IonCol>
                 {nonCriticalArticles.map((article) => {
-                  const timePassedMs =
-                    new Date().getTime() -
-                    new Date(article.updatedDate).getTime();
-                  const timePassedSec = timePassedMs / 1000;
-                  let timePassedLabel;
-                  if (timePassedSec < 60) {
-                    timePassedLabel = `0 ${homeContent.news.timestamp.minutesAgo}`;
-                  } else if (timePassedSec < 3600) {
-                    timePassedLabel = `${Math.floor(timePassedSec / 60)} ${homeContent.news.timestamp.minutesAgo}`;
-                  } else if (timePassedSec < 3600 * 24) {
-                    timePassedLabel = `${Math.floor(timePassedSec / 3600)} ${homeContent.news.timestamp.hoursAgo}`;
-                  } else {
-                    timePassedLabel = `${Math.floor(timePassedSec / 3600 / 24)} ${homeContent.news.timestamp.daysAgo}`;
-                  }
+                  const timePassedLabel = getTimePassedLabel(
+                    article.updatedDate,
+                  );
 
                   return (
                     <IonCol size={"6"}>

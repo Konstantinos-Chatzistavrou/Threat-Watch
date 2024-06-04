@@ -19,7 +19,7 @@ const Chip = ({
         fontSize: "0.5rem",
       }}
       data-testid={dataTestId}
-      class={"ion-align-items-center"}
+      className={"ion-align-items-center"}
     >
       {icon ? (
         <IonIcon icon={icon} style={{ padding: "0 2px 0 0" }} />
