@@ -153,9 +153,9 @@ Are you interested in sponsoring this project or contributing with donations? Le
 
 ## License
 
-This project is licensed under the [GNU General Public License version 3 (GPLv3)](https://github.com/kochas23/Threat-Watch/blob/Core/LICENSE). 
+This project is licensed under the [GNU Affero General Public License version 3 (AGPLv3)](https://github.com/kochas23/Threat-Watch/blob/Core/LICENSE).
 
-This license grants you the freedom to use, modify, and distribute this software as per the terms outlined in the GPLv3. It's important to review the full [LICENSE](https://github.com/kochas23/Threat-Watch/blob/Core/LICENSE) text to understand your rights and responsibilities.
+This license grants you the freedom to use, modify, and distribute this software as per the terms outlined in the AGPLv3. It's important to review the full [LICENSE](https://github.com/kochas23/Threat-Watch/blob/Core/LICENSE) text to understand your rights and responsibilities, especially regarding the requirement to release the source code of any modified versions that you make available over a network.
 
 ## Contact
 
