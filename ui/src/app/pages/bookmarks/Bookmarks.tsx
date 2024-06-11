@@ -4,7 +4,6 @@ import gridLockImage from "@assets/grid-lock.jpeg";
 import { Button } from "@common/Button";
 import bookmarksContent from "@content/bookmarks.json";
 import {
-  IonAlert,
   IonCard,
   IonCardContent,
   IonCardHeader,
@@ -20,6 +19,7 @@ import {
   IonRow,
   IonText,
   IonToggle,
+  useIonAlert,
 } from "@ionic/react";
 import "./Bookmarks.css";
 import { ArticleDetails } from "@pages/article-details/ArticleDetails";
@@ -31,6 +31,7 @@ export const Bookmarks: React.FC = () => {
   const [bookmarkedArticles, setBookmarkedArticles] = useState<Article[]>(
     bookmarkedArticleMockData,
   );
+  const [presentAlert] = useIonAlert();
 
   const navLinkWrapper = (articleId: number) => (child: ReactNode) => (
     <IonNavLink
@@ -65,8 +66,7 @@ export const Bookmarks: React.FC = () => {
       }
     }
 
-    // return editMode && moreThanOneSelected;
-    return true;
+    return editMode && moreThanOneSelected;
   };
 
   const handleRemovedBookmarks = () => {
@@ -168,29 +168,26 @@ export const Bookmarks: React.FC = () => {
                         position: "fixed",
                         bottom: "0",
                       },
+                      onClick: () => {
+                        presentAlert({
+                          header: bookmarksContent.alertConfirmation,
+                          buttons: [
+                            {
+                              text: "Yes",
+                              role: "confirm",
+                              handler: handleRemovedBookmarks,
+                            },
+                            {
+                              text: "No",
+                              role: "cancel",
+                            },
+                          ],
+                        });
+                      },
                     }}
                   >
                     {bookmarksContent.removeArticlesButton}
                   </Button>
-
-                  <IonAlert
-                    header={bookmarksContent.alertConfirmation}
-                    trigger="present-alert"
-                    buttons={[
-                      {
-                        text: "Yes",
-                        role: "confirm",
-                        handler: handleRemovedBookmarks,
-                      },
-                      {
-                        text: "No",
-                        role: "cancel",
-                      },
-                    ]}
-                    onDidDismiss={({ detail }) =>
-                      console.log(`Dismissed with role: ${detail.role}`)
-                    }
-                  ></IonAlert>
                 </IonRow>
               ) : undefined}
             </IonGrid>
