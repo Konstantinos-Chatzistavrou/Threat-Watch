@@ -1,30 +1,23 @@
 import { Article } from "@/app/api/articleApi/ArticleTypes";
 import { bookmarkedArticleMockData } from "@/app/api/articleApi/mock-data/bookmarkedArticleMockData";
-import gridLockImage from "@assets/grid-lock.jpeg";
 import { Button } from "@common/Button";
+import ListCard from "@common/ListCard/ListCard";
 import bookmarksContent from "@content/bookmarks.json";
 import {
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonCardTitle,
   IonCheckbox,
   IonCol,
   IonContent,
   IonGrid,
-  IonIcon,
   IonNav,
   IonNavLink,
   IonPage,
   IonRow,
-  IonText,
   IonToggle,
   useIonAlert,
 } from "@ionic/react";
 import "./Bookmarks.css";
 import { ArticleDetails } from "@pages/article-details/ArticleDetails";
-import { timeSharp } from "ionicons/icons";
-import React, { ReactNode, useState } from "react";
+import React, { useState } from "react";
 import Header from "../../common/Header/Header";
 
 export const Bookmarks: React.FC = () => {
@@ -32,16 +25,6 @@ export const Bookmarks: React.FC = () => {
     bookmarkedArticleMockData,
   );
   const [presentAlert] = useIonAlert();
-
-  const navLinkWrapper = (articleId: number) => (child: ReactNode) => (
-    <IonNavLink
-      routerDirection={"forward"}
-      component={() => <ArticleDetails id={articleId} />}
-    >
-      {child}
-    </IonNavLink>
-  );
-
   const [editMode, setEditMode] = useState<boolean>(false);
   const [selectedArticles, setSelectedArticles] = useState<
     Record<number, boolean>
@@ -84,7 +67,7 @@ export const Bookmarks: React.FC = () => {
           <Header title="Bookmarks" />
           <IonContent fullscreen>
             <IonGrid>
-              <IonRow>
+              <IonRow className={"ion-padding-vertical"}>
                 <IonToggle
                   checked={editMode}
                   onIonChange={(e) => handleEditMode(e.detail.checked)}
@@ -98,51 +81,17 @@ export const Bookmarks: React.FC = () => {
                     size={editMode ? "11" : "12"}
                     className={"ion-no-padding ion-padding-bottom"}
                   >
-                    <IonCard
-                      className={"ion-no-margin"}
-                      style={{
-                        width: "100%",
-                        border: "1px solid black",
-                      }}
+                    <IonNavLink
+                      routerDirection={"forward"}
+                      component={() => (
+                        <ArticleDetails id={article.id} bookmarked={true} />
+                      )}
                     >
-                      <IonRow
-                        className={"ion-justify-content-between ion-padding"}
-                      >
-                        <div style={{ transform: "scale(1,1)" }}>
-                          <IonCardHeader className={"ion-no-padding"}>
-                            <IonCardTitle>{article.title}</IonCardTitle>
-                          </IonCardHeader>
-                          <IonCardContent
-                            className={"ion-no-padding"}
-                            style={{
-                              position: "fixed",
-                              bottom: 0,
-                            }}
-                          >
-                            <IonRow className={"ion-align-items-center"}>
-                              <IonIcon
-                                icon={timeSharp}
-                                style={{ padding: "0 2px 0 0" }}
-                              />
-                              <IonText color={"medium"}>
-                                {new Date(
-                                  article.createdDate,
-                                ).toLocaleDateString()}
-                              </IonText>
-                            </IonRow>
-                          </IonCardContent>
-                        </div>
-
-                        <img
-                          alt={"alt"}
-                          src={gridLockImage}
-                          style={{
-                            width: "120px",
-                            maxHeight: "103px",
-                          }}
-                        />
-                      </IonRow>
-                    </IonCard>
+                      <ListCard
+                        title={article.title}
+                        date={article.createdDate}
+                      />
+                    </IonNavLink>
                   </IonCol>
                   {editMode && (
                     <IonCol>

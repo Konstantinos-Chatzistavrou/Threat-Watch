@@ -17,7 +17,7 @@ const getRandomDate = (withinPastDays: number) =>
     new Date().getTime() - Math.random() * 8.64e7 * withinPastDays,
   ).toISOString();
 
-export const bookmarkedArticleMockData: Article[] = [...Array(5)].map(
+export const bookmarkedArticleMockData: Article[] = [...Array(7)].map(
   (_, i) => ({
     id: i,
     title: `Bookmarked Article ${i + 1}`,

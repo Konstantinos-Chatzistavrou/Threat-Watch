@@ -1,4 +1,5 @@
 import { articleMockData } from "@/app/api/articleApi/mock-data/articleMockData";
+import { bookmarkedArticleMockData } from "@/app/api/articleApi/mock-data/bookmarkedArticleMockData";
 import gridLockImage from "@assets/grid-lock.jpeg";
 import Header from "@common/Header/Header";
 import articleDetails from "@content/article-details.json";
@@ -7,10 +8,13 @@ import React from "react";
 
 interface ArticleDetailsProps {
   id: number;
+  bookmarked?: boolean;
 }
 
-export const ArticleDetails = ({ id }: ArticleDetailsProps) => {
-  const article = articleMockData.find((article) => article.id === id);
+export const ArticleDetails = ({ id, bookmarked }: ArticleDetailsProps) => {
+  const article = (
+    bookmarked ? bookmarkedArticleMockData : articleMockData
+  ).find((article) => article.id === id);
 
   if (!article) return <div>No article found.</div>;
 
