@@ -16,7 +16,7 @@ interface ListCardProps {
   date: string;
 }
 
-const ListCard = ({ title, date }: ListCardProps) => {
+const CardListItem = ({ title, date }: ListCardProps) => {
   return (
     <IonCard
       className={"ion-no-margin"}
@@ -59,4 +59,4 @@ const ListCard = ({ title, date }: ListCardProps) => {
   );
 };
 
-export default ListCard;
+export default CardListItem;
