@@ -1,13 +1,13 @@
 import { Article } from "@/app/api/articleApi/ArticleTypes";
-import { bookmarkedArticleMockData } from "@/app/api/articleApi/mock-data/bookmarkedArticleMockData";
+import { downloadedArticleMockData } from "@/app/api/articleApi/mock-data/downloadedArticleMockData";
 import { EditCardList } from "@common/EditCardList";
-import bookmarksContent from "@content/bookmarks.json";
-import "./Bookmarks.css";
+import downloadsContent from "@content/downloads.json";
+import "./Downloads.css";
 import React, { useState } from "react";
 
-export const Bookmarks: React.FC = () => {
-  const [bookmarkedArticles, setBookmarkedArticles] = useState<Article[]>(
-    bookmarkedArticleMockData,
+export const Downloads: React.FC = () => {
+  const [downloadedArticles, setDownloadedArticles] = useState<Article[]>(
+    downloadedArticleMockData,
   );
   const [selectedArticles, setSelectedArticles] = useState<
     Record<number, boolean>
@@ -16,8 +16,8 @@ export const Bookmarks: React.FC = () => {
     setSelectedArticles((prev) => ({ ...prev, [articleId]: checked }));
   };
 
-  const handleRemovedBookmarks = () => {
-    setBookmarkedArticles((prev) =>
+  const handleRemovedDownloads = () => {
+    setDownloadedArticles((prev) =>
       prev.filter((article) => !selectedArticles[article.id]),
     );
     setSelectedArticles({});
@@ -29,19 +29,19 @@ export const Bookmarks: React.FC = () => {
 
   return (
     <EditCardList
-      pageTitle={bookmarksContent.pageTitle}
-      cardItemsData={bookmarkedArticles.map(({ id, title, createdDate }) => ({
+      pageTitle={downloadsContent.pageTitle}
+      cardItemsData={downloadedArticles.map(({ id, title, createdDate }) => ({
         id,
         title,
         date: createdDate,
       }))}
-      handleRemoveItem={handleRemovedBookmarks}
-      alertHeaderMessage={bookmarksContent.alertConfirmation}
-      removeButtonText={bookmarksContent.removeArticlesButton}
+      handleRemoveItem={handleRemovedDownloads}
+      alertHeaderMessage={downloadsContent.alertConfirmation}
+      removeButtonText={downloadsContent.removeArticlesButton}
       handleSelected={handleArticledSelected}
       selectedItems={selectedArticles}
       clearSelectedItems={clearSelectedArticles}
-      cardDetailsApiUrl={"bookmark"}
+      cardDetailsApiUrl={"downloads"}
     />
   );
 };

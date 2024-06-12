@@ -23,6 +23,7 @@ export interface CardProps {
 }
 
 interface EditCardListProps {
+  pageTitle: string;
   cardItemsData: CardProps[];
   handleRemoveItem: () => void;
   alertHeaderMessage: string;
@@ -30,9 +31,11 @@ interface EditCardListProps {
   handleSelected: (id: number, checked: boolean) => void;
   selectedItems: Record<number, boolean>;
   clearSelectedItems: () => void;
+  cardDetailsApiUrl: string;
 }
 
 export const EditCardList = ({
+  pageTitle,
   cardItemsData,
   handleRemoveItem,
   alertHeaderMessage,
@@ -40,6 +43,7 @@ export const EditCardList = ({
   handleSelected,
   selectedItems,
   clearSelectedItems,
+  cardDetailsApiUrl,
 }: EditCardListProps) => {
   const [presentAlert] = useIonAlert();
   const [editMode, setEditMode] = useState<boolean>(false);
@@ -71,7 +75,7 @@ export const EditCardList = ({
     <IonNav
       root={() => (
         <IonPage>
-          <Header title="Bookmarks" />
+          <Header title={pageTitle} />
           <IonContent fullscreen>
             <IonGrid>
               <IonRow className={"ion-padding-vertical"}>
@@ -91,7 +95,7 @@ export const EditCardList = ({
                     <IonNavLink
                       routerDirection={"forward"}
                       component={() => (
-                        <ArticleDetails id={id} bookmarked={true} />
+                        <ArticleDetails id={id} url={cardDetailsApiUrl} />
                       )}
                     >
                       <CardListItem title={title} date={date} />

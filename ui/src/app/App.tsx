@@ -30,7 +30,7 @@ import {
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import { Bookmarks } from "@pages/bookmarks";
-import Downloads from "@pages/downloads";
+import { Downloads } from "@pages/downloads";
 import { Home } from "@pages/home";
 import Profile from "@pages/profile";
 import Settings from "@pages/settings";

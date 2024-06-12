@@ -1,5 +1,6 @@
 import { articleMockData } from "@/app/api/articleApi/mock-data/articleMockData";
 import { bookmarkedArticleMockData } from "@/app/api/articleApi/mock-data/bookmarkedArticleMockData";
+import { downloadedArticleMockData } from "@/app/api/articleApi/mock-data/downloadedArticleMockData";
 import gridLockImage from "@assets/grid-lock.jpeg";
 import Header from "@common/Header/Header";
 import articleDetails from "@content/article-details.json";
@@ -8,12 +9,14 @@ import React from "react";
 
 interface ArticleDetailsProps {
   id: number;
-  bookmarked?: boolean;
+  url: string;
 }
 
-export const ArticleDetails = ({ id, bookmarked }: ArticleDetailsProps) => {
+export const ArticleDetails = ({ id, url }: ArticleDetailsProps) => {
   const article = (
-    bookmarked ? bookmarkedArticleMockData : articleMockData
+    (url === "article" && articleMockData) ||
+    (url === "bookmark" && bookmarkedArticleMockData) ||
+    downloadedArticleMockData
   ).find((article) => article.id === id);
 
   if (!article) return <div>No article found.</div>;

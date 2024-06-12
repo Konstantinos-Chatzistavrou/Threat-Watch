@@ -51,7 +51,7 @@ export const Home: React.FC = () => {
   const navLinkWrapper = (articleId: number) => (child: ReactNode) => (
     <IonNavLink
       routerDirection={"forward"}
-      component={() => <ArticleDetails id={articleId} />}
+      component={() => <ArticleDetails id={articleId} url={"article"} />}
     >
       {child}
     </IonNavLink>

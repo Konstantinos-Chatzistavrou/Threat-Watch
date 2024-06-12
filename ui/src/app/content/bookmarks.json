@@ -1,4 +1,5 @@
 {
+  "pageTitle": "Bookmarks",
   "removeArticlesButton": "Remove Articles",
-  "alertConfirmation": "Do you wish to remove the selected articles?"
+  "alertConfirmation": "Do you wish to remove the bookmarked articles?"
 }
