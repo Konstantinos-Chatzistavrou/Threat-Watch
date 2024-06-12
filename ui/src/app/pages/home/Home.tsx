@@ -26,7 +26,7 @@ import { CriticalNews } from "./components/CriticalNews";
 
 export const Home: React.FC = () => {
   const [articles, setArticles] = useState<Article[]>(articleMockData);
-  const handleSearchChange = () => {};
+  const [searchInput, setSearchInput] = useState<string>("");
   const handleBookmark = (id: number) => {
     setArticles((list) =>
       list.map((article) => {
@@ -80,8 +80,11 @@ export const Home: React.FC = () => {
                     aria-label="home-search-input"
                     animated={true}
                     placeholder={homeContent.searchPlaceholder}
+                    value={searchInput}
                     debounce={500}
-                    onIonInput={handleSearchChange}
+                    onIonInput={(e) => {
+                      setSearchInput(e.detail.value?.trim() || "");
+                    }}
                     className={"custom"}
                   ></IonSearchbar>
                 </IonCol>
@@ -108,31 +111,35 @@ export const Home: React.FC = () => {
                     {homeContent.news.heading}
                   </IonHeader>
                 </IonCol>
-                {nonCriticalArticles.map((article) => {
-                  const timePassedLabel = getTimePassedLabel(
-                    article.updatedDate,
-                  );
+                {nonCriticalArticles
+                  .filter(({ title }) =>
+                    new RegExp(`.*${searchInput}.*`, "i").test(title),
+                  )
+                  .map((article) => {
+                    const timePassedLabel = getTimePassedLabel(
+                      article.updatedDate,
+                    );
 
-                  return (
-                    <IonCol size={"6"}>
-                      <InfoCard
-                        id={article.id}
-                        title={article.title}
-                        handleBookmark={() => handleBookmark(article.id)}
-                        handleDownload={() => handleDownload(article.id)}
-                        isBookmarked={article.isBookmarked}
-                        isDownloaded={article.isDownloaded}
-                        chipLabel={timePassedLabel}
-                        cardImg={gridLockImage}
-                        cardImgAlt={"security-thumbnail"}
-                        testId={`${testId.newsInfoCard}-${article.id}`}
-                        chipIcon={timeSharp}
-                        cardContent={article.summary}
-                        navLinkWrapper={navLinkWrapper(article.id)}
-                      />
-                    </IonCol>
-                  );
-                })}
+                    return (
+                      <IonCol size={"6"}>
+                        <InfoCard
+                          id={article.id}
+                          title={article.title}
+                          handleBookmark={() => handleBookmark(article.id)}
+                          handleDownload={() => handleDownload(article.id)}
+                          isBookmarked={article.isBookmarked}
+                          isDownloaded={article.isDownloaded}
+                          chipLabel={timePassedLabel}
+                          cardImg={gridLockImage}
+                          cardImgAlt={"security-thumbnail"}
+                          testId={`${testId.newsInfoCard}-${article.id}`}
+                          chipIcon={timeSharp}
+                          cardContent={article.summary}
+                          navLinkWrapper={navLinkWrapper(article.id)}
+                        />
+                      </IonCol>
+                    );
+                  })}
               </IonRow>
             </IonGrid>
           </IonContent>
