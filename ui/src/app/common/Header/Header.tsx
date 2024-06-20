@@ -35,7 +35,11 @@ const Header = ({
               <IonIcon className="xl" aria-hidden="true" src={logo} />
             </IonCol>
           )}
-          <IonCol>{title && <IonTitle>{title}</IonTitle>}</IonCol>
+          <IonCol>
+            {title && (
+              <IonTitle className={"ion-text-center"}>{title}</IonTitle>
+            )}
+          </IonCol>
           <IonCol>{children}</IonCol>
         </IonRow>
       </IonGrid>

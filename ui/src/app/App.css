@@ -1,3 +1,7 @@
+html {
+    --ion-font-family: 'Archivo Black';
+}
+
 ion-icon.xl {
     font-size: 3rem;
 }
@@ -62,4 +66,3 @@ ion-popover {
 div.ion-delegate-host {
     border: 2px solid #377E7F;
 }
-
