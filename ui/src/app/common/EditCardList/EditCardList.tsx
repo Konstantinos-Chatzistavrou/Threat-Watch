@@ -1,3 +1,4 @@
+import { buildElementId } from "@/app/utils/idUtils";
 import { Button } from "@common/Button";
 import CardListItem from "@common/CardListItem/CardListItem";
 import Header from "@common/Header/Header";
@@ -22,7 +23,7 @@ export interface CardProps {
   date: string;
 }
 
-interface EditCardListProps {
+export interface EditCardListProps {
   pageTitle: string;
   cardItemsData: CardProps[];
   handleRemoveItem: () => void;
@@ -82,6 +83,8 @@ export const EditCardList = ({
                 <IonToggle
                   checked={editMode}
                   onIonChange={(e) => handleEditMode(e.detail.checked)}
+                  data-testid={testId.toggleEditBtn}
+                  enableOnOffLabels={true}
                 >
                   Edit
                 </IonToggle>
@@ -108,6 +111,7 @@ export const EditCardList = ({
                         onIonChange={(e) =>
                           handleSelected(id, e.detail.checked)
                         }
+                        data-testid={`${testId.itemCheckbox}-${id}`}
                       ></IonCheckbox>
                     </IonCol>
                   )}
@@ -153,4 +157,11 @@ export const EditCardList = ({
       )}
     />
   );
+};
+
+const buildId = (element: string) =>
+  buildElementId("Common", "EditCardList", element);
+export const testId = {
+  toggleEditBtn: buildId("toggleEditBtn"),
+  itemCheckbox: buildId("itemCheckbox"),
 };

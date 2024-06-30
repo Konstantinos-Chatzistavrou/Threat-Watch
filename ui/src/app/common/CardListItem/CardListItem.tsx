@@ -11,12 +11,12 @@ import {
 import { timeSharp } from "ionicons/icons";
 import React from "react";
 
-interface ListCardProps {
+export interface CardListItemProps {
   title: string;
   date: string;
 }
 
-const CardListItem = ({ title, date }: ListCardProps) => {
+const CardListItem = ({ title, date }: CardListItemProps) => {
   return (
     <IonCard
       className={"ion-no-margin"}

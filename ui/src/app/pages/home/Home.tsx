@@ -1,6 +1,6 @@
 import { Article } from "@/app/api/articleApi/ArticleTypes";
 import { articleMockData } from "@/app/api/articleApi/mock-data/articleMockData";
-import { buildElementId } from "@/app/utils/test/testUtils";
+import { buildElementId } from "@/app/utils/idUtils";
 import { getTimePassedLabel } from "@/app/utils/timeUtils";
 import gridLockImage from "@assets/grid-lock.jpeg";
 import Button from "@common/Button/Button";

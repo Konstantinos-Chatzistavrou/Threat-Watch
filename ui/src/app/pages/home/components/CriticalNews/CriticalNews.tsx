@@ -1,5 +1,5 @@
 import { Article } from "@/app/api/articleApi/ArticleTypes";
-import { buildElementId } from "@/app/utils/test/testUtils";
+import { buildElementId } from "@/app/utils/idUtils";
 import lockSecurityImage from "@assets/lock-circuit.jpeg";
 import Button from "@common/Button/Button";
 import InfoCard from "@common/InfoCard/InfoCard";
