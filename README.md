@@ -9,7 +9,7 @@
 <details>
   <summary>Translated Versions</summary>
   <ul>
-    <li><a href="https://github.com/Konstantinos-Chatzistavrou/Privatify/blob/Core/README-GR.md">Ελληνικά</a></li>
+    <li><a href="https://github.com/kochas23/Threat-Watch/blob/Core/README-GR.md">Ελληνικά</a></li>
 
 <li><a href="https://github.com/kochas23/Threat-Watch/blob/Core/README-FR.md">Français</a></li>
     <!-- Add more translated version links here -->
