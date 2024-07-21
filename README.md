@@ -55,7 +55,7 @@ Welcome to Threat-Watch, the most privacy-focused cybersecurity news app in the 
 
 - No ads for free.
 
-- No central server, everything is run either inside the user's device or inside an API, thus making it almost impossible for a breach to ever happen.
+- Completely open source.
 
 
 ## Logo-and-App-Name-License
@@ -170,3 +170,4 @@ Thank you for your interest in Threat-Watch!
 ##### If you want to help us translate this file to your mother language please read how to translate it from Crowdin here: [Translations Guide](Translations.md). Make sure to click the translated versions button to check which languages are already available.
 
 # Help us create a safer digital world
+# Join the Privacy Revolution
