@@ -37,7 +37,7 @@ The privacy focused cybersecurity news app. Project's official website: [Threat 
 - [License](#license)
 - [Contact](#contact)
 
-Welcome to Threat-Watch, the most privacy-focused cybersecurity news app in the world. This README provides an overview of the app's features, installation instructions, how to contribute, and more.
+Welcome to Threat-Watch, the most privacy-focused cybersecurity news app in the world. This README provides an overview of the app's features, installation instructions, how to contribute, and more. Our official app is still under development and testing. We don't have an exact release date, but we are aiming for an official launch in late August.
 
 ## Features
 
@@ -67,22 +67,17 @@ Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)
 This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
 For details, please visit: [Creative Commons License Page](https://creativecommons.org/licenses/by-nc/4.0/).
 
-This license applies to the Threat-Watch logo, the app name "Threat-Watch" in this repository, as well as the branding color combinations of the project and app, including:
+This license applies to the Threat-Watch logo and the app name "Threat-Watch" in this repository.
 
-- **Primary**: #002147
-- **Text**: #00FF00
-- **Accent**: #FFFF00
-- **Secondary**: #008080
-- **Anchor**: #000000
+If you wish to use any of those 2:
 
-These branding color combinations are part of our identity and are closely related to our project.
-If you wish to use any of those 3:
+• **Contact Us**: You may contact us before you use our logo or name in any way.
 
 • **NonCommercial Use**: You may not use them for commercial purposes.
 
-• **Attribution**: You must attribute our project: the Threat-Watch Project.
+• **Attribution**: You must attribute to our project: Threat-Watch Project.
 
-For any questions or permissions beyond the scope of this license, please contact us at threatwatchapp@gmail.com
+For any questions or permissions within or beyond the scope of this license, please contact us at threatwatchapp@gmail.com
 
 ## Meet-the-Threat-Watch-Team
 
