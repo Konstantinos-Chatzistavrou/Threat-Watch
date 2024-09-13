@@ -1,3 +1,7 @@
+html {
+    --ion-font-family: 'Archivo Black';
+}
+
 ion-icon.xl {
     font-size: 3rem;
 }
@@ -26,6 +30,10 @@ ion-card {
     --background: #377E7F;
 }
 
+ion-card-title {
+    font-size: 1rem;
+}
+
 ion-button {
     border-radius: 5px;
     --background: #4CA7BE;
@@ -40,10 +48,6 @@ ion-button {
 
     &.large-square {
         width: 3.5rem
-    }
-
-    &.rounded {
-        border-radius: 50%;
     }
 
     &.none {
@@ -62,4 +66,3 @@ ion-popover {
 div.ion-delegate-host {
     border: 2px solid #377E7F;
 }
-

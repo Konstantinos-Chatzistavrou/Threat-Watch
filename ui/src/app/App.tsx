@@ -1,3 +1,6 @@
+/* Theme variables */
+import coursesIcon from "@assets/icons/cast_for_education.svg";
+import "./theme/variables.css";
 import appContent from "@content/app.json";
 
 /* Core CSS required for Ionic components to work properly */
@@ -15,9 +18,6 @@ import "@ionic/react/css/text-alignment.css";
 import "@ionic/react/css/text-transformation.css";
 import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
-
-/* Theme variables */
-import "./theme/variables.css";
 import {
   IonApp,
   IonIcon,
@@ -28,15 +28,15 @@ import {
   IonTabs,
   setupIonicReact,
 } from "@ionic/react";
-import { IonReactRouter } from "@ionic/react-router";
-import Downloads from "@pages/downloads";
-import { Home } from "@pages/home";
-import Profile from "@pages/profile";
-import Saved from "@pages/saved";
+import {IonReactRouter} from "@ionic/react-router";
+import {Bookmarks} from "@pages/bookmarks";
+import Courses from "@pages/courses/Courses";
+import {Downloads} from "@pages/downloads";
+import {Home} from "@pages/home";
 import Settings from "@pages/settings";
-import { bookmark, download, home, person, settings } from "ionicons/icons";
+import {bookmark, download, home, settings} from "ionicons/icons";
 import React from "react";
-import { Redirect, Route } from "react-router-dom";
+import {Redirect, Route} from "react-router-dom";
 import "./App.css";
 
 setupIonicReact();
@@ -49,8 +49,8 @@ const App: React.FC = () => (
           <Route exact path="/home">
             <Home />
           </Route>
-          <Route exact path="/saved">
-            <Saved />
+          <Route exact path="/bookmarks">
+            <Bookmarks />
           </Route>
           <Route exact path="/settings">
             <Settings />
@@ -58,8 +58,8 @@ const App: React.FC = () => (
           <Route exact path="/downloads">
             <Downloads />
           </Route>
-          <Route exact path="/profile">
-            <Profile />
+          <Route exact path="/courses">
+            <Courses />
           </Route>
           <Route exact path="/">
             <Redirect to="/home" />
@@ -70,9 +70,9 @@ const App: React.FC = () => (
             <IonIcon aria-hidden="true" icon={home} />
             <IonLabel>{appContent.home}</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="saved" href="/saved">
+          <IonTabButton tab="bookmarks" href="/bookmarks">
             <IonIcon aria-hidden="true" icon={bookmark} />
-            <IonLabel>{appContent.saved}</IonLabel>
+            <IonLabel>{appContent.bookmarks}</IonLabel>
           </IonTabButton>
           <IonTabButton tab="settings" href="/settings">
             <IonIcon aria-hidden="true" icon={settings} />
@@ -82,9 +82,9 @@ const App: React.FC = () => (
             <IonIcon aria-hidden="true" icon={download} />
             <IonLabel>{appContent.downloads}</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="profile" href="/profile">
-            <IonIcon aria-hidden="true" icon={person} />
-            <IonLabel>{appContent.profile}</IonLabel>
+          <IonTabButton tab="courses" href="/courses">
+            <IonIcon aria-hidden="true" icon={coursesIcon} />
+            <IonLabel>{appContent.courses}</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

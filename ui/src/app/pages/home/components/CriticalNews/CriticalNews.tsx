@@ -1,5 +1,8 @@
-import { buildElementId } from "@/app/utils/test/testUtils";
+import { Article } from "@/app/api/articleApi/ArticleTypes";
+import { buildElementId } from "@/app/utils/idUtils";
+import lockSecurityImage from "@assets/lock-circuit.jpeg";
 import Button from "@common/Button/Button";
+import InfoCard from "@common/InfoCard/InfoCard";
 import homeContent from "@content/home.json";
 import {
   IonCol,
@@ -19,10 +22,18 @@ import {
 import "swiper/swiper-bundle.min.css";
 
 import "swiper/swiper.min.css";
-import React, { ReactNode, useState } from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-export const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
+interface CriticalNewsProps {
+  articles: Article[];
+  handleBookmark: (id: number) => void;
+}
+
+export const CriticalNews = ({
+  articles,
+  handleBookmark,
+}: CriticalNewsProps) => {
   const [showSwiper, setShowSwiper] = useState(false);
 
   return (
@@ -91,7 +102,20 @@ export const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
         <Swiper slidesPerView={"auto"}>
           {articles.map((article) => (
             <SwiperSlide key={article.id} style={{ width: "fit-content" }}>
-              {render(article)}
+              <InfoCard
+                id={article.id}
+                title={article.title}
+                handleBookmark={() => handleBookmark(article.id)}
+                isBookmarked={article.isBookmarked}
+                chipLabel={homeContent.criticalNews.chipLabel}
+                cardImgAlt={"security-thumbnail"}
+                cardImg={lockSecurityImage}
+                testId={`${testId.criticalNewsArticle}-${article.id}`}
+                cardMaxWidth={"15rem"}
+                imgWidth={"15rem"} // 225px
+                imgMaxHeight={"5rem"} // 80px
+                classes={"ion-margin-end"}
+              />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -100,15 +124,11 @@ export const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
   );
 };
 
-interface CriticalNewsProps {
-  articles: Article[];
-  render: (article: Article) => ReactNode;
-}
-
 const prefixId = (name: string) =>
   buildElementId("home", "critical-news", name);
 export const testId = {
   moreInfoBtn: prefixId("more-info"),
   popoverContent: prefixId("popover-content"),
   swiperContainer: prefixId("swiper-container"),
+  criticalNewsArticle: prefixId("article"),
 };

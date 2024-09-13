@@ -25,10 +25,10 @@ test("displays a search bar and 2 buttons", async () => {
 test("highlights a starred article", async () => {
   const { user } = renderHome();
 
-  const favoriteBtn = screen.getByLabelText("favorite-btn-1");
-  expect(within(favoriteBtn).queryByRole("img")).toBeNull();
-  await user.click(favoriteBtn);
-  expect(within(favoriteBtn).getByRole("img")).toHaveAttribute(
+  const bookmarkBtn = screen.getByLabelText("bookmark-btn-1");
+  expect(within(bookmarkBtn).queryByRole("img")).toBeNull();
+  await user.click(bookmarkBtn);
+  expect(within(bookmarkBtn).getByRole("img")).toHaveAttribute(
     "style",
     "color: yellow;",
   );

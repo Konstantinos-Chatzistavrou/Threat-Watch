@@ -5,7 +5,6 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import ExploreContainer from "../../common/ExploreContainer/ExploreContainer";
 import "./index.css";
 import Header from "../../common/Header/Header";
 
@@ -19,7 +18,9 @@ const Settings: React.FC = () => {
             <IonTitle size="large">Tab 3</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 3 page" />
+        <div className="container">
+          <strong>Settings Page</strong>
+        </div>
       </IonContent>
     </IonPage>
   );

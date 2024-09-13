@@ -5,24 +5,25 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import ExploreContainer from "../../common/ExploreContainer/ExploreContainer";
 import "./index.css";
 import Header from "../../common/Header/Header";
 
-const Profile: React.FC = () => {
+const Courses: React.FC = () => {
   return (
     <IonPage>
-      <Header title="Profile" />
+      <Header title="Courses" />
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Tab 3</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 3 page" />
+        <div className="container">
+          <strong>Under Development</strong>
+        </div>
       </IonContent>
     </IonPage>
   );
 };
 
-export default Profile;
+export default Courses;

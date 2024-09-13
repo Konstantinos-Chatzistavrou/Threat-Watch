@@ -1,145 +1,157 @@
-import { buildElementId } from "@/app/utils/test/testUtils";
-import lockSecurityImage from "@assets/lock-circuit.jpeg";
+import { Article } from "@/app/api/articleApi/ArticleTypes";
+import { articleMockData } from "@/app/api/articleApi/mock-data/articleMockData";
+import { buildElementId } from "@/app/utils/idUtils";
+import { getTimePassedLabel } from "@/app/utils/timeUtils";
+import gridLockImage from "@assets/grid-lock.jpeg";
 import Button from "@common/Button/Button";
-import Chip from "@common/Chip/Chip";
 import Header from "@common/Header/Header";
+import InfoCard from "@common/InfoCard/InfoCard";
+import "./HomeStyles.css";
 import homeContent from "@content/home.json";
 import {
-  IonCard,
-  IonCardHeader,
-  IonCardTitle,
   IonCol,
   IonContent,
   IonGrid,
+  IonHeader,
+  IonNav,
+  IonNavLink,
   IonPage,
   IonRow,
   IonSearchbar,
 } from "@ionic/react";
-import ArticleMockData from "@pages/home/__tests__/mock-data/ArticleHeaders.json";
-import { sparkles, star, syncCircle } from "ionicons/icons";
-import React, { useState } from "react";
+import { ArticleDetails } from "@pages/article-details/ArticleDetails";
+import { sparkles, syncCircle, timeSharp } from "ionicons/icons";
+import React, { ReactNode, useState } from "react";
 import { CriticalNews } from "./components/CriticalNews";
 
 export const Home: React.FC = () => {
-  const [articles, setArticles] = useState<Article[]>(ArticleMockData);
-  const handleSearchChange = () => {};
-  const handleFavorite = (id: number) => () => {
+  const [articles, setArticles] = useState<Article[]>(articleMockData);
+  const [searchInput, setSearchInput] = useState<string>("");
+  const handleBookmark = (id: number) => {
     setArticles((list) =>
       list.map((article) => {
         if (article.id !== id) return article;
-        return { ...article, isFavorite: !article.isFavorite };
+        return { ...article, isBookmarked: !article.isBookmarked };
       }),
     );
   };
 
-  const renderNewsArticles = ({ title, id, isFavorite }: Article) => (
-    <IonCard
-      className={"ion-no-margin ion-margin-end"}
-      style={{
-        maxWidth: "15rem",
-      }}
-      data-testid={`${testId.criticalNewsArticle}-${id}`}
+  const handleDownload = (id: number) => {
+    setArticles((list) =>
+      list.map((article) => {
+        if (article.id !== id) return article;
+        return { ...article, isDownloaded: !article.isDownloaded };
+      }),
+    );
+  };
+
+  const criticalArticles = articles.filter((article) => article.isCritical);
+  const nonCriticalArticles = articles.filter((article) => !article.isCritical);
+
+  const navLinkWrapper = (articleId: number) => (child: ReactNode) => (
+    <IonNavLink
+      routerDirection={"forward"}
+      component={() => <ArticleDetails id={articleId} url={"article"} />}
     >
-      <img
-        alt="security-thumbnail"
-        src={lockSecurityImage}
-        style={{
-          width: "15rem", // 225px
-          maxHeight: "5rem", // 80px
-          objectFit: "none",
-        }}
-      />
-      <div
-        style={{
-          position: "fixed",
-          bottom: "2.5rem",
-          left: "0.2rem",
-        }}
-      >
-        <Chip
-          content={homeContent.criticalNews.chipLabel}
-          backgroundColor={"#59BE3B"}
-          ionLabelProps={{ color: "dark" }}
-        />
-      </div>
-
-      <IonCardHeader class={"ion-no-padding"}>
-        <IonRow class={"ion-align-items-center ion-padding-horizontal"}>
-          <IonCol>
-            <IonCardTitle>{title}</IonCardTitle>
-          </IonCol>
-          <IonCol>
-            <Button
-              type="icon"
-              ariaLabel={`favorite-btn-${id}`}
-              classes={"small-square ion-float-right"}
-              ionButtonProps={{
-                size: "small",
-                shape: "round",
-                onClick: handleFavorite(id),
-              }}
-              ionIconProps={{
-                icon: star,
-                size: "small",
-                color: isFavorite ? "yellow" : "",
-              }}
-            />
-          </IonCol>
-        </IonRow>
-      </IonCardHeader>
-    </IonCard>
+      {child}
+    </IonNavLink>
   );
-
   return (
-    <IonPage>
-      <Header />
-      <IonContent fullscreen>
-        <IonGrid className={""}>
-          <IonRow
-            className={"ion-align-items-center"}
-            data-testid={testId.homeSearchRow}
-          >
-            <IonCol size={"2"}>
-              <Button
-                type="icon"
-                ariaLabel={"search-reload"}
-                classes={"default-square"}
-                ionIconProps={{ icon: syncCircle }}
-              />
-            </IonCol>
-            <IonCol>
-              <IonSearchbar
-                aria-label="home-search-input"
-                animated={true}
-                placeholder={homeContent.searchPlaceholder}
-                debounce={500}
-                onIonInput={handleSearchChange}
-                className={"custom"}
-              ></IonSearchbar>
-            </IonCol>
-            <IonCol size={"2"}>
-              <Button
-                type="icon"
-                ariaLabel={"sparkles-placeholder-aria-label"}
-                classes={"ion-float-right default-square"}
-                ionIconProps={{ icon: sparkles }}
-              />
-            </IonCol>
-          </IonRow>
-          <IonRow>
-            <IonCol>
-              <CriticalNews articles={articles} render={renderNewsArticles} />
-            </IonCol>
-          </IonRow>
-        </IonGrid>
-      </IonContent>
-    </IonPage>
+    <IonNav
+      root={() => (
+        <IonPage>
+          <Header title={"Home"} />
+          <IonContent fullscreen>
+            <IonGrid>
+              <IonRow
+                className={"ion-align-items-center"}
+                data-testid={testId.homeSearchRow}
+              >
+                <IonCol size={"2"}>
+                  <Button
+                    type="icon"
+                    ariaLabel={"search-reload"}
+                    classes={"default-square"}
+                    ionIconProps={{ icon: syncCircle }}
+                  />
+                </IonCol>
+                <IonCol>
+                  <IonSearchbar
+                    aria-label="home-search-input"
+                    animated={true}
+                    placeholder={homeContent.searchPlaceholder}
+                    value={searchInput}
+                    debounce={500}
+                    onIonInput={(e) => {
+                      setSearchInput(e.detail.value?.trim() || "");
+                    }}
+                    className={"custom"}
+                  ></IonSearchbar>
+                </IonCol>
+                <IonCol size={"2"}>
+                  <Button
+                    type="icon"
+                    ariaLabel={"sparkles-placeholder-aria-label"}
+                    classes={"ion-float-right default-square"}
+                    ionIconProps={{ icon: sparkles }}
+                  />
+                </IonCol>
+              </IonRow>
+              <IonRow>
+                <IonCol>
+                  <CriticalNews
+                    articles={criticalArticles}
+                    handleBookmark={handleBookmark}
+                  />
+                </IonCol>
+              </IonRow>
+              <IonRow>
+                <IonCol size={"12"}>
+                  <IonHeader class={"ion-no-border"}>
+                    {homeContent.news.heading}
+                  </IonHeader>
+                </IonCol>
+                {nonCriticalArticles
+                  .filter(({ title }) =>
+                    new RegExp(`.*${searchInput}.*`, "i").test(title),
+                  )
+                  .map((article) => {
+                    const timePassedLabel = getTimePassedLabel(
+                      article.updatedDate,
+                    );
+
+                    return (
+                      <IonCol size={"6"}>
+                        <InfoCard
+                          id={article.id}
+                          title={article.title}
+                          handleBookmark={() => handleBookmark(article.id)}
+                          handleDownload={() => handleDownload(article.id)}
+                          isBookmarked={article.isBookmarked}
+                          isDownloaded={article.isDownloaded}
+                          chipLabel={timePassedLabel}
+                          cardImg={gridLockImage}
+                          cardImgAlt={"security-thumbnail"}
+                          testId={`${testId.newsInfoCard}-${article.id}`}
+                          chipIcon={timeSharp}
+                          cardContent={article.summary}
+                          navLinkWrapper={navLinkWrapper(article.id)}
+                        />
+                      </IonCol>
+                    );
+                  })}
+              </IonRow>
+            </IonGrid>
+          </IonContent>
+        </IonPage>
+      )}
+    />
   );
 };
 
 const prefixId = (section: string, element: string) =>
   buildElementId("home", section, element);
 export const testId = {
-  criticalNewsArticle: prefixId("critical-news", "article"),
   homeSearchRow: prefixId("search-bar", "row"),
+  newsInfoCard: prefixId("news", "info-card"),
 };
