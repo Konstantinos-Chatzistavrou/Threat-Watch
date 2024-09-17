@@ -5,96 +5,171 @@ import Chip from "@common/Chip/Chip";
 import Header from "@common/Header/Header";
 import homeContent from "@content/home.json";
 import {
-  IonCard,
-  IonCardHeader,
-  IonCardTitle,
-  IonCol,
-  IonContent,
-  IonGrid,
-  IonPage,
-  IonRow,
-  IonSearchbar,
+    IonCard,
+    IonCardHeader,
+    IonCardTitle,
+    IonCol,
+    IonContent,
+    IonGrid, IonHeader, IonInfiniteScroll, IonInfiniteScrollContent, IonLabel,
+    IonPage,
+    IonRow,
+    IonSearchbar, IonText, IonTitle,
 } from "@ionic/react";
-import ArticleMockData from "@pages/home/__tests__/mock-data/ArticleHeaders.json";
 import { sparkles, star, syncCircle } from "ionicons/icons";
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { CriticalNews } from "./components/CriticalNews";
+import axios from "axios";
 
 export const Home: React.FC = () => {
-  const [articles, setArticles] = useState<Article[]>(ArticleMockData);
-  const handleSearchChange = () => {};
-  const handleFavorite = (id: number) => () => {
-    setArticles((list) =>
-      list.map((article) => {
-        if (article.id !== id) return article;
-        return { ...article, isFavorite: !article.isFavorite };
-      }),
-    );
-  };
 
-  const renderNewsArticles = ({ title, id, isFavorite }: Article) => (
+  const [criticalArticles, setCriticalArticles] = useState<Article[]>([]);
+  const [newsArticles, setNewsArticles] = useState<Article[]>([]);
+  const [isFetching, setIsFetching] = useState(true);
+  const [page, setPage] = useState(1);
+  const baseUrl = 'http://localhost:8000/articles/';
+  // const baseUrl = 'https://threat-watch.onrender.com/articles/';
+
+  useEffect(() => {
+    const url = baseUrl+'critical';
+    axios.get(url).then((r: any)=>{
+      // console.log(r.data);
+      setCriticalArticles(r.data);
+    }).catch(err=>console.log(err));
+  },[]);
+
+  const getNewsArticles = () => {
+      const url = baseUrl+'get';
+      axios.get(url,{params:{page:page}}).then((r: any)=>{
+          // console.log(r.data);
+          const articlesNew = [...newsArticles, ...r.data];
+          setNewsArticles(articlesNew);
+    }).catch(err=>console.log(err));
+      setPage(page+1);
+  }
+
+    useEffect(() => {
+        if(isFetching){
+            getNewsArticles();
+            setIsFetching(false);
+        }
+    },[isFetching]);
+
+    // TODO: Add bookmark functionality
+    // TODO: Implement search functionality
+
+  const onArticleClick = (id: string) => {
+      console.log('clicked article with id: ', id);
+  }
+
+  const handleSearchChange = () => {};
+  // const handleFavorite = (id: string) => () => {
+  //   setArticles((list) =>
+  //     list.map((article) => {
+  //       if (article._id !== id) return article;
+  //       return { ...article, isFavorite: !article.isFavorite };
+  //     }),
+  //   );
+  // };
+
+  const renderCriticalNews = ({ title, _id, media }: Article) => (
     <IonCard
       className={"ion-no-margin ion-margin-end"}
+      key={_id}
       style={{
-        maxWidth: "15rem",
+          maxWidth: "15rem",
+          maxHeight: "20rem",
+          height:"100%",
       }}
-      data-testid={`${testId.criticalNewsArticle}-${id}`}
+      data-testid={`${testId.criticalNewsArticle}-${_id}`}
     >
       <img
         alt="security-thumbnail"
-        src={lockSecurityImage}
+        src={media || lockSecurityImage}
         style={{
-          width: "15rem", // 225px
-          maxHeight: "5rem", // 80px
-          objectFit: "none",
+          width: "100%",
+          maxHeight: "40%",
+          objectFit: "contain"
         }}
       />
-      <div
-        style={{
-          position: "fixed",
-          bottom: "2.5rem",
-          left: "0.2rem",
-        }}
-      >
-        <Chip
-          content={homeContent.criticalNews.chipLabel}
-          backgroundColor={"#59BE3B"}
-          ionLabelProps={{ color: "dark" }}
-        />
-      </div>
 
-      <IonCardHeader class={"ion-no-padding"}>
-        <IonRow class={"ion-align-items-center ion-padding-horizontal"}>
-          <IonCol>
+      <IonCardHeader>
+        <IonRow>
             <IonCardTitle>{title}</IonCardTitle>
-          </IonCol>
           <IonCol>
-            <Button
-              type="icon"
-              ariaLabel={`favorite-btn-${id}`}
-              classes={"small-square ion-float-right"}
-              ionButtonProps={{
-                size: "small",
-                shape: "round",
-                onClick: handleFavorite(id),
-              }}
-              ionIconProps={{
-                icon: star,
-                size: "small",
-                color: isFavorite ? "yellow" : "",
-              }}
-            />
+            {/*<Button*/}
+            {/*  type="icon"*/}
+            {/*  ariaLabel={`favorite-btn-${id}`}*/}
+            {/*  classes={"small-square ion-float-right"}*/}
+            {/*  ionButtonProps={{*/}
+            {/*    size: "small",*/}
+            {/*    shape: "round",*/}
+            {/*    onClick: handleFavorite(id),*/}
+            {/*  }}*/}
+            {/*  ionIconProps={{*/}
+            {/*    icon: star,*/}
+            {/*    size: "small",*/}
+            {/*    color: isFavorite ? "yellow" : "",*/}
+            {/*  }}*/}
+            {/*/>*/}
           </IonCol>
         </IonRow>
       </IonCardHeader>
     </IonCard>
   );
 
+  const renderNews = ({ title, _id, media }: Article) => (
+      <IonCol size="6" key={_id}>
+    <IonCard
+      className={"ion-no-margin ion-margin-end"}
+      style={{
+          height:"100%",
+        maxHeight: "20rem",
+      }}
+      data-testid={`${testId.criticalNewsArticle}-${_id}`}
+      onClick={()=>onArticleClick(_id)}
+    >
+      <img
+        alt="security-thumbnail"
+        src={media || lockSecurityImage}
+        style={{
+          width: "100%",
+          maxHeight: "40%",
+          objectFit: "contain"
+        }}/>
+
+      <IonCardHeader>
+        <IonRow>
+          <IonCol>
+            <IonCardTitle>{title}</IonCardTitle>
+          </IonCol>
+          {/*<IonCol>*/}
+          {/*  <Button*/}
+          {/*    type="icon"*/}
+          {/*    ariaLabel={`favorite-btn-${id}`}*/}
+          {/*    classes={"small-square ion-float-right"}*/}
+          {/*    ionButtonProps={{*/}
+          {/*      size: "small",*/}
+          {/*      shape: "round",*/}
+          {/*      onClick: handleFavorite(id),*/}
+          {/*    }}*/}
+          {/*    ionIconProps={{*/}
+          {/*      icon: star,*/}
+          {/*      size: "small",*/}
+          {/*      color: isFavorite ? "yellow" : "",*/}
+          {/*    }}*/}
+          {/*  />*/}
+          {/*</IonCol>*/}
+        </IonRow>
+      </IonCardHeader>
+    </IonCard>
+      </IonCol>
+  );
+
   return (
-    <IonPage>
+    <IonPage >
       <Header />
       <IonContent fullscreen>
-        <IonGrid className={""}>
+        <IonGrid>
           <IonRow
             className={"ion-align-items-center"}
             data-testid={testId.homeSearchRow}
@@ -128,9 +203,23 @@ export const Home: React.FC = () => {
           </IonRow>
           <IonRow>
             <IonCol>
-              <CriticalNews articles={articles} render={renderNewsArticles} />
+              <CriticalNews articles={criticalArticles} render={renderCriticalNews} />
             </IonCol>
           </IonRow>
+            <IonRow>
+                <IonCol size='12'>
+                    <IonText color="light"><h2>News</h2></IonText>
+                </IonCol>
+                    {newsArticles.map((article) => renderNews(article))}
+                <IonInfiniteScroll
+                    onIonInfinite={(ev) => {
+                        setIsFetching(true);
+                        setTimeout(() => ev.target.complete(), 500);
+                    }}
+                >
+                    <IonInfiniteScrollContent></IonInfiniteScrollContent>
+                </IonInfiniteScroll>
+            </IonRow>
         </IonGrid>
       </IonContent>
     </IonPage>

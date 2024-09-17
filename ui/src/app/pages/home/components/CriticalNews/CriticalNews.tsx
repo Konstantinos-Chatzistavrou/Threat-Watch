@@ -45,44 +45,12 @@ export const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
             }}
           ></Button>
         </IonCol>
-        <IonCol size={"4"}>
+        <IonCol size={"6"}>
           <IonRow>
-            <IonLabel>{homeContent.criticalNews.heading}</IonLabel>
+            <IonLabel color="light">{homeContent.criticalNews.heading}</IonLabel>
           </IonRow>
         </IonCol>
-        <IonCol>
-          <Button
-            type={"icon"}
-            ariaLabel={"critical-news-menu"}
-            classes={"none"}
-            ionButtonProps={{
-              id: "critical-news-more-info",
-            }}
-            ionIconProps={{
-              size: "small",
-              icon: ellipsisHorizontalCircleSharp,
-            }}
-            dataTestId={testId.moreInfoBtn}
-          />
-          <IonPopover
-            trigger={"critical-news-more-info"}
-            triggerAction={"click"}
-            side={"bottom"}
-            alignment={"center"}
-          >
-            <IonContent data-testid={testId.popoverContent}>
-              <IonList className={"ion-no-padding"} lines={"full"}>
-                {Object.values(homeContent.criticalNews.menuItem).map(
-                  (item, i) => (
-                    <IonItem key={i}>
-                      <IonLabel class={"ion-text-center"}>{item}</IonLabel>
-                    </IonItem>
-                  ),
-                )}
-              </IonList>
-            </IonContent>
-          </IonPopover>
-        </IonCol>
+        <IonCol/>
       </IonRow>
       <IonRow
         class={!showSwiper ? "ion-hide" : ""}
@@ -90,7 +58,7 @@ export const CriticalNews = ({ articles, render }: CriticalNewsProps) => {
       >
         <Swiper slidesPerView={"auto"}>
           {articles.map((article) => (
-            <SwiperSlide key={article.id} style={{ width: "fit-content" }}>
+            <SwiperSlide key={article._id} style={{ width:"max-content" }}>
               {render(article)}
             </SwiperSlide>
           ))}
