@@ -1,6 +1,6 @@
 import { ButtonProps } from "@common/Button/ButtonTypes";
 import { IonButton, IonIcon } from "@ionic/react";
-import React, { ReactNode } from "react";
+import React, { PropsWithChildren, ReactNode } from "react";
 
 const Button = ({
   type,
@@ -9,8 +9,9 @@ const Button = ({
   classes,
   ionIconProps = { ariaHidden: true },
   ionButtonProps = {},
-}: ButtonProps) => {
-  let buttonContents: ReactNode = <></>;
+  children,
+}: PropsWithChildren<ButtonProps>) => {
+  let buttonContents: ReactNode = <>{children}</>;
 
   if (type === "icon") {
     const { ariaHidden, color, ...rest } = ionIconProps;

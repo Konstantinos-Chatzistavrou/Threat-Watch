@@ -3,6 +3,7 @@ export interface IonButtonProps {
   shape?: "round";
   onClick?: (e: any) => void;
   id?: string;
+  style?: Record<string, string>;
 }
 
 export interface IonIconProps {

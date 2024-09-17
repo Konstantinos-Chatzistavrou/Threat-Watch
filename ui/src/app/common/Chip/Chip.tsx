@@ -1,15 +1,16 @@
 import { ChipProps } from "@common/Chip/ChipTypes";
-import { IonLabel } from "@ionic/react";
+import { IonIcon, IonLabel, IonRow } from "@ionic/react";
 import React from "react";
 
 const Chip = ({
   content,
-  backgroundColor = "",
+  backgroundColor,
   ionLabelProps = {},
   dataTestId,
+  icon,
 }: ChipProps) => {
   return (
-    <div
+    <IonRow
       style={{
         padding: "2px 4px",
         backgroundColor,
@@ -18,9 +19,13 @@ const Chip = ({
         fontSize: "0.5rem",
       }}
       data-testid={dataTestId}
+      className={"ion-align-items-center"}
     >
+      {icon ? (
+        <IonIcon icon={icon} style={{ padding: "0 2px 0 0" }} />
+      ) : undefined}
       <IonLabel {...ionLabelProps}>{content}</IonLabel>
-    </div>
+    </IonRow>
   );
 };
 

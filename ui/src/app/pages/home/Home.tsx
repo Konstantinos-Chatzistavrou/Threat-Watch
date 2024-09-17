@@ -1,10 +1,23 @@
-import { buildElementId } from "@/app/utils/test/testUtils";
-import lockSecurityImage from "@assets/lock-circuit.jpeg";
+import { Article } from "@/app/api/articleApi/ArticleTypes";
+import { articleMockData } from "@/app/api/articleApi/mock-data/articleMockData";
+import { buildElementId } from "@/app/utils/idUtils";
+import { getTimePassedLabel } from "@/app/utils/timeUtils";
+import gridLockImage from "@assets/grid-lock.jpeg";
 import Button from "@common/Button/Button";
-import Chip from "@common/Chip/Chip";
 import Header from "@common/Header/Header";
+import InfoCard from "@common/InfoCard/InfoCard";
+import "./HomeStyles.css";
 import homeContent from "@content/home.json";
 import {
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonHeader,
+  IonNav,
+  IonNavLink,
+  IonPage,
+  IonRow,
+  IonSearchbar,
     IonCard,
     IonCardHeader,
     IonCardTitle,
@@ -17,6 +30,9 @@ import {
 } from "@ionic/react";
 import { sparkles, star, syncCircle } from "ionicons/icons";
 import React, {useEffect, useState} from "react";
+import { ArticleDetails } from "@pages/article-details/ArticleDetails";
+import { sparkles, syncCircle, timeSharp } from "ionicons/icons";
+import React, { ReactNode, useState } from "react";
 import { CriticalNews } from "./components/CriticalNews";
 import axios from "axios";
 
@@ -164,12 +180,31 @@ export const Home: React.FC = () => {
     </IonCard>
       </IonCol>
   );
+  const handleDownload = (id: number) => {
+    setArticles((list) =>
+      list.map((article) => {
+        if (article.id !== id) return article;
+        return { ...article, isDownloaded: !article.isDownloaded };
+      }),
+    );
+  };
 
+  const criticalArticles = articles.filter((article) => article.isCritical);
+  const nonCriticalArticles = articles.filter((article) => !article.isCritical);
+
+  const navLinkWrapper = (articleId: number) => (child: ReactNode) => (
+    <IonNavLink
+      routerDirection={"forward"}
+      component={() => <ArticleDetails id={articleId} url={"article"} />}
+    >
+      {child}
+    </IonNavLink>
+  );
   return (
-    <IonPage >
+    <IonPage>
       <Header />
       <IonContent fullscreen>
-        <IonGrid>
+        <IonGrid className={""}>
           <IonRow
             className={"ion-align-items-center"}
             data-testid={testId.homeSearchRow}
@@ -203,23 +238,9 @@ export const Home: React.FC = () => {
           </IonRow>
           <IonRow>
             <IonCol>
-              <CriticalNews articles={criticalArticles} render={renderCriticalNews} />
+              <CriticalNews articles={articles} render={renderNewsArticles} />
             </IonCol>
           </IonRow>
-            <IonRow>
-                <IonCol size='12'>
-                    <IonText color="light"><h2>News</h2></IonText>
-                </IonCol>
-                    {newsArticles.map((article) => renderNews(article))}
-                <IonInfiniteScroll
-                    onIonInfinite={(ev) => {
-                        setIsFetching(true);
-                        setTimeout(() => ev.target.complete(), 500);
-                    }}
-                >
-                    <IonInfiniteScrollContent></IonInfiniteScrollContent>
-                </IonInfiniteScroll>
-            </IonRow>
         </IonGrid>
       </IonContent>
     </IonPage>
