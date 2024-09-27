@@ -38,9 +38,11 @@ import {bookmark, download, home, settings} from "ionicons/icons";
 import React from "react";
 import {Redirect, Route} from "react-router-dom";
 import "./App.css";
+import {ArticleDetails} from "@pages/article-details/ArticleDetails";
 
 setupIonicReact();
 
+// @ts-ignore
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
@@ -48,6 +50,9 @@ const App: React.FC = () => (
         <IonRouterOutlet>
           <Route exact path="/home">
             <Home />
+          </Route>
+          <Route exact path="/article">
+            <ArticleDetails />
           </Route>
           <Route exact path="/bookmarks">
             <Bookmarks />

@@ -13,7 +13,7 @@ import React from "react";
 
 export interface CardListItemProps {
   title: string;
-  date: string;
+  date: Date;
 }
 
 const CardListItem = ({ title, date }: CardListItemProps) => {
