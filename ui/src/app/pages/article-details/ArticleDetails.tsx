@@ -1,66 +1,51 @@
-import { articleMockData } from "@/app/api/articleApi/mock-data/articleMockData";
-import { bookmarkedArticleMockData } from "@/app/api/articleApi/mock-data/bookmarkedArticleMockData";
-import { downloadedArticleMockData } from "@/app/api/articleApi/mock-data/downloadedArticleMockData";
-import gridLockImage from "@assets/grid-lock.jpeg";
 import Header from "@common/Header/Header";
 import articleDetails from "@content/article-details.json";
-import { IonContent, IonGrid, IonRow, IonText } from "@ionic/react";
+import {IonContent, IonGrid, IonPage, IonRow, IonText} from "@ionic/react";
 import React from "react";
+import {useLocation} from "react-router";
 
-interface ArticleDetailsProps {
-  id: number;
-  url: string;
-}
-
-export const ArticleDetails = ({ id, url }: ArticleDetailsProps) => {
-  const article = (
-    (url === "article" && articleMockData) ||
-    (url === "bookmark" && bookmarkedArticleMockData) ||
-    downloadedArticleMockData
-  ).find((article) => article.id === id);
-
+export const ArticleDetails = (a:Article) => {
+  const location = useLocation();
+  // @ts-ignore
+  const article = location?.state?.article || a.a;
   if (!article) return <div>No article found.</div>;
 
   return (
-    <>
+    <IonPage>
       <Header title={"Article Source Title"} inModal={true} />
-      <IonContent fullscreen>
+      <IonContent>
         <IonGrid>
           <IonRow>
             <IonText color={"light"}>
               <h1>{article.title}</h1>
               <p>
                 {articleDetails.writtenBy}
-                {article.createdBy}
+                {article.author}
                 <br />
                 {articleDetails.createdDate}
-                {new Date(article.createdDate).toLocaleString()}
-                <br />
-                {article.updatedDate
-                  ? `${articleDetails.updatedDate}${new Date(article.updatedDate).toLocaleString()}`
-                  : undefined}
+                {new Date(article.publishedDate).toLocaleString()}
               </p>
             </IonText>
           </IonRow>
           <IonRow>
             <img
               alt={"security-thumbnail"}
-              src={gridLockImage}
+              src={article.media}
               style={{ border: "1px solid black" }}
             />
           </IonRow>
           <IonRow>
             <IonText color={"light"}>
-              <p>{article.text}</p>
+              <h3>{article.description}</h3>
             </IonText>
           </IonRow>
           <IonRow>
             <IonText color={"light"}>
-              <h3>{articleDetails.similarNews}</h3>
+              <p>{article.summary}</p>
             </IonText>
           </IonRow>
         </IonGrid>
       </IonContent>
-    </>
+    </IonPage>
   );
 };

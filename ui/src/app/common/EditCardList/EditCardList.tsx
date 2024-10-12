@@ -18,9 +18,9 @@ import { ArticleDetails } from "@pages/article-details/ArticleDetails";
 import React, { useState } from "react";
 
 export interface CardProps {
-  id: number;
+  _id: string;
   title: string;
-  date: string;
+  date: Date;
 }
 
 export interface EditCardListProps {
@@ -29,8 +29,8 @@ export interface EditCardListProps {
   handleRemoveItem: () => void;
   alertHeaderMessage: string;
   removeButtonText: string;
-  handleSelected: (id: number, checked: boolean) => void;
-  selectedItems: Record<number, boolean>;
+  handleSelected: (id: string, checked: boolean) => void;
+  selectedItems: Record<string, boolean>;
   clearSelectedItems: () => void;
   cardDetailsApiUrl: string;
 }
@@ -44,7 +44,6 @@ export const EditCardList = ({
   handleSelected,
   selectedItems,
   clearSelectedItems,
-  cardDetailsApiUrl,
 }: EditCardListProps) => {
   const [presentAlert] = useIonAlert();
   const [editMode, setEditMode] = useState<boolean>(false);
@@ -89,8 +88,8 @@ export const EditCardList = ({
                   Edit
                 </IonToggle>
               </IonRow>
-              {cardItemsData.map(({ id, title, date }) => (
-                <IonRow className={"ion-align-items-center"} key={id}>
+              {cardItemsData.length>0 ? cardItemsData.map(article => (
+                <IonRow className={"ion-align-items-center"} key={article._id}>
                   <IonCol
                     size={editMode ? "11" : "12"}
                     className={"ion-no-padding ion-padding-bottom"}
@@ -98,25 +97,25 @@ export const EditCardList = ({
                     <IonNavLink
                       routerDirection={"forward"}
                       component={() => (
-                        <ArticleDetails id={id} url={cardDetailsApiUrl} />
+                        <ArticleDetails a={article} />
                       )}
                     >
-                      <CardListItem title={title} date={date} />
+                      <CardListItem title={article.title} date={article.date} />
                     </IonNavLink>
                   </IonCol>
                   {editMode && (
                     <IonCol>
                       <IonCheckbox
-                        checked={selectedItems[id] || false}
+                        checked={selectedItems[article._id] || false}
                         onIonChange={(e) =>
-                          handleSelected(id, e.detail.checked)
+                          handleSelected(article._id, e.detail.checked)
                         }
-                        data-testid={`${testId.itemCheckbox}-${id}`}
+                        data-testid={`${testId.itemCheckbox}-${article._id}`}
                       ></IonCheckbox>
                     </IonCol>
                   )}
                 </IonRow>
-              ))}
+              )):(<IonRow className={"ion-justify-content-center"}><h2>No Bookmarks</h2></IonRow>)}
               {shouldShowRemoveBtn() ? (
                 <IonRow className={"ion-justify-content-center"}>
                   <Button
