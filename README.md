@@ -91,7 +91,7 @@ Introducing you to the Threat-Watch Team! Get to know the dedicated individuals 
 
 Contact: [konstantinoschatzistavrou@gmail.com](mailto:konstantinoschatzistavrou@gmail.com)
 
-• [Chayan Khatry](https://github.com/ehuang47) - Full-Stack Developer 
+• [Chayan Khatry](https://github.com/CrazyDragonX007) - Full-Stack Developer 
 
 • [Heba Abdallah](https://github.com/cameronwritingcode) - UI/UX design
 
