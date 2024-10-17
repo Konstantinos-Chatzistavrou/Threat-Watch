@@ -93,7 +93,7 @@ Contact: [konstantinoschatzistavrou@gmail.com](mailto:konstantinoschatzistavrou@
 
 • [Chayan Khatry](https://github.com/CrazyDragonX007) - Full-Stack Developer 
 
-• [Heba Abdallah](https://github.com/cameronwritingcode) - UI/UX design
+• [Heba Abdallah](https://github.com/hobaDevHome) - Front-End Developer
 
 
 ## Security
