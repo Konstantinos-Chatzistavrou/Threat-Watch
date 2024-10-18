@@ -91,9 +91,9 @@ Introducing you to the Threat-Watch Team! Get to know the dedicated individuals 
 
 Contact: [konstantinoschatzistavrou@gmail.com](mailto:konstantinoschatzistavrou@gmail.com)
 
-• [Ethan Huang](https://github.com/ehuang47) - Front-End Developer 
+• [Chayan Khatry](https://github.com/CrazyDragonX007) - Full-Stack Developer 
 
-• [Cameron Keeley](https://github.com/cameronwritingcode) - UI/UX design
+• [Heba Abdallah](https://github.com/hobaDevHome) - Front-End Developer
 
 
 ## Security
